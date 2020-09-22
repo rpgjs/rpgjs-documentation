@@ -1,0 +1,16 @@
+{
+  "name": "rpgs-doc",
+  "version": "1.0.0",
+  "description": "Documentationf for RPG JS v3",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.5.4"
+  }
+}
