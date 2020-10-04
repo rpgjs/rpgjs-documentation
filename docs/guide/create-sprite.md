@@ -18,7 +18,7 @@ Here is the spritesheet we will use:
 2. Then create the following file in `src/client/characters/hero.ts`
 
 ```ts
-import { Spritesheet } from 'rpgjs/client'
+import { Spritesheet } from '@rpgjs/client'
 
 @Spritesheet({
     id: 'hero', // id (mandatory)

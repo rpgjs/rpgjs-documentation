@@ -23,7 +23,7 @@ Here is the spritesheet we will use:
 2. Then create the following file in `src/client/characters/medieval.ts`
 
 ```ts
-import { Spritesheet } from 'rpgjs/client'
+import { Spritesheet } from '@rpgjs/client'
 
 @Spritesheet({
     images: {
@@ -45,7 +45,7 @@ The `images` object allows to group several tilesets at the same time
 1. Go to `src/client/rpg.ts`
 
 ```ts
-import { RpgClient, RpgClientEngine } from 'rpgjs/client'
+import { RpgClient, RpgClientEngine } from '@rpgjs/client'
 import { Tilesets } from './characters/medieval'
 
 @RpgClient({

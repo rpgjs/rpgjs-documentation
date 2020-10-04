@@ -1,5 +1,9 @@
 # Set Player start in map
 
+## Prerequisites
+
+1. You must have created a map and added in your game
+
 ## It is necessary to know
 
 1. You can perform several commands on the player. Change hit points, level, etc.
@@ -8,7 +12,7 @@
 ## Create Player class
 
 ```ts
-import { RpgPlayer } from 'rpgjs/server'
+import { RpgPlayer } from '@rpgjs/server'
 
 export class Player extends RpgPlayer {
     onConnected() {
@@ -29,3 +33,24 @@ export class Player extends RpgPlayer {
 3. Position the player on the map with X and Y positions
 
 > Make sure that there is a map with the correct identifier. Here, the `medieval` map exists. Otherwise, read the tutorial on how to create a map.
+
+## Add Player class in your game engine
+
+In `src/server/rpg.ts`
+
+```ts
+import { RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { Player } from './player'
+import { MedievalMap } from './maps/medieval.ts'
+
+@RpgServer({
+    basePath: __dirname,
+    maps:  [
+        MedievalMap
+    ],
+    playerClass: Player
+})
+export default class RPG extends RpgServerEngine {
+    
+}
+```

@@ -21,7 +21,11 @@ module.exports = {
         '/guide/create-tileset',
         '/guide/create-map',
         '/guide/create-sprite',
-        '/guide/player-start'
+        '/guide/player-start',
+        '/guide/create-event',
+        '/guide/create-database',
+        '/guide/use-event-commands',
+        '/guide/create-gui'
       ]
     }],
     plugins: ['@vuepress/active-header-links']
