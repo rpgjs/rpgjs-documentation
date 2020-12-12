@@ -40,6 +40,57 @@ Here we have two hooks:
 
 Then in each method, you can make commands, either on the event, on the player concerned, or on a set of players
 
+## Position the event on the map
+
+### Solution 1 : Insert a point on Tiled Map Editor
+
+
+1. Go to Tiled Map Editor
+2. Go to the object layer
+3. Insert a point on the map
+
+![start-event](/assets/start-event.png)
+
+4. Set the `event` type and event name in `name` property
+
+![start-event2](/assets/start-event2.png)
+
+5. Go to the `src/server/maps/medieval.ts` and add the event in the `events` array :
+
+```ts
+import { RpgMap, MapData } from '@rpgjs/server'
+import { CharaEvent } from '../events/chara'
+
+@MapData({
+    id: 'medieval',
+    file: require('./tmx/medieval.tmx'),
+    name: 'Town',
+    events: [
+        CharaEvent
+    ]
+})
+export class MedievalMap extends RpgMap { }
+```
+
+### Solution 2 : Give coordinate points
+
+Position the event on the map with X and Y positions
+
+```ts
+import { RpgMap, MapData } from '@rpgjs/server'
+import { CharaEvent } from '../events/chara'
+
+@MapData({
+    id: 'medieval',
+    file: require('./tmx/medieval.tmx'),
+    name: 'Town',
+    events: [
+        { event: CharaEvent, x: 100, y: 150 }
+    ]
+})
+export class MedievalMap extends RpgMap { }
+```
+
 ### Dialogue with a non-player character
 
 

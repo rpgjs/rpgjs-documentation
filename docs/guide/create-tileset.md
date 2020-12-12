@@ -58,23 +58,85 @@ export default class RPG extends RpgClientEngine {}
 
 2. And add the `Tilesets`, class 
 
-## Put colission properties on the tileset
+## Define collisions
+
+### First of all
 
 1. Create a new tileset with Tiled Map Editor (`File` > `New` > `New Tileset`)
 2. Set source and width and height of tile
+3. Save file to `medieval.tsx` in `src/server/maps/tmx`
 
 ![new tileset](/assets/new-tileset.png)
 
-3. Select the tile (or several at the same time) and set a new property
+### Solution 1: Collision on a tile
+
+1. Select the tile (or several at the same time) and set a new property
 
 ![select tile](/assets/select-tile.jpeg)
 
-4. Add the `colission` property of type `BOOL`
+2. Add the `collision` property of type `BOOL`
 
 ![add colission](/assets/add-colission.png)
 
-5. Check the `colission` property on the selected tile
+3. Check the `collision` property on the selected tile
 
-![set colission](/assets/set-colission.jpeg)
+![set collision](/assets/set-colission.jpeg)
 
-6. Save file to `medieval.tsx` in `src/server/maps/tmx`
+### Solution 2: Precise collision with a polygon
+
+![precise collision](/assets/precise-collision.png)
+
+1. Select `Tile Collision Editor`
+2. Choose the tile
+3. Put a polygon on part having a collision
+
+## Define overlays
+
+To define an overlay, you have two solutions. Either indicate that the layer is above the events, or the tile itself
+
+### Solution 1: Z layer
+
+![layer-overlay](/assets/layer-overlay.png)
+
+1. Click on the layer
+2. Add a property by clicking on the plus icon
+
+![z-value](/assets/z-value.png)
+
+3. Add the property named `z` of `int` type 
+
+![layer-z](/assets/layer-z.png)
+
+The z value is the height (in number of tiles) in the terrain (grass for example) and the elements of the new layer.
+
+For example, in the image above, 
+- z = 0 (the grass, the hero's feet)
+- z = 1 (The middle of the wall of the house, The middle of the wall of the house)
+- z = 2 (The top of the wall of the house, the beginning of the roof of the house)
+- z = 3 (The beginning of the chimney, the middle of the roof)
+- z = 4 (The top of the roof)
+
+> It is important to respect the z-positions. Because by putting good z values, you could later (in future versions of RPGJS) play with heights (make a bridge, make an object fall, etc.).
+
+### Solution 2: Z tile (May be complementary with the first solution)
+
+![z-tile](/assets/z-tile.png)
+
+1. Select a tile
+2. Set the `z` property
+
+> Note that the z-value is added to the z-value of the layer. For example, in the image above, the top of the trunk is on z=1. But if the tree is on a layer of z=2 then the true value of the top of the trunk will be z=3.
+
+##### Case of overlay of a tile with a precise collision
+
+You may have problems with overlapping ([See above](#solution-2-precise-collision-with-a-polygon)). The image below shows the hero's feet over the bush
+
+![overlay-problem](/assets/overlay-problem.png)
+
+To remedy this problem, give the z-value on the tile correctly. Here, the bush is at the same level as the hero's feet. So we put z=0
+
+![z-0](/assets/z-0.png)
+
+The problem is solved!
+
+![overlay-problem-solved](/assets/overlay-problem-solved.png)
