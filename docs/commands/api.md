@@ -114,55 +114,11 @@ console.log(player.level) // 50
 
 ## Items Settings
 
-### Add item 
+<Content :page-key="$site.pages.find(p => p.path === '/api/ItemManager.html').key"/>
 
-- **Method**: `player.addItem(item, nb = 1)`
-- **Arguments**: 
-    - {ItemClass | string} item
-    - {number} nb
-- **Return**: `{ nb: number, item: instance of ItemClass }`
-- **Usage**:
+## Movement
 
-Add an object in the player's inventory. You can give more than one by specifying `nb`
-
-```ts
-import Potion from 'your-database/potion'
-
-player.addItem(Potion, 5)
-```
-
-### Remove item 
-
-- **Method**: `player.addItem(item, nb = 1)`
-- **Arguments**: 
-    - {ItemClass | string} item
-    - {number} nb
-- **Return**: `{ nb: number, item: instance of ItemClass } | undefined`
-- **Usage**:
-
-Deletes an object. Decreases the value `nb`. If the number falls to 0, then the object is removed from the inventory. The method then returns `undefined`
-
-```ts
-import Potion from 'your-database/potion'
-
-try {
-    player.removeItem(Potion, 5)
-}
-catch (err) {
-    console.log(err)
-}
-```
-
-If the object is not in the inventory, an exception is raised
-
-```
-{
-    id: ITEM_NOT_INVENTORY,
-    msg: '...'
-}
-```
-
-> If the first parameter is a string, then it must represent the identifier of the item.
+<Content :page-key="$site.pages.find(p => p.path === '/api/MoveManager.html').key"/>
 
 ## Prebuilt GUI
 

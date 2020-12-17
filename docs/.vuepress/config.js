@@ -34,6 +34,21 @@ module.exports = {
         children: [
           '/commands/api'
         ]
+      },
+      {
+        title: 'RPG Database',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          '/database/item',
+          '/database/weapon',
+          '/database/armor',
+          '/database/actor',
+          '/database/class',
+          '/database/skill',
+          '/database/state',
+          '/database/element'
+        ]
       }
     ],
     plugins: ['@vuepress/active-header-links']

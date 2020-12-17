@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "generate": "node bin/extract"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^1.5.4"
+  },
+  "dependencies": {
+    "comment-parser": "^0.7.6"
   }
 }
