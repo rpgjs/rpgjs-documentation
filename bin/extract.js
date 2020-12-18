@@ -23,7 +23,9 @@ const files = [
 const types = {
     Effect: '/database/effect.html',
     Element: '/database/element.html',
-    StateClass: '/database/state.html'
+    StateClass: '/database/state.html',
+    ItemClass: '/database/item.html',
+    Move: '/commands/move.html#move'
 }
 
 function toLink(type) {
@@ -127,12 +129,14 @@ md[memberof.name] += `
         if (tag('throws')) {
             md[memberof.name] += 
 `
-- **Exceptions**:`
+- **Throws**:
+`
             for(let tag of tags) {
                 if (tag.tag != 'throws') continue
                 md[memberof.name] += 
 `
-    - \`{${tag.type}}\` \`${tag.name}\`. ${tag.description}`
+${tag.description}
+---`
             }
         }
 

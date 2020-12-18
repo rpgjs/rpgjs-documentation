@@ -35,8 +35,10 @@ module.exports = {
           '/commands/parameter',
           '/commands/gold',
           '/commands/item',
+          '/commands/variable',
           '/commands/move',
-          '/commands/gui'
+          '/commands/gui',
+          '/commands/effect'
         ]
       },
       {
