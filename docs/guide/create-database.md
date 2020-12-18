@@ -48,8 +48,7 @@ import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 import { Potion } from '../database/items/potion.ts'
 
 @EventData({
-    name: 'EV-1',
-    syncAll: false
+    name: 'EV-1'
 })
 export class CharaEvent extends RpgEvent {
     async onAction(player: RpgPlayer) {

@@ -20,11 +20,9 @@ First of all, add a file in `src/server/events/chara.ts`
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 
 @EventData({
-    name: 'EV-1',
-    syncAll: true
+    name: 'EV-1'
 })
 export class CharaEvent extends RpgEvent {
-
     onInit(player: RpgPlayer) {
     }
 
@@ -100,8 +98,7 @@ The idea is to put an appearance as soon as the event is initialized.
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 
 @EventData({
-    name: 'EV-1',
-    syncAll: true
+    name: 'EV-1'
 })
 export class CharaEvent extends RpgEvent {
     onInit() {
@@ -116,8 +113,7 @@ Then, when the player interacts with the event, you are asked to display a dialo
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 
 @EventData({
-    name: 'EV-1',
-    syncAll: true
+    name: 'EV-1'
 })
 export class CharaEvent extends RpgEvent {
     onInit() {
@@ -140,8 +136,7 @@ Here is a more complete example. It shows a small scenario. It is important to k
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 
 @EventData({
-    name: 'EV-1',
-    syncAll: true
+    name: 'EV-1'
 })
 export class CharaEvent extends RpgEvent {
     onInit() {

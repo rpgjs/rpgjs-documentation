@@ -4,30 +4,30 @@ const fs = require('fs')
 const baseUrl = __dirname + '/../../RPGJS/'
 const destination  = __dirname + '/../docs/api/'
 
+const open = function(path) {
+    return fs
+    .readdirSync(baseUrl + path)
+    .map(file => `${path}/${file}`)
+}
+
 const files = [
-    {
-        source: 'packages/database/src/item.ts'
-    },
-    {
-        source: 'packages/server/src/Player/ItemManager.ts'
-    },
-    {
-        source: 'packages/server/src/Player/MoveManager.ts'
-    }
+    ...open('packages/database/src'),
+    ...open('packages/server/src/Player')
 ]
 
 let md = {}
 for (let file of files) {
-    const code = fs.readFileSync(baseUrl + file.source, 'utf-8')
-    const comments = parser(code)
+    const code = fs.readFileSync(baseUrl + file, 'utf-8')
+    const comments = parser(code, {
+        trim: false
+    })
     for (let comment of comments) {
         const { tags, description } = comment
         const tag = name => tags.find(tag => tag.tag == name)
-        const memberof = tag('memberof')
-        if (!memberof) continue
-        if (!md[memberof.name]) md[memberof.name] = ''
-       
-        md[memberof.name] += `
+        const memberofs = tags.filter(tag => tag.tag == 'memberof')
+        for (let memberof of memberofs) {  
+            if (!md[memberof.name]) md[memberof.name] = ''
+            md[memberof.name] += `
 ---
 `
         if (tag('title')) {
@@ -41,6 +41,12 @@ md[memberof.name] +=
 - **Property**: \`${tag('prop').name}\`
 - **Type**: \`${tag('prop').type}\`
 - **Optional**: \`${tag('prop').optional}\``
+        }
+
+        if (tag('readonly')) {
+            md[memberof.name] += 
+`
+- **Read Only**`
         }
 
         if (tag('method')) {
@@ -94,6 +100,7 @@ ${tag('example').description}`
 
 ${description}
 `
+        }
     }
    
 }

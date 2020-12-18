@@ -77,34 +77,3 @@ Example, the Paralize state has a 1 in 2 chance of removal :
 removeStates: [{ rate: 0.5, state: Paralize }]
 ``` 
 
-
----
-
-- **Property**: `hpValue`
-- **Type**: `number`
-- **Optional**: `true` 
-- **Usage**:
-
- 
-The number of heart points given back by the item 
-
----
-
-- **Property**: `hitRate`
-- **Type**: `number`
-- **Optional**: `true`
-- **Default**: `1` 
-- **Usage**:
-
- The success rate of the item. Value between 0 and 1. Even if the use of the item failed, the item will be removed from the player's inventory. 
-
----
-
-- **Property**: `consumable`
-- **Type**: `boolean`
-- **Optional**: `true`
-- **Default**: `true` 
-- **Usage**:
-
- 
-Indicate if the item can be used. If not, an error will be sent 

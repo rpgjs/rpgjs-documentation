@@ -10,7 +10,9 @@
 import { Move } from '@rpgjs/server'
 
 player.moveRoutes([ Move.tileLeft(), Move.tileDown(2) ])
-``` 
+```
+ 
 - **Usage**:
+
 
 Gives an itinerary
