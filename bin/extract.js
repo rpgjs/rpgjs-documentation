@@ -6,21 +6,54 @@ const destination  = __dirname + '/../docs/api/'
 
 const open = function(path) {
     return fs
-    .readdirSync(baseUrl + path)
-    .map(file => `${path}/${file}`)
+        .readdirSync(baseUrl + path)
+        .map(file => `${baseUrl}${path}/${file}`)
+        .filter(file => {
+            const isDir = fs.lstatSync(file).isDirectory()
+            return !isDir
+        })
 }
 
 const files = [
     ...open('packages/database/src'),
+    ...open('packages/database/src/interfaces'),
     ...open('packages/server/src/Player')
 ]
 
+const types = {
+    Effect: '/database/effect.html',
+    Element: '/database/element.html',
+    StateClass: '/database/state.html'
+}
+
+function toLink(type) {
+    for (let list in types) {
+        let regexp = new RegExp(`(${list})`, 'g')
+        type = type.replace(regexp, `[$1](${types[list]})`)
+        type = type.replace(/>/g, '&gt;')
+        type = type.replace(/</g, '&lt;')
+    }
+    return type
+}
+
+function createSummary(summary) {
+    let text = '::: tip Summary\n'
+    for (let title of summary) {
+        if (!title) continue
+        text += `- [${title}](#${title.toLowerCase().replace(/ /g, '-')})\n`
+    }
+    text += ':::'
+    return text
+}
+
 let md = {}
+let summary = {}
 for (let file of files) {
-    const code = fs.readFileSync(baseUrl + file, 'utf-8')
+    const code = fs.readFileSync(file, 'utf-8')
     const comments = parser(code, {
         trim: false
     })
+    
     for (let comment of comments) {
         const { tags, description } = comment
         const tag = name => tags.find(tag => tag.tag == name)
@@ -30,16 +63,40 @@ for (let file of files) {
             md[memberof.name] += `
 ---
 `
-        if (tag('title')) {
+        if (tag('todo')) {
+            md[memberof.name] += `
+::: warning
+The realization of this property or method has not been completed.
+:::
+`
+        }
+
+        const title = tag('title') ? `${tag('title').name} ${tag('title').description}` : tag('prop')?.name
+        if (!summary[memberof.name]) summary[memberof.name] = []
+        summary[memberof.name].push(title)
+
 md[memberof.name] += 
-`### ${tag('title').name} ${tag('title').description}`
+`### ${title}`
+
+        if (tag('enum')) {
+md[memberof.name] += `
+- **Enum**: \`${tag('enum').type}\`
+
+| Tag           | Description |
+| ------------- |------------:|`
+            const description = tag('enum').description
+            const lines = description.split('\n')
+            for (let line of lines) {
+                md[memberof.name] += `
+| ${line} |`
+            }
         }
        
         if (tag('prop')) {
             md[memberof.name] += 
 `
 - **Property**: \`${tag('prop').name}\`
-- **Type**: \`${tag('prop').type}\`
+- **Type**: ${toLink(tag('prop').type)}
 - **Optional**: \`${tag('prop').optional}\``
         }
 
@@ -63,7 +120,7 @@ md[memberof.name] +=
                 if (tag.tag != 'param') continue
                 md[memberof.name] += 
 `
-    - \`{${tag.type}}\` \`${tag.name}\`. ${tag.description} (Optional: \`${tag.optional}\`)`
+    - {${toLink(tag.type)}} \`${tag.name}\`. ${tag.description} (Optional: \`${tag.optional}\`)`
             }
         }
 
@@ -81,7 +138,7 @@ md[memberof.name] +=
 
         if (tag('returns')) {
 md[memberof.name] += `
-- **Return**: \`${tag('returns').type}\`  ${tag('returns').description}`          
+- **Return**: ${toLink(tag('returns').type)}  ${tag('returns').description}`          
         }
 
         if (tag('example')) {
@@ -100,11 +157,13 @@ ${tag('example').description}`
 
 ${description}
 `
+
+
         }
     }
-   
 }
 
 for (let key in md) {
-    fs.writeFileSync(destination + key + '.md', md[key], 'utf-8')
+    const text = createSummary(summary[key]) + md[key]
+    fs.writeFileSync(destination + key + '.md', text, 'utf-8')
 }

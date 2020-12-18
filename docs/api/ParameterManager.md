@@ -1,8 +1,16 @@
-
+::: tip Summary
+- [Set initial level](#set-initial-level)
+- [Set final level](#set-final-level)
+- [Change Experience Curve](#change-experience-curve)
+- [Change HP](#change-hp)
+- [Change Experience](#change-experience)
+- [Change Level](#change-level)
+- [Experience for next level ?](#experience-for-next-level-?)
+:::
 ---
 ### Set initial level
 - **Property**: `player.initialLevel`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Default**: `1` 
 - **Usage**:
@@ -16,7 +24,7 @@ player.initialLevel = 5
 ---
 ### Set final level
 - **Property**: `player.finalLevel`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Default**: `99` 
 - **Usage**:
@@ -30,7 +38,7 @@ player.finalLevel = 50
 ---
 ### Change Experience Curve
 - **Property**: `player.expCurve`
-- **Type**: `object`
+- **Type**: object
 - **Optional**: `false`
 - **Default**: `
 ` 
@@ -46,7 +54,7 @@ With Object-based syntax, you can use following options:
 ---
 ### Change HP
 - **Property**: `player.hp`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Default**: `MaxHPValue` 
 - **Usage**:
@@ -64,7 +72,7 @@ player.hp = 100
 ---
 ### Change Experience
 - **Property**: `player.exp`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Default**: `0` 
 - **Usage**:
@@ -88,7 +96,7 @@ console.log(player.level) // 2
 ---
 ### Change Level
 - **Property**: `player.level`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Default**: `1` 
 - **Usage**:
@@ -112,7 +120,7 @@ console.log(player.level) // 50
 ---
 ### Experience for next level ?
 - **Property**: `player.expForNextlevel`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:

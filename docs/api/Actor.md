@@ -2,10 +2,8 @@
 - [id](#id)
 - [name](#name)
 - [description](#description)
-- [effects](#effects)
 - [statesEfficiency](#statesefficiency)
 - [elementsEfficiency](#elementsefficiency)
-- [paramsModifier](#paramsmodifier)
 :::
 ---
 ### id
@@ -36,22 +34,6 @@ The name of the item.
 
  
 The description of the item. 
-
----
-### effects
-- **Property**: `effects`
-- **Type**: Array&lt;[Effect](/database/effect.html)&gt;
-- **Optional**: `true`
-- **Example**: 
-```ts
-import { Effect } from '@rpgjs/server'
-
-effects: [Effect.CAN_NOT_SKILL]
-``` 
-- **Usage**:
-
- 
-List of effects applied by the object, weapon, armor or condition
 
 ---
 
@@ -150,63 +132,4 @@ Changes the efficiency of the elements. It indicates whether or not the player w
 It is a multiplying coefficient for damage calculations.
 
 To help, you can use the Efficiency enumerations
-
-
----
-### paramsModifier
-- **Property**: `paramsModifier`
-- **Type**: Object
-- **Optional**: `true`
-- **Example**: 
-```ts
-import { Presets } from '@rpgjs/server'
-
-const { MAXHP } = Presets
-
-paramsModifier: {
-     [MAXHP]: {
-         value: 100
-     }
-}
-```
-
-1. Player has 741 MaxHp
-2. After changing the parameter, he will have 841 MaxHp
- 
-- **Usage**:
-
- 
-Changes the values of some parameters
-
-> It is important that these parameters have been created beforehand with the `addParameter()` method.
-> By default, the following settings have been created: 
-- maxhp
-- maxsp
-- str
-- int
-- dex
-- agi
-
-**Object Key**
-
-The key of the object is the name of the parameter
-
-> The good practice is to retrieve the name coming from a constant
-
-**Object Value**
-
-The value of the key is an object containing: 
-``` 
-{
-  value: number,
-  rate: number
-}
-```
-
-- value: Adds a number to the parameter
-- rate: Adds a rate to the parameter
-
-> Note that you can put both (value and rate)
-
-In the case of a state or the equipment of a weapon or armor, the parameters will be changed but if the state disappears or the armor/weapon is de-equipped, then the parameters will return to the initial state.
 

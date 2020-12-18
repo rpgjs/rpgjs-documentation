@@ -1,10 +1,12 @@
-
+::: tip Summary
+- [Give an itinerary](#give-an-itinerary)
+:::
 ---
 ### Give an itinerary
 - **Method**: `player.moveRoutes(routes)`
 - **Arguments**:
-    - `{Array<string | Promise<any> | Direction | Function>}` `routes`.  (Optional: `false`)
-- **Return**: `Promise`  
+    - {Array&lt;string | Promise&lt;any&gt; | Direction | Function&gt;} `routes`.  (Optional: `false`)
+- **Return**: Promise  
 - **Example**: 
 ```ts
 import { Move } from '@rpgjs/server'

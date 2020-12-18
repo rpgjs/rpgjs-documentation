@@ -47,7 +47,8 @@ module.exports = {
           '/database/class',
           '/database/skill',
           '/database/state',
-          '/database/element'
+          '/database/element',
+          '/database/effect'
         ]
       }
     ],

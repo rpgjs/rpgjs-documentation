@@ -2,18 +2,18 @@
 
 ## Player Parameters
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/GoldManager.html').key"/>
+<ApiContent page="GoldManager" />
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/ParameterManager.html').key"/>
+<ApiContent page="ParameterManager" />
 
 ## Items Settings
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/ItemManager.html').key"/>
+<ApiContent page="ItemManager" />
 
 ## Movement
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/MoveManager.html').key"/>
+<ApiContent page="MoveManager" />
 
 ## Prebuilt GUI
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/GuiManager.html').key"/>
+<ApiContent page="GuiManager" />

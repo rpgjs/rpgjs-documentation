@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-Read the article [Create database](/guide/create-database.html#prerequisites) to find out how to put the data into your game and then use it. 
+<Partial page="prerequisites-data" />
 
-Example of full state:
+## Example of full state:
 
 ```ts
 import { RpgPlayer } from '@rpgjs/core'
@@ -25,4 +25,4 @@ export class Paralyse {
 
 ## API
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/State.html').key"/>
+<ApiContent page="State" />

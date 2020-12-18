@@ -1,10 +1,8 @@
 # Weapons
 
-## Prerequisites
+<Partial page="prerequisites-data" />
 
-Read the article [Create database](/guide/create-database.html#prerequisites) to find out how to put the data into your game and then use it. 
-
-Example of full weapon:
+## Example of full weapon:
 
 ```ts
 import { RpgPlayer } from '@rpgjs/core'
@@ -47,4 +45,4 @@ export class Sword {
 
 ## API
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/Weapon.html').key"/>
+<ApiContent page="Weapon" />

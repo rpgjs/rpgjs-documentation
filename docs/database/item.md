@@ -1,10 +1,8 @@
 # Items
 
-## Prerequisites
+<Partial page="prerequisites-data" />
 
-Read the article [Create database](/guide/create-database.html#prerequisites) to find out how to put the data into your game and then use it. 
-
-Example of full item:
+## Example of full item:
 
 ```ts
 import { RpgPlayer } from '@rpgjs/core'
@@ -44,4 +42,4 @@ export class Potion {
 
 ## API
 
-<Content :page-key="$site.pages.find(p => p.path === '/api/Item.html').key"/>
+<ApiContent page="Item" />

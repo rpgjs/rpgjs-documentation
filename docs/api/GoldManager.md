@@ -1,8 +1,10 @@
-
+::: tip Summary
+- [Change Gold](#change-gold)
+:::
 ---
 ### Change Gold
 - **Property**: `player.gold`
-- **Type**: `number`
+- **Type**: number
 - **Optional**: `false`
 - **Default**: `0` 
 - **Usage**:

@@ -1,11 +1,13 @@
-
+::: tip Summary
+- [Show Text ](#show-text-)
+:::
 ---
 ### Show Text 
 - **Method**: `player.showText(text,options)`
 - **Arguments**:
-    - `{string}` `text`.  (Optional: `false`)
-    - `{object}` `options`. the different options, see usage below (Optional: `true`)
-- **Return**: `Promise`   
+    - {string} `text`.  (Optional: `false`)
+    - {object} `options`. the different options, see usage below (Optional: `true`)
+- **Return**: Promise   
 - **Usage**:
 
 
