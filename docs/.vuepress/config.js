@@ -32,7 +32,11 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 2,
         children: [
-          '/commands/api'
+          '/commands/parameter',
+          '/commands/gold',
+          '/commands/item',
+          '/commands/move',
+          '/commands/gui'
         ]
       },
       {
