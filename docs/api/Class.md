@@ -1,10 +1,28 @@
 ::: tip Summary
+- [skillsToLearn](#skillstolearn)
 - [id](#id)
 - [name](#name)
 - [description](#description)
 - [statesEfficiency](#statesefficiency)
 - [elementsEfficiency](#elementsefficiency)
 :::
+---
+### skillsToLearn
+- **Property**: `skillsToLearn`
+- **Type**: Array&lt;{ level: number, skill: [SkillClass](/database/skill.html) }&gt;
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Indicate which skill will be learned when the level is reached
+
+```ts
+import { Fire } from 'my-database/skills/fire'
+
+skillsToLearn: [{ level: 5, skill: Fire }]
+```
+
+
 ---
 ### id
 - **Property**: `id`

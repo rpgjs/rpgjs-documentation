@@ -1,10 +1,108 @@
 ::: tip Summary
+- [parameters](#parameters)
+- [startingEquipment](#startingequipment)
+- [class](#class)
+- [Set initial level](#set-initial-level)
+- [Set final level](#set-final-level)
+- [Experience Curve](#experience-curve)
 - [id](#id)
 - [name](#name)
 - [description](#description)
 - [statesEfficiency](#statesefficiency)
 - [elementsEfficiency](#elementsefficiency)
 :::
+---
+### parameters
+- **Property**: `parameters`
+- **Type**: object
+- **Optional**: `true`
+- **Arguments**:
+    - {object} ``.  (Optional: `false`) 
+- **Usage**:
+
+ 
+Give parameters. Give a start value and an end value. 
+The start value will be set to the level set at `initialLevel` and the end value will be linked to the level set at `finalLevel`.
+
+```ts
+import { Presets } from '@rpgjs/server'
+
+const { MAXHP } = Presets 
+
+parameters: {
+     [MAXHP]: {
+         start: 700,
+         end: 10000
+     }
+}
+```
+
+
+---
+### startingEquipment
+- **Property**: `startingEquipment`
+- **Type**: Array&lt;[WeaponClass](/database/weapon.html) | [ArmorClass](/database/armor.html)&gt;
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Allows to give a default equipment
+
+```ts
+import { Sword } from 'my-database/weapons/sword'
+
+startingEquipment: [Sword]
+```
+
+
+---
+### class
+- **Property**: `class`
+- **Type**: [ClassClass](/database/class.html)
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Assigns a default class
+
+```ts
+import { Fighter } from 'my-database/classes/fighter'
+
+class: Fighter
+```
+
+---
+### Set initial level
+- **Property**: `initialLevel`
+- **Type**: number
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+
+---
+### Set final level
+- **Property**: `finalLevel`
+- **Type**: number
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+
+---
+### Experience Curve
+- **Property**: `expCurve`
+- **Type**: object
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+With Object-based syntax, you can use following options:
+- `basis: number`
+- `extra: number`
+- `accelerationA: number`
+- `accelerationB: number`
+
 ---
 ### id
 - **Property**: `id`

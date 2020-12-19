@@ -5,7 +5,7 @@
 ## Example of full item:
 
 ```ts
-import { RpgPlayer } from '@rpgjs/core'
+import { RpgPlayer } from '@rpgjs/server'
 import { Item } from '@rpgjs/database'
 
 @Item({  

@@ -25,6 +25,11 @@ const types = {
     Element: '/database/element.html',
     StateClass: '/database/state.html',
     ItemClass: '/database/item.html',
+    SkillClass: '/database/skill.html',
+    WeaponClass: '/database/weapon.html',
+    ArmorClass: '/database/armor.html',
+    ActorClass: '/database/actor.html',
+    ClassClass: '/database/class.html',
     Move: '/commands/move.html#move'
 }
 

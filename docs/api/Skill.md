@@ -2,6 +2,11 @@
 - [id](#id)
 - [name](#name)
 - [description](#description)
+- [spCost](#spcost)
+- [power](#power)
+- [coefficient](#coefficient)
+- [variance](#variance)
+- [hitRate](#hitrate)
 - [elements](#elements)
 - [removeStates](#removestates)
 :::
@@ -34,6 +39,73 @@ The name of the item.
 
  
 The description of the item. 
+
+---
+### spCost
+- **Property**: `spCost`
+- **Type**: number
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Indicates how much SP will be removed when the skill is used.
+
+
+---
+### power
+- **Property**: `power`
+- **Type**: number
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Indicates the power of the skill
+
+
+---
+### coefficient
+- **Property**: `coefficient`
+- **Type**: object
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The coefficient indicates which parameter influences the skill
+
+```ts
+import { Presets } from '@rpgjs/server'
+
+const { ATK } = Presets
+
+coefficient: {
+     [ATK]: 2
+}
+```
+
+Below, The ATK parameter will be taken into account, added and multiplied by 2.
+
+> It depends on the fight formula. By default, the coefficients are used on ATK, PDEF SDEF, STR, DEX, AGI, INT
+
+
+---
+### variance
+- **Property**: `variance`
+- **Type**: number
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The variance of the damage. For example, if you put `20` and the damage is 500 then the player can lose between 480 and 520 HP.
+
+---
+### hitRate
+- **Property**: `hitRate`
+- **Type**: number
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The rate of chance, between 0 and 1 that the skill will take effect
 
 ---
 ### elements

@@ -33,12 +33,17 @@ module.exports = {
         sidebarDepth: 2,
         children: [
           '/commands/parameter',
+          '/commands/class',
           '/commands/gold',
+          '/commands/state',
+          '/commands/element',
           '/commands/item',
+          '/commands/skill',
           '/commands/variable',
           '/commands/move',
           '/commands/gui',
-          '/commands/effect'
+          '/commands/effect',
+          '/commands/battle'
         ]
       },
       {

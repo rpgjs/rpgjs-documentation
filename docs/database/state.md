@@ -7,7 +7,7 @@
 ## Example of full state:
 
 ```ts
-import { RpgPlayer } from '@rpgjs/core'
+import { RpgPlayer } from '@rpgjs/server'
 import { State } from '@rpgjs/database'
 
 @State({  
