@@ -32,6 +32,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 2,
         children: [
+          '/commands/common',
           '/commands/parameter',
           '/commands/class',
           '/commands/gold',

@@ -17,7 +17,8 @@ const open = function(path) {
 const files = [
     ...open('packages/database/src'),
     ...open('packages/database/src/interfaces'),
-    ...open('packages/server/src/Player')
+    ...open('packages/server/src/Player'),
+    ...open('packages/common/src')
 ]
 
 const types = {
