@@ -1,5 +1,6 @@
 ::: tip Summary
 - [Get Item](#get-item)
+- [Has Item](#has-item)
 - [Add Item](#add-item)
 - [Remove Item](#remove-item)
 - [Buy Item](#buy-item)
@@ -11,7 +12,7 @@
 ### Get Item
 - **Method**: `player.getItem(itemClass)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html)} `itemClass`.  (Optional: `false`)
+    - {[ItemClass](/database/item.html) | string} `itemClass`. Identifier of the object if the parameter is a string (Optional: `false`)
 - **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) }  
 - **Example**: 
 ```ts
@@ -26,6 +27,24 @@ console.log(inventory) // { nb: 5, item: <instance of Potion> }
 
 
 Retrieves the information of an object: the number and the instance 
+
+---
+### Has Item
+- **Method**: `player.hasItem(itemClass)`
+- **Arguments**:
+    - {[ItemClass](/database/item.html) | string} `itemClass`. Identifier of the object if the parameter is a string (Optional: `false`)
+- **Return**: boolean  
+- **Example**: 
+```ts
+import Potion from 'your-database/potion'
+
+player.hasItem(Potion) // false
+ ```
+ 
+- **Usage**:
+
+
+Check if the player has the item in his inventory.
 
 ---
 ### Add Item
@@ -134,7 +153,7 @@ Purchases an item and reduces the amount of gold
 ### Sell Item
 - **Method**: `player.sellItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html)} `itemClass`.  (Optional: `false`)
+    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
     - {number} `nbToSell`. Default 1 (Optional: `true`)
 - **Throws**:
 
@@ -188,7 +207,7 @@ Sell an item and the player wins the amount of the item divided by 2
 ### Use an Item
 - **Method**: `player.useItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html)} `itemClass`.  (Optional: `false`)
+    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
 - **Throws**:
 
 If the player has the `Effect.CAN_NOT_ITEM` effect
@@ -254,7 +273,7 @@ catch (err) {
 ### Equip Weapon or Armor
 - **Method**: `player.equip(itemClass,equip=true)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html)} `itemClass`.  (Optional: `false`)
+    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
     - {number} `equip`. Equip the object if true or un-equipped if false (Optional: `true`)
 - **Throws**:
 

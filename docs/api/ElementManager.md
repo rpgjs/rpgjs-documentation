@@ -1,6 +1,6 @@
 ::: tip Summary
 - [Get Elements Defense](#get-elements-defense)
-- [Set/Get Elements Efficiency](#set/get-elements-efficiency)
+- [Set/Get Elements Efficiency](#set-get-elements-efficiency)
 - [Get Elements](#get-elements)
 :::
 ---

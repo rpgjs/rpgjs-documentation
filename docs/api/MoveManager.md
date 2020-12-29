@@ -1,6 +1,7 @@
 ::: tip Summary
 - [Change Speed](#change-speed)
 - [Block movement](#block-movement)
+- [Go through to other player](#go-through-to-other-player)
 - [Go through the player](#go-through-the-player)
 - [Change Frequency](#change-frequency)
 - [Give an itinerary](#give-an-itinerary)
@@ -14,9 +15,13 @@
 
 | Tag           | Description |
 | ------------- |------------:|
+| Speed.Slowest | 0.2 |
+| Speed.Slower | 0.5 |
 | Speed.Slow | 1 |
 | Speed.Normal | 3 |
 | Speed.Fast | 5 |
+| Speed.Faster | 7 |
+| Speed.Fastest | 10 |
 - **Property**: `player.speed`
 - **Type**: number
 - **Optional**: `false`
@@ -55,6 +60,22 @@ player.canMove = false
 
 
 ---
+### Go through to other player
+- **Property**: `player.throughOtherPlayer`
+- **Type**: boolean
+- **Optional**: `false`
+- **Default**: `true` 
+- **Usage**:
+
+ 
+The player passes through the other players (or vice versa). But the player does not go through the events.
+
+```ts
+player.throughOtherPlayer = true
+```
+
+
+---
 ### Go through the player
 - **Property**: `player.through`
 - **Type**: boolean
@@ -63,7 +84,7 @@ player.canMove = false
 - **Usage**:
 
  
-No collision will occur if the value of this property is `true`.
+The player goes through the event or the other players (or vice versa)
 
 ```ts
 player.through = true
@@ -76,7 +97,12 @@ player.through = true
 
 | Tag           | Description |
 | ------------- |------------:|
-| Frequency.Low | 400 |
+| Frequency.Lowest | 600 |
+| Frequency.Lower | 400 |
+| Frequency.Low | 200 |
+| Frequency.High | 100 |
+| Frequency.Highter | 50 |
+| Frequency.Highest | 25 |
 | Frequency.None | 0 |
 - **Property**: `player.speed`
 - **Type**: number

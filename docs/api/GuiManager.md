@@ -1,5 +1,10 @@
 ::: tip Summary
-- [Show Text ](#show-text-)
+- [Show Text ](#show-text)
+- [Show Choices ](#show-choices)
+- [Call Main Menu](#call-main-menu)
+- [Call Shop Menu](#call-shop-menu)
+- [Call custom GUI](#call-custom-gui)
+- [Close custom GUI](#close-custom-gui)
 :::
 ---
 ### Show Text 
@@ -11,7 +16,7 @@
 - **Usage**:
 
 
-Show a text. This is a graphical interface already built
+Show a text. This is a graphical interface already built. Opens the GUI named `rpg-dialog`
 
 ```ts
 player.showText('Hello World')
@@ -87,4 +92,100 @@ player.showText('Hello World', {
      talkWith: this
 })
 ```
+
+
+---
+### Show Choices 
+- **Method**: `player.showChoices(text,choices)`
+- **Arguments**:
+    - {string} `text`.  (Optional: `false`)
+    - {Array&lt;{ text: string, value: any }&gt;} `choices`.  (Optional: `false`)
+    - {object} `options`. Same options as the openDialog method (Optional: `true`)
+- **Return**: Promise&lt;Choice | null&gt;   
+- **Usage**:
+
+
+Shows a dialog box with a choice. Opens the GUI named `rpg-dialog`
+
+```ts
+const choice = await player.showChoices('What color do you prefer?', [
+     { text: 'Black', value: 'black' },
+     { text: 'Rather the blue', value: 'blue' },
+     { text: 'I don\'t have a preference!', value: 'none' }
+])
+
+// If the player selects the first
+console.log(choice) // { text: 'Black', value: 'black' }
+```
+
+
+---
+### Call Main Menu
+- **Method**: `player.callMainMenu()`
+- **Return**: void   
+- **Usage**:
+
+
+Calls main menu. Opens the GUI named `rpg-main-menu`
+
+
+---
+### Call Shop Menu
+- **Method**: `player.callShop()`
+- **Return**: void   
+- **Usage**:
+
+
+Calls shop menu. Opens the GUI named `rpg-shop`
+
+
+---
+### Call custom GUI
+- **Method**: `player.gui(guiId)`
+- **Arguments**:
+    - {string} `guiId`.  (Optional: `false`)
+- **Return**: Gui   
+- **Usage**:
+
+
+Call a custom Gui
+
+```ts
+// Calls a client-side component, created with VueJS, named "inn".
+const gui = player.gui('inn')
+
+ // You can wait for actions on the menu. It only works if the menu is open.
+gui.on('accept', () => {
+     player.allRecovery()
+})
+
+// The GUI is opened by passing recoverable data on the client side.
+gui.open({ hello: 'world' })
+```
+
+When opening the GUI, one can give options
+
+```ts
+await gui.open({ hello: 'world' }, {
+     waitingAction: true,
+     blockPlayerInput: true
+})
+// After the GUI is closed
+```
+
+- `blockPlayerInput`: while the GUI is open, the player can not move on the map
+- `waitingAction`: We explicitly wait until the GUI is closed for the promise to be resolved.
+
+
+---
+### Close custom GUI
+- **Method**: `player.removeGui(guiId,data)`
+- **Arguments**:
+    - {string} `guiId`.  (Optional: `false`)
+    - {object} `data`. Passing data if you close the GUI  (Optional: `true`)
+- **Return**: Gui   
+- **Usage**:
+
+
+Closes the GUI and removes it from memory
 

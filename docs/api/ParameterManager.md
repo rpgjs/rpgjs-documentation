@@ -1,5 +1,4 @@
 ::: tip Summary
-- [Get Param Value](#get-param-value)
 - [Set initial level](#set-initial-level)
 - [Set final level](#set-final-level)
 - [Change Experience Curve](#change-experience-curve)
@@ -8,32 +7,12 @@
 - [Change Experience](#change-experience)
 - [Change Level](#change-level)
 - [Experience for next level ?](#experience-for-next-level-?)
+- [Get Param Value](#get-param-value)
 - [Set Parameters Modifier](#set-parameters-modifier)
 - [Add custom parameters](#add-custom-parameters)
-- [Recovery HP and/or SP](#recovery-hp-and/or-sp)
+- [Recovery HP and/or SP](#recovery-hp-and-or-sp)
 - [All Recovery](#all-recovery)
 :::
----
-### Get Param Value
-- **Property**: `player.param`
-- **Type**: object
-- **Optional**: `false`
-- **Read Only** 
-- **Usage**:
-
- 
-Read the value of a parameter. Put the name of the parameter.
-
-```ts
-import { Presets } from '@rpgjs/server'
-
-const { MAXHP } = Presets 
-
-console.log(player.param[MAXHP])
-```
-
-> Possible to use the `player.getParamValue(name)` method instead
-
 ---
 ### Set initial level
 - **Property**: `player.initialLevel`
@@ -173,6 +152,27 @@ console.log(player.level) // 50
 ```ts
 console.log(player.expForNextlevel) // 150
 ```
+
+---
+### Get Param Value
+- **Property**: `player.param`
+- **Type**: object
+- **Optional**: `false`
+- **Read Only** 
+- **Usage**:
+
+ 
+Read the value of a parameter. Put the name of the parameter.
+
+```ts
+import { Presets } from '@rpgjs/server'
+
+const { MAXHP } = Presets 
+
+console.log(player.param[MAXHP])
+```
+
+> Possible to use the `player.getParamValue(name)` method instead
 
 ---
 ### Set Parameters Modifier

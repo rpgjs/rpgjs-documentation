@@ -10,7 +10,6 @@ Here is the structure of a project
 
 * src
     * client
-        * event.ts (optional)
         * gui (optional)
             * (your-gui).vue
         * characters (optional)
@@ -23,7 +22,7 @@ Here is the structure of a project
                 (your-tileset).png
         * index.html
         * main.ts
-        * player.ts (optional)
+        * sprite.ts (optional)
         * rpg.ts
     * server
         * maps (optional)

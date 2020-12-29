@@ -47,9 +47,9 @@ export class Player extends RpgPlayer {
 import { RpgPlayer } from '@rpgjs/server'
 
 export class Player extends RpgPlayer {
-    onConnected() {
+    async onConnected() {
         this.setGraphic('hero')
-        this.changeMap('medieval')
+        await this.changeMap('medieval')
     }
 }
 ```
@@ -64,9 +64,9 @@ Position the player on the map with X and Y positions
 import { RpgPlayer } from '@rpgjs/server'
 
 export class Player extends RpgPlayer {
-    onConnected() {
+    async onConnected() {
         this.setGraphic('hero')
-        this.changeMap('medieval', {
+        await this.changeMap('medieval', {
             x: 100,
             y: 100
         })

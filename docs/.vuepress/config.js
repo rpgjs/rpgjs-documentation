@@ -24,8 +24,10 @@ module.exports = {
           '/guide/player-start',
           '/guide/create-event',
           '/guide/create-database',
-          '/guide/use-event-commands',
-          '/guide/create-gui'
+          '/guide/create-gui',
+          '/guide/save',
+          '/guide/unit-test',
+          '/guide/production',
         ]
       }, {
         title: 'Player Commands API',

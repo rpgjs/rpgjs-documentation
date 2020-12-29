@@ -1,11 +1,12 @@
 ::: tip Summary
-- [Read/Give a name](#read/give-a-name)
+- [Read/Give a name](#read-give-a-name)
 - [Set Graphic](#set-graphic)
 - [Change Map](#change-map)
+- [Teleport on the map](#teleport-on-the-map)
 - [Run Sync Changes](#run-sync-changes)
 - [Get Current Map](#get-current-map)
 - [Emit to client](#emit-to-client)
-- [Get/Set position](#get/set-position)
+- [Get/Set position](#get-set-position)
 - [Set Sizes](#set-sizes)
 - [Set Hitbox](#set-hitbox)
 - [Change direction](#change-direction)
@@ -41,7 +42,7 @@ Give the spritesheet identifier
 - **Method**: `player.changeMap(mapId,positions)`
 - **Arguments**:
     - {string} `mapId`.  (Optional: `false`)
-    - { {x: number, y: number} } `positions`.  (Optional: `true`)
+    - { {x: number, y: number, z?: number} | string } `positions`.  (Optional: `true`)
 - **Return**: Promise&lt;RpgMap&gt;   
 - **Usage**:
 
@@ -51,6 +52,37 @@ Change your map. Indicate the positions to put the player at a place on the map
 > The map must be added to RpgServer beforehand. Guide: [Create Map](/guide/create-map.html)
 
 You don't have to give positions but you can put a starting position in the TMX file. Guide: [Start Position](/guide/player-start.html)
+
+
+---
+### Teleport on the map
+- **Method**: `player.teleport(positions)`
+- **Arguments**:
+    - { {x: number, y: number, z?: number} | string } `positions`.  (Optional: `true`)
+- **Return**:  {x: number, y: number, z: number}    
+- **Usage**:
+
+
+Allows to change the positions of the player on the current map. 
+You can put the X and Y positions or the name of the created shape on Tiled Map Editor.
+If you have several shapes with the same name, one position will be chosen randomly.
+
+```ts
+player.teleport({ x: 100, y: 500 })
+```
+
+or
+
+```ts
+player.teleport('my-shape-name')
+```
+
+If no parameter: 
+
+```ts
+player.teleport() // { x: 0, y: 0, z: 0 }
+```
+
 
 ---
 ### Run Sync Changes

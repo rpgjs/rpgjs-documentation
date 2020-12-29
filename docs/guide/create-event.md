@@ -155,4 +155,25 @@ export class CharaEvent extends RpgEvent {
 }
 ```
 
-## Create a character. scenario mode
+## Create a character. Scenario mode
+
+The scenario mode allows you to have events specific to the player. Thus, the graphics, the positions of the event will be different for each player. Beware of performance! The event is duplicated by each player.
+
+```ts 
+import { RpgEvent, EventData, RpgPlayer, EventMode } from '@rpgjs/server'
+
+@EventData({
+    name: 'EV-1',
+    mode: EventMode.Scenario
+})
+export class CharaEvent extends RpgEvent {
+    onInit() {
+        this.setGraphic('chara')
+    }
+    onAction(player: RpgPlayer) {
+       this.setGraphic('other-character') // The graphics will only change for the player concerned.
+    }
+}
+```
+
+Set the `Scenario` mode

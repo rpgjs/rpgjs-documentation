@@ -48,7 +48,7 @@ function createSummary(summary) {
     let text = '::: tip Summary\n'
     for (let title of summary) {
         if (!title) continue
-        text += `- [${title}](#${title.toLowerCase().replace(/ /g, '-')})\n`
+        text += `- [${title}](#${title.toLowerCase().trim().replace(/[ \/]/g, '-')})\n`
     }
     text += ':::'
     return text

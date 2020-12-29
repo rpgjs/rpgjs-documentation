@@ -4,8 +4,8 @@
   "description": "Documentationf for RPG JS v3",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "generate": "node bin/extract"
   },
   "keywords": [],

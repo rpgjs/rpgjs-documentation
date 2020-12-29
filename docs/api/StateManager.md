@@ -1,6 +1,6 @@
 ::: tip Summary
 - [Get States Defense](#get-states-defense)
-- [Set/Get States Efficiency](#set/get-states-efficiency)
+- [Set/Get States Efficiency](#set-get-states-efficiency)
 - [Get State](#get-state)
 - [Add State](#add-state)
 - [Remove State](#remove-state)
