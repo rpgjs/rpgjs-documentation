@@ -5,7 +5,7 @@ module.exports = {
       repo: 'https://github.com/RSamaium/RPG-JS',
       nav: [{
           text: 'Home',
-          link: '/'
+          link: 'https://rpgjs.dev'
         },
         {
           text: 'Guide',
@@ -17,6 +17,7 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
+          '/guide/get-started',
           '/guide/structure',
           '/guide/create-tileset',
           '/guide/create-map',
