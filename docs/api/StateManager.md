@@ -138,10 +138,6 @@ catch (err) {
 
 
 ---
-
-::: warning
-The realization of this property or method has not been completed.
-:::
 ### Remove State
 - **Method**: `player.removeState(stateClass,chance=1)`
 - **Arguments**:

@@ -18,7 +18,8 @@ const files = [
     ...open('packages/database/src'),
     ...open('packages/database/src/interfaces'),
     ...open('packages/server/src/Player'),
-    ...open('packages/common/src')
+    ...open('packages/common/src'),
+    ...open('packages/client/src/Sprite')
 ]
 
 const types = {

@@ -22,15 +22,32 @@ module.exports = {
           '/guide/create-tileset',
           '/guide/create-map',
           '/guide/create-sprite',
+          '/guide/create-animation',
           '/guide/player-start',
           '/guide/create-event',
           '/guide/create-database',
-          '/guide/create-gui',
           '/guide/save',
           '/guide/unit-test',
           '/guide/production',
         ]
-      }, {
+      }, 
+      {
+        title: 'GUI Creation',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          '/guide/create-gui',
+        ]
+      },
+      {
+        title: 'Advanced',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          '/advanced/spritesheet',
+        ]
+      },
+      {
         title: 'Player Commands API',
         collapsable: false,
         sidebarDepth: 2,
