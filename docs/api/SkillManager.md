@@ -85,7 +85,7 @@ The realization of this property or method has not been completed.
 - **Method**: `player.useSkill(skillClass,otherPlayer)`
 - **Arguments**:
     - {[SkillClass](/database/skill.html)} `skillClass`.  (Optional: `false`)
-    - {Array&lt;RpgPlayer&gt; | RpgPlayer} `otherPlayer`.  (Optional: `true`)
+    - {Array&lt;[RpgPlayer](/classes/player)&gt; | [RpgPlayer](/classes/player)} `otherPlayer`.  (Optional: `true`)
 - **Throws**:
 
 If the player has the `Effect.CAN_NOT_SKILL` effect 

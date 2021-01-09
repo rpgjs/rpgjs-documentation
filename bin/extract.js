@@ -19,6 +19,8 @@ const files = [
     ...open('packages/database/src/interfaces'),
     ...open('packages/server/src/Player'),
     ...open('packages/common/src'),
+    ...open('packages/server/src'),
+    ...open('packages/server/src/decorators'),
     ...open('packages/client/src/Sprite')
 ]
 
@@ -32,7 +34,13 @@ const types = {
     ArmorClass: '/database/armor.html',
     ActorClass: '/database/actor.html',
     ClassClass: '/database/class.html',
-    Move: '/commands/move.html#move'
+    Move: '/commands/move.html#move',
+    RpgPlayer: '/classes/player',
+    RpgMap: '/classes/map',
+    RpgEvent: '/classes/event',
+    RpgServer: '/classes/server',
+    RpgClient: '/classes/client',
+    RpgSprite: '/classes/sprite'
 }
 
 function toLink(type) {

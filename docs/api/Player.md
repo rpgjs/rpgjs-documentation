@@ -47,7 +47,7 @@ Give the spritesheet identifier
 - **Arguments**:
     - {string} `mapId`.  (Optional: `false`)
     - { {x: number, y: number, z?: number} | string } `positions`.  (Optional: `true`)
-- **Return**: Promise&lt;RpgMap&gt;   
+- **Return**: Promise&lt;[RpgMap](/classes/map)&gt;   
 - **Usage**:
 
 
@@ -144,7 +144,7 @@ setInterval(() => {
 ---
 ### Get Current Map
 - **Method**: `player.getCurrentMap()`
-- **Return**: RpgMap   
+- **Return**: [RpgMap](/classes/map)   
 - **Usage**:
 
 
@@ -170,9 +170,12 @@ For this type of spritesheet:
 @Spritesheet({
  id: 'fire',
  image: require('')
- animations: {
-     default: [
-     ]
+ textures: {
+     default: {
+         animations: [
+         
+         ]
+     }
   }
 })
 export class FireAnimation {}

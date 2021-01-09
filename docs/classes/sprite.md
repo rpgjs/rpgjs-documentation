@@ -1,0 +1,3 @@
+# RpgSprite
+
+# RpgSprite Hooks
