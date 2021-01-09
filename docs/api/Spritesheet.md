@@ -257,7 +257,6 @@ images: {
 
  
 Spritesheet identifier.
-The key of the object is the identifier of the spritesheet and the value and the link to the image.
 
 > Do not use the `images` property
 

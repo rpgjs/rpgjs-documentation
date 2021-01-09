@@ -1,4 +1,4 @@
-# Find players
+# RpgWorld
 
 Finding players can be interesting to carry out commands on a group of players. The other interest is to use the `RpgWord` module in an `ExpressJS` or other server.
 

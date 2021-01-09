@@ -21,7 +21,9 @@ const files = [
     ...open('packages/common/src'),
     ...open('packages/server/src'),
     ...open('packages/server/src/decorators'),
-    ...open('packages/client/src/Sprite')
+    ...open('packages/client/src/Sprite'),
+    ...open('packages/client/src/Sound'),
+    ...open('packages/client/src')
 ]
 
 const types = {
@@ -40,7 +42,9 @@ const types = {
     RpgEvent: '/classes/event',
     RpgServer: '/classes/server',
     RpgClient: '/classes/client',
-    RpgSprite: '/classes/sprite'
+    RpgSprite: '/classes/sprite',
+    Sound: '/classes/sound',
+    SpriteSheet: '/classes/spritesheet'
 }
 
 function toLink(type) {

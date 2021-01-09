@@ -7,7 +7,8 @@ const apiMenu = [
       '/classes/server',
       '/classes/player',
       '/classes/map',
-      '/classes/event'
+      '/classes/event',
+      '/classes/world'
     ]
   },
   {
@@ -16,7 +17,9 @@ const apiMenu = [
     sidebarDepth: 2,
     children: [
       '/classes/client',
-      '/classes/sprite'
+      '/classes/sprite',
+      '/classes/spritesheet',
+      '/classes/sound'
     ]
   },
   {
@@ -70,8 +73,6 @@ const guideMenu = [{
     '/guide/player-start',
     '/guide/create-event',
     '/guide/create-database',
-    '/guide/create-animation',
-    '/guide/get-player',
     '/guide/save',
     '/guide/unit-test',
     '/guide/production',

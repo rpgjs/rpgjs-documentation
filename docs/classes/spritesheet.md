@@ -1,8 +1,4 @@
-# Create Animation
-
-## Prerequisites
-
-Have already created a Spritesheet
+# SpriteSheet Decorator
 
 ## Example SpriteSheet 
 

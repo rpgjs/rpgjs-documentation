@@ -5,3 +5,5 @@ The effects make it possible to change the combat (or other) situation. Effects 
 <ApiContent page="Effect" />
 
 ## Create Custom Effect
+
+<Partial page="todo" />
