@@ -153,7 +153,7 @@ class RPG extends RpgClientEngine { }
 ---
 ### scenes
 - **Property**: `scenes`
-- **Type**:  [sceneName: string]: Class of [RpgScene](/classes/scene-map)Map 
+- **Type**:  [sceneName: string]: Class of [[RpgScene](/classes/scene-map)Map](/classes/scene-map) 
 - **Optional**: `true` 
 - **Usage**:
 

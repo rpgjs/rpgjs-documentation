@@ -4,7 +4,7 @@
 ---
 ### viewport
 - **Property**: `viewport`
-- **Type**: PIXI.Viewport
+- **Type**: [PIXI.Viewport](https://github.com/davidfig/pixi-viewport)
 - **Optional**: `false` 
 - **Usage**:
 
