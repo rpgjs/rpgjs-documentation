@@ -5,6 +5,7 @@
 - [gui](#gui)
 - [sounds](#sounds)
 - [spriteClass](#spriteclass)
+- [scenes](#scenes)
 - [canvas](#canvas)
 :::
 ---
@@ -144,6 +145,35 @@ class Sprite extends RpgSprite {
 
 @RpgClient({
      spriteClass: Sprite
+})
+class RPG extends RpgClientEngine { } 
+``` 
+
+
+---
+### scenes
+- **Property**: `scenes`
+- **Type**:  [sceneName: string]: Class of [RpgScene](/classes/scene-map)Map 
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Reference the scenes of the game. Here you can put your own class that inherits RpgSceneMap
+
+```ts
+import { RpgPlayer, RpgServer, RpgServerEngine, RpgSceneMap } from '@rpgjs/server'
+
+class SceneMap extends RpgSceneMap {
+     onLoad() {
+         // is loaded
+     }
+}
+
+@RpgClient({
+     scenes: {
+     // If you put the RpgSceneMap scene, Thhe key is called mandatory `map`
+         map: SceneMap
+     }
 })
 class RPG extends RpgClientEngine { } 
 ``` 

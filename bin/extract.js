@@ -23,7 +23,9 @@ const files = [
     ...open('packages/server/src/decorators'),
     ...open('packages/client/src/Sprite'),
     ...open('packages/client/src/Sound'),
-    ...open('packages/client/src')
+    ...open('packages/client/src/Scene'),
+    ...open('packages/client/src'),
+    ...open('packages/common/src/gui')
 ]
 
 const types = {
@@ -43,8 +45,15 @@ const types = {
     RpgServer: '/classes/server',
     RpgClient: '/classes/client',
     RpgSprite: '/classes/sprite',
+    RpgGui: '/classes/gui',
+    RpgSceneMap: '/classes/scene-map',
+    RpgScene: '/classes/scene-map',
     Sound: '/classes/sound',
-    SpriteSheet: '/classes/spritesheet'
+    SpriteSheet: '/classes/spritesheet',
+    'PIXI.Container': 'https://pixijs.download/dev/docs/PIXI.Container.html',
+    'PIXI.Sprite': 'https://pixijs.download/dev/docs/PIXI.Sprite.html',
+    'PIXI.Viewport': 'https://github.com/davidfig/pixi-viewport',
+    Observable: 'https://rxjs.dev/guide/observable'
 }
 
 function toLink(type) {

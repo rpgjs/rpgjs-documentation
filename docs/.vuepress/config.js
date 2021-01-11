@@ -19,11 +19,14 @@ const apiMenu = [
       '/classes/client',
       '/classes/sprite',
       '/classes/spritesheet',
-      '/classes/sound'
+      '/classes/scene-map',
+      '/classes/gui',
+      '/classes/sound',
+      '/classes/vue-inject'
     ]
   },
   {
-    title: 'Player Commands API',
+    title: 'Player Commands Server-Side',
     collapsable: false,
     sidebarDepth: 2,
     children: [

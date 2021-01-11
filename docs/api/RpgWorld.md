@@ -7,7 +7,7 @@
 ---
 ### Subscribe to the world
 - **Property**: `RpgWorld.changes`
-- **Type**: Observable
+- **Type**: [Observable](https://rxjs.dev/guide/observable)
 - **Optional**: `false` 
 - **Usage**:
 

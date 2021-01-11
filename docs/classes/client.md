@@ -19,6 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
 1. Use `entryPoint` to create an instance of `RpgClientEngine`. 
 2. Be sure to start the client part when the DOM is loaded.
 
+### RpgClientEngine Hooks 
+
+Full Example:
+
+```ts
+import { entryPoint, RpgClientEngine, RpgClient } from '@rpgjs/client'
+
+@RpgClient({
+    // options of RpgClient decorator
+})
+export class RPG extends RpgClientEngine {
+    onConnected() { }
+
+    onConnectError(err) { }
+
+    onDisconnect() { }
+}
+```
+
 ## @RpgClient decorator
 
 <ApiContent page="RpgClient" />
