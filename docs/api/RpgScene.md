@@ -5,6 +5,8 @@
 - [Stop Inputs](#stop-inputs)
 - [Listen Inputs](#listen-inputs)
 - [Show Animation](#show-animation)
+- [Get Sprite](#get-sprite)
+- [Get Current Player](#get-current-player)
 :::
 ---
 ### Set Inputs
@@ -204,4 +206,26 @@ animation.onFinish = () => {
      console.log('finish !')
 }
 ```
+
+
+---
+### Get Sprite
+- **Method**: `scene.getSprite(id)`
+- **Arguments**:
+    - {string} `id`.  (Optional: `false`)
+- **Return**: [RpgSprite](/classes/sprite)   
+- **Usage**:
+
+
+Retrieve a sprite according to its identifier
+
+
+---
+### Get Current Player
+- **Method**: `scene.getCurrentPlayer()`
+- **Return**: [RpgSprite](/classes/sprite)   
+- **Usage**:
+
+
+Retrieve a sprite that the player controls
 

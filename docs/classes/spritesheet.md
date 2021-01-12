@@ -52,7 +52,23 @@ You can call the animation
 
 ### Client Side
 
-<Partial page="todo" />
+On the scene
+
+```ts
+import { RpgSceneMap } from '@rpgjs/client'
+
+export class SceneMap extends RpgSceneMap {
+     onLoad() {
+         this.showAnimation({
+             graphic: 'shield',
+             animationName: 'default',
+             attachTo: this.getCurrentPlayer()
+         })
+     }
+}
+```
+
+[Show Animation method](/classes/scene-map.html#rpgscene)
 
 ### Server Side
 

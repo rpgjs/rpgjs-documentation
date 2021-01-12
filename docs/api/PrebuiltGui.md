@@ -12,7 +12,8 @@
 | PrebuiltGui.Shop | rpg-shop |
 | PrebuiltGui.Disconnect | rpg-disconnect |
 | PrebuiltGui.Gameover | rpg-gameover |
-| PrebuiltGui.Save | rpg-save | 
+| PrebuiltGui.Save | rpg-save |
+| PrebuiltGui.Controls | rpg-controls | 
 - **Usage**:
 
  

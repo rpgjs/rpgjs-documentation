@@ -4,6 +4,7 @@
 - [rpgObjects](#rpgobjects)
 - [rpgCurrentPlayer](#rpgcurrentplayer)
 - [rpgGuiClose](#rpgguiclose)
+- [rpgGuiInteraction](#rpgguiinteraction)
 - [rpgKeypress](#rpgkeypress)
 - [rpgSocket](#rpgsocket)
 :::
@@ -134,6 +135,35 @@ export default {
          close() {
              this.rpgGuiClose('gui-name', {
                  amount: 1000
+             })
+         }
+     }
+}
+``` 
+
+
+---
+### rpgGuiInteraction
+- **Property**: `rpgGuiInteraction`
+- **Type**: Function(guiId, name, data = {})
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Perform an interaction with the open GUI
+
+It is a function with 2 parameters:
+* `guiId`: The name of the component/Gui
+* `name`: The name of the interaction (defined on the server side)
+* `data`: Data to be sent
+
+```js
+export default {
+     inject: ['rpgGuiInteraction'],
+     methods: {
+         changeGold() {
+             this.rpgGuiInteraction('gui-name', 'change-gold', {
+                 amount: 100
              })
          }
      }

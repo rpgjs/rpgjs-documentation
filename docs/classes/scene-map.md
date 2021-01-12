@@ -1,5 +1,7 @@
 # RpgScene & RpgSceneMap
 
+[Put the created class in the RpgClient decorator](/classes/client.html#scenes)
+
 ## RpgScene
 
 <ApiContent page="RpgScene" />

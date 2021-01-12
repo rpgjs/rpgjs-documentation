@@ -15,6 +15,21 @@ RPGJS was created several years ago, with the aim of creating an RPG on the brow
 - VueJS v3 (for GUIs)
 - Jest v26 (for unit tests)
 
+## Compatibility
+
+**Client-Side**
+
+- Google Chrome
+- Firefox
+- Edge (only Webkit version)
+- Brave
+
+> Warning, the game is not compatible with Internet Explorer.
+
+**Server-Side**
+
+- NodeJS >12
+
 ## Installation
 
 **For MMORPG**:

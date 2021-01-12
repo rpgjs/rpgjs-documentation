@@ -90,13 +90,21 @@ const guideMenu = [{
   ]
 },
 {
+  title: 'Technical',
+  collapsable: false,
+  sidebarDepth: 2,
+  children: [
+    '/guide/responsive-design',
+  ]
+}
+/*{
   title: 'Advanced',
   collapsable: false,
   sidebarDepth: 2,
   children: [
     '/advanced/spritesheet',
   ]
-}]
+} */]
 
 module.exports = {
     title: 'RPGJS v3 Documentation',
