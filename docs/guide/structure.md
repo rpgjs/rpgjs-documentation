@@ -22,6 +22,7 @@ Here is the structure of a project
                 (your-tileset).png
         * index.html
         * main.ts
+        * map.ts (optional)
         * sprite.ts (optional)
         * rpg.ts
     * server

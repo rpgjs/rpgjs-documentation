@@ -95,6 +95,7 @@ const guideMenu = [{
   sidebarDepth: 2,
   children: [
     '/guide/responsive-design',
+    '/guide/webpack',
   ]
 }
 /*{

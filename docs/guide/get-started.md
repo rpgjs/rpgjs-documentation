@@ -41,7 +41,11 @@ npm install
 npm run dev
 ```
 
-And open a browser on `http://localhost:3000`
+And open a browser on `http://localhost:3001` (Development mode with browserSync)
+
+ > Without browserSync: `http://localhost:3000`
+ 
+ > To change the port: `PORT=4000 npm run dev`. Then, you can go to port 4000 or 4001
 
 **For RPG**:
 
@@ -49,12 +53,9 @@ The same line as above but start the development line with `RPG_TYPE` environmen
 
 `RPG_TYPE=rpg npm run dev`
 
-> Beware, for the RPG, there is no server reading your game. You have to launch a server on `dist/standalone`
-> Example: 
-> ```bash
-> npm install -g serve 
-> cd dist/standalone && serve
-> ```
+Go to `http://localhost:3000`
+
+> To change the port: `PORT=4000 RPG_TYPE=rpg npm run dev`
 
 ## Existing packages
 
