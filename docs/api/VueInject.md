@@ -7,6 +7,7 @@
 - [rpgGuiInteraction](#rpgguiinteraction)
 - [rpgKeypress](#rpgkeypress)
 - [rpgSocket](#rpgsocket)
+- [rpgGui](#rpggui)
 :::
 ---
 ### rpgScene
@@ -216,6 +217,26 @@ export default {
      mounted() {
          const socket = this.rpgSocket()
          socket.emit('foo', 'bar')
+     }
+}
+``` 
+
+
+---
+### rpgGui
+- **Property**: `rpgGui`
+- **Type**: [RpgGui](/classes/gui)
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The RpgGui object to control GUIs
+
+```js
+export default {
+     inject: ['rpgGui'],
+     mounted() {
+        const guis = this.rpgGui.getAll()
      }
 }
 ``` 

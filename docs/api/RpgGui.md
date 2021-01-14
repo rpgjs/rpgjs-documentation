@@ -1,5 +1,6 @@
 ::: tip Summary
 - [Get a GUI](#get-a-gui)
+- [Get all GUI](#get-all-gui)
 - [GUI Exists ?](#gui-exists-?)
 - [Display GUI](#display-gui)
 - [Hide GUI](#hide-gui)
@@ -9,7 +10,7 @@
 - **Method**: `RpgGui.get(id)`
 - **Arguments**:
     - {string} `id`.  (Optional: `false`)
-- **Return**:  { data: any, display: boolean }   
+- **Return**:  { data: any, display: boolean }    
 - **Usage**:
 
 
@@ -20,6 +21,23 @@ import { RpgGui } from '@rpgjs/client'
 
 const gui = RpgGui.get('my-gui') 
 console.log(gui.display) // false
+```
+
+
+---
+### Get all GUI
+- **Method**: `RpgGui.getAll()`
+- **Return**:  { [guiName]: { data: any, display: boolean }  }   
+- **Usage**:
+
+
+Get all GUI. You retrieve GUI data and information whether it is displayed or not
+
+```ts
+import { RpgGui } from '@rpgjs/client'
+
+const gui = RpgGui.getAll() 
+console.log(gui) // { 'rpg-dialog': { data: {}, display: true } }
 ```
 
 
