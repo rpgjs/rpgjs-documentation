@@ -157,6 +157,7 @@ Retrieves data from the current map
 - **Arguments**:
     - {string} `graphic`. spritesheet identifier (Optional: `false`)
     - {string} `animationName`. Name of the animation in the spritesheet (Optional: `false`)
+    - {boolean} `replaceGraphic`. Replace the event graphic with the animation. After the end of the animation, the original graphic is reapplied (Optional: `true`)
 - **Return**: void   
 - **Usage**:
 
