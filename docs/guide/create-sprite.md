@@ -38,7 +38,9 @@ const frameY = direction => {
     height: 192, // height of image
     textures: {
         [Animation.Stand]: {
-            animations: direction => [{ time: 0, frameX: 1, frameY: frameY(direction) }]
+            animations: direction => [
+                [{ time: 0, frameX: 1, frameY: frameY(direction) }]
+            ]
         },
         [Animation.Walk]:  {
             animations: direction => [

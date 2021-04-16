@@ -153,7 +153,7 @@ Retrieves data from the current map
 
 ---
 ### Show Animation
-- **Method**: `player.showAnimation(graphic,animationName)`
+- **Method**: `player.showAnimation(graphic,animationName,replaceGraphic=false)`
 - **Arguments**:
     - {string} `graphic`. spritesheet identifier (Optional: `false`)
     - {string} `animationName`. Name of the animation in the spritesheet (Optional: `false`)
@@ -185,7 +185,15 @@ export class FireAnimation {}
 Here is the call of the method:
 
 ```ts
-player.animation('fire', 'default')
+player.showAnimation('fire', 'default')
+```
+
+If you don't want to put an animation on top of the event but replace the event graphic with another one, set true as last parameter.
+This is useful, if for example, you want to make an animated character (sword stroke when pressing a key)
+When the animation is finished, the original graphic is displayed again
+
+```ts
+player.showAnimation('sword_stroke', 'default', true)
 ```
 
 

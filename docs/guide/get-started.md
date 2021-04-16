@@ -11,7 +11,6 @@ RPGJS was created several years ago, with the aim of creating an RPG on the brow
 - NodeJS >v12 (for server)
 - Socket.io v3 (for real time)
 - PixiJS v5 (for WebGL rendering)
-- Lance-gg (modified) (For motion interpolation)
 - VueJS v3 (for GUIs)
 - Jest v26 (for unit tests)
 

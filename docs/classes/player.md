@@ -21,16 +21,21 @@ export class Player extends RpgPlayer {
 Full Example:
 
 ```ts
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgMap } from '@rpgjs/server'
 
 export class Player extends RpgPlayer {
     onConnected() { }
 
     onInput({ input }) { }
 
-    onDead() { }
+    onJoinMap(map: RpgMap) { }
+
+    onLeaveMap(map: RpgMap) { }
 
     onLevelUp(nbLevel) { }
+
+    // HP drops to 0
+    onDead() { }
 
     onDisconnected() { }
 }
