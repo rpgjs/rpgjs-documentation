@@ -1,4 +1,5 @@
 ::: tip Summary
+- [valuesChange](#valueschange)
 - [Set Inputs](#set-inputs)
 - [Get Control](#get-control)
 - [Apply Control](#apply-control)
@@ -8,6 +9,36 @@
 - [Get Sprite](#get-sprite)
 - [Get Current Player](#get-current-player)
 :::
+---
+### valuesChange
+- **Property**: `valuesChange`
+- **Type**: [Observable](https://rxjs.dev/guide/observable)&lt;{ data: object, partial: object }&gt;
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+
+Listen to all the synchronized values of the scene with the server
+
+```ts 
+import { RpgSceneMap } from '@rpgjs/client'
+
+export class SceneMap extends RpgSceneMap {
+     onLoad() {
+         this.valuesChange.subscribe((obj) => {
+             console.log(obj.data, obj.partial)
+         })
+     }
+}
+```
+
+- `data` represents all the current data of the scene (`users`, `events` and others)
+- `partial` represents only the data that has changed on the scene
+
+> In the class, you can also use the onChanges hook
+
+
+
 ---
 ### Set Inputs
 - **Enum**: `string`

@@ -133,13 +133,6 @@ player.load(json)
 Run the change detection cycle. Normally, as soon as a hook is called in a class, the cycle is started. But you can start it manually
 The method calls the `onChanges` method on events and synchronizes all map data with the client.
 
-```ts
-// restarts the change detection cycle every 3s
-setInterval(() => {
-     player.hp += 10
-     player.syncChanges()
-}, 3000)
-```
 
 ---
 ### Get Current Map

@@ -4,6 +4,7 @@
 - [name](#name)
 - [events](#events)
 - [sounds](#sounds)
+- [syncSchema](#syncschema)
 :::
 ---
 ### id
@@ -93,4 +94,68 @@ events: [{ event: NpcEvent, x: 10, y: 30 }]
 
  
 The sounds that will be played when the map is open. Sounds must be defined on the client side. Then, put the name of the sound identifier
+
+
+---
+### syncSchema
+- **Property**: `syncSchema`
+- **Type**: object
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Specify which properties will be synchronized with the client. On the client side, you can retrieve the values synchronized with the valueChanges property on the scene
+
+You must create the schema:
+
+```ts
+import { MapData, RpgMap } from '@rpgjs/server'
+
+@MapData({
+     id: 'medieval',
+     file: require('./tmx/town.tmx'),
+     syncSchema: {
+         count: Number
+     }
+})
+export class TownMap extends RpgMap {
+     count: number = 0
+
+     onEnter() {
+         this.count++
+     }
+
+     onLeave() {
+         this.count--
+     }
+}
+
+```
+
+If you want to change the scheme of players and events, consider overwriting the existing scheme
+
+ ```ts
+import { MapData, RpgMap, RpgPlayer } from '@rpgjs/server'
+
+
+export class Player extends RpgPlayer {
+   customProp: string = 'test'
+}
+
+@MapData({
+     id: 'medieval',
+     file: require('./tmx/town.tmx'),
+     syncSchema: {
+         users: [
+             {
+                 customProp: String,
+                 ...RpgPlayer.schemas
+             }
+         ]
+     }
+})
+export class TownMap extends RpgMap {}
+```
+
+The properties are called `users` and `events`. Their scheme is identical and defined in `RpgPlayer.schemas`. To write schematics, refer to the [documentation of the @rpgjs/sync-server](https://github.com/RSamaium/RPG-JS/tree/v3/packages/sync-server#define-schema) module
 
