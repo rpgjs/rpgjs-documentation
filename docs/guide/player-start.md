@@ -76,6 +76,47 @@ export class Player extends RpgPlayer {
 
 > Make sure that there is a map with the correct identifier. Here, the `medieval` map exists. Otherwise, read the tutorial on how to create a map.
 
+## Good practice
+
+After loading the map, **do not continue** to do the rest of the code in the onConnected method because the properties will not be synchronized with the client
+
+```ts
+import { RpgPlayer } from '@rpgjs/server'
+
+export class Player extends RpgPlayer {
+    async onConnected() {
+        this.setGraphic('hero')
+        await this.changeMap('medieval', {
+            x: 100,
+            y: 100
+        })
+        // BAD PRACTICE, because not synchronized on the map
+        this.hp = 500
+    }
+}
+```
+
+Make your code in the `onJoinMap()` hook:
+
+```ts
+import { RpgPlayer } from '@rpgjs/server'
+
+export class Player extends RpgPlayer {
+    onConnected() {
+        this.setGraphic('hero')
+        this.changeMap('medieval', {
+            x: 100,
+            y: 100
+        })
+    }
+
+    // GOOD PRACTICE
+    onJoinMap() {
+        this.hp = 500
+    }
+}
+```
+
 ## Add Player class in your game engine
 
 In `src/server/rpg.ts`

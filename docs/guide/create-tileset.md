@@ -23,6 +23,10 @@ Here is the spritesheet we will use:
 For a tileset compatible with WebGL 1 (mainly mobiles), the image must be at most 4096*4096px
 :::
 
+::: danger
+The size of the tiles must not exceed the dimensions of the image. For example, if the width of a tile is 32px but the width of the tileset is 60px then there will be a problem. The width of the tileset must be 64px
+:::
+
 
 1. Place the image in `src/client/maps/assets`
 2. Then create the following file in `src/client/characters/medieval.ts`
