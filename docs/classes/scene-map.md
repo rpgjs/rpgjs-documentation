@@ -20,8 +20,11 @@ export class SceneMap extends RpgSceneMap {
     // When the scene is loaded (Image of the loaded tileset, drawing completed and viewport assigned)
     onLoad() { }
 
+    // When server data changes on the map (events, players, or other)
+    onChanges(obj: { data: any, partial: any }) { }
+
     // the scene is drawn
-    onDraw(t: number, dt: number) {}
+    onDraw(t: number) {}
 
     // a sprite has been added on the scene
     onAddSprite(sprite: RpgSprite) {}

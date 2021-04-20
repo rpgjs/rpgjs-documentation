@@ -1,6 +1,8 @@
 ::: tip Summary
 - [selector](#selector)
 - [selectorGui](#selectorgui)
+- [selectorCanvas](#selectorcanvas)
+- [plugins](#plugins)
 - [spritesheets](#spritesheets)
 - [gui](#gui)
 - [sounds](#sounds)
@@ -27,8 +29,35 @@ The element selector that will display the canvas. By default, `#rpg`
 - **Usage**:
 
  
-The selector that corresponds to the GUIs
+The selector that corresponds to the GUIs. By default, `#gui`
 If you didn't put a GUI element in the div, an element will be automatically created.
+
+
+---
+### selectorCanvas
+- **Property**: `selectorCanvas`
+- **Type**: string
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The selector that corresponds to the element contains canvas. By default, `#canvas`
+If you didn't put element in the main div, an element will be automatically created.
+
+
+---
+### plugins
+::: warning
+The realization of this property or method has not been completed.
+:::
+
+- **Property**: `plugins`
+- **Type**:  { client: null | Function, server: null | Function }[]
+- **Optional**: `true` 
+- **Usage**:
+
+
+Adding client-side plugins
 
 
 ---

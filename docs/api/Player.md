@@ -1,6 +1,7 @@
 ::: tip Summary
 - [Read/Give a name](#read-give-a-name)
 - [Set Graphic](#set-graphic)
+- [Set Vision](#set-vision)
 - [Change Map](#change-map)
 - [Teleport on the map](#teleport-on-the-map)
 - [Load progress](#load-progress)
@@ -39,6 +40,36 @@ player.name = 'Link'
 Give the spritesheet identifier
 
 > You must, on the client side, create the spritesheet in question. Guide: [Create Sprite](/guide/create-sprite.html)
+
+
+---
+### Set Vision
+::: warning
+The realization of this property or method has not been completed.
+:::
+
+- **Method**: `player.setVision(obj)`
+- **Arguments**:
+    - {object} `obj`.  (Optional: `false`) 
+- **Usage**:
+
+
+Define a vision for the event. 
+
+The object in parameter
+- type: `box`
+- height: Height
+- width: Width
+
+the `onInVision()` and `onOutVision()` methods are triggered on the `RpgPlayer` class
+
+```ts
+player.setVision({
+     type: 'box',
+     width: 100, 
+     height: 100
+})
+```
 
 
 ---

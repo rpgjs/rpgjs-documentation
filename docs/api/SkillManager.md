@@ -77,11 +77,11 @@ catch (err) {
 
 
 ---
-
+### Use Skill
 ::: warning
 The realization of this property or method has not been completed.
 :::
-### Use Skill
+
 - **Method**: `player.useSkill(skillClass,otherPlayer)`
 - **Arguments**:
     - {[SkillClass](/database/skill.html)} `skillClass`.  (Optional: `false`)

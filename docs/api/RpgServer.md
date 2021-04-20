@@ -1,10 +1,26 @@
 ::: tip Summary
+- [plugins](#plugins)
 - [playerClass](#playerclass)
 - [database](#database)
 - [maps](#maps)
 - [basePath](#basepath)
 - [damageFormulas](#damageformulas)
 :::
+---
+### plugins
+::: warning
+The realization of this property or method has not been completed.
+:::
+
+- **Property**: `plugins`
+- **Type**:  { client: null | Function, server: null | Function }[]
+- **Optional**: `true` 
+- **Usage**:
+
+
+Add server-side plugins
+
+
 ---
 ### playerClass
 - **Property**: `playerClass`

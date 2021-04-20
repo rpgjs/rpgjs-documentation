@@ -84,3 +84,7 @@ it will display the animation on the player and will be visible to all other pla
 ## Properties
 
 <ApiContent page="Spritesheet" />
+
+## Create Animation with Timeline system
+
+<ApiContent page="Timeline" />

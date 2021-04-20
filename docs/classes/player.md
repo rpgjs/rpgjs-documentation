@@ -32,6 +32,10 @@ export class Player extends RpgPlayer {
 
     onLeaveMap(map: RpgMap) { }
 
+    onInVision(other: RpgPlayer) { }
+
+    onOutVision(other: RpgPlayer) { }
+
     onLevelUp(nbLevel) { }
 
     // HP drops to 0

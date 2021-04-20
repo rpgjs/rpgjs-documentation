@@ -2,6 +2,7 @@
 - [Subscribe to the world](#subscribe-to-the-world)
 - [Get Player](#get-player)
 - [Get all Players](#get-all-players)
+- [Get all objects of map](#get-all-objects-of-map)
 - [Get all Players a map](#get-all-players-a-map)
 :::
 ---
@@ -33,7 +34,7 @@ RpgWorld.changes
 ### Get Player
 - **Method**: `RpgWorld.getPlayer(player)`
 - **Arguments**:
-    - {[RpgPlayer](/classes/player) | string} `player`. spritesheet identifier (Optional: `false`)
+    - {[RpgPlayer](/classes/player) | string} `player`. identifier (Optional: `false`)
 - **Return**: [RpgPlayer](/classes/player)   
 - **Usage**:
 
@@ -60,6 +61,33 @@ Recover all the players of the game
 import { RpgWorld } from '@rpgjs/server'
 
 const players = RpgWorld.getPlayers()
+```
+
+
+---
+### Get all objects of map
+- **Method**: `RpgWorld.getObjectsOfMap(map,playerId?)`
+- **Arguments**:
+    - {string} `map`. Map Name (Optional: `false`)
+    - {[RpgPlayer](/classes/player) | string} `playerId`. player identifier (Optional: `false`)
+- **Return**: Array&lt;[RpgPlayer](/classes/player)&gt;   
+- **Usage**:
+
+
+Allows to recover all the objects of the map (players and events) 
+
+```ts
+import { RpgWorld } from '@rpgjs/server'
+
+const objects = RpgWorld.getObjectsOfMap('mapname')
+```
+
+If you specify the player, you can retrieve his events in Scenario mode
+
+```ts
+import { RpgWorld } from '@rpgjs/server'
+
+const objects = RpgWorld.getObjectsOfMap('mapname', 'playerid')
 ```
 
 

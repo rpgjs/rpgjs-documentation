@@ -24,6 +24,7 @@ const files = [
     ...open('packages/client/src/Sprite'),
     ...open('packages/client/src/Sound'),
     ...open('packages/client/src/Scene'),
+    ...open('packages/client/src/Effects'),
     ...open('packages/client/src'),
     ...open('packages/common/src/gui')
 ]
@@ -49,6 +50,7 @@ const types = {
     RpgSceneMap: '/classes/scene-map',
     RpgScene: '/classes/scene-map',
     Sound: '/classes/sound',
+    Timeline: '/classes/spritesheet.html#create-animation-with-timeline-system',
     SpriteSheet: '/classes/spritesheet',
     'PIXI.Container': 'https://pixijs.download/dev/docs/PIXI.Container.html',
     'PIXI.Sprite': 'https://pixijs.download/dev/docs/PIXI.Sprite.html',
@@ -93,20 +95,20 @@ for (let file of files) {
             md[memberof.name] += `
 ---
 `
-        if (tag('todo')) {
-            md[memberof.name] += `
-::: warning
-The realization of this property or method has not been completed.
-:::
-`
-        }
-
         const title = tag('title') ? `${tag('title').name} ${tag('title').description}` : tag('prop')?.name
         if (!summary[memberof.name]) summary[memberof.name] = []
         summary[memberof.name].push(title)
 
 md[memberof.name] += 
 `### ${title}`
+
+        if (tag('todo')) {
+    md[memberof.name] += `
+::: warning
+The realization of this property or method has not been completed.
+:::
+`
+        }
 
         if (tag('enum')) {
 md[memberof.name] += `

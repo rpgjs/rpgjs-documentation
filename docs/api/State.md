@@ -54,11 +54,11 @@ effects: [Effect.CAN_NOT_SKILL]
 List of effects applied by the object, weapon, armor or condition
 
 ---
-
+### statesEfficiency
 ::: warning
 The realization of this property or method has not been completed.
 :::
-### statesEfficiency
+
 - **Enum**: `number`
 
 | Tag           | Description |

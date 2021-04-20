@@ -101,11 +101,11 @@ player.getState(Paralyze)
 
 
 ---
-
+### Add State
 ::: warning
 The realization of this property or method has not been completed.
 :::
-### Add State
+
 - **Method**: `player.addState(stateClass,chance=1)`
 - **Arguments**:
     - {[StateClass](/database/state.html)} `stateClass`.  (Optional: `false`)
