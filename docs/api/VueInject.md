@@ -8,6 +8,7 @@
 - [rpgKeypress](#rpgkeypress)
 - [rpgSocket](#rpgsocket)
 - [rpgGui](#rpggui)
+- [rpgSound](#rpgsound)
 :::
 ---
 ### rpgScene
@@ -66,7 +67,8 @@ export default {
      inject: ['rpgObjects'],
      mounted() {
          this.obs = this.rpgObjects.subscribe((objects) => {
-             for (let obj in objects) {
+             for (let id in objects) {
+                 const obj = objects[id]
                  console.log(obj.object, obj.paramsChanged)
              }
          })
@@ -237,6 +239,26 @@ export default {
      inject: ['rpgGui'],
      mounted() {
         const guis = this.rpgGui.getAll()
+     }
+}
+``` 
+
+
+---
+### rpgSound
+- **Property**: `rpgSound`
+- **Type**: Rpg[Sound](/classes/sound)
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Equivalent to RpgSound
+
+```js
+export default {
+     inject: ['rpgSound'],
+     mounted() {
+        this.rpgSound.get('my-sound-id').play()
      }
 }
 ``` 

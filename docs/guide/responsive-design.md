@@ -73,22 +73,22 @@ Note that the Canvas and the GUIs all take the size of the main selector (`#rpg`
 To put controls (as in the picture above), you have to create a GUI and open it as soon as the card is ready. You are free to create a GUI named `rpg-controls`.
 Then, you can inject [rpgScene](/classes/vue-inject.html#services) into the component and take advantage of the [applyControl()]((/classes/scene-map.html#rpgscene)) method to apply controls when a GUI location is pressed.
 
-If you don't want to create by yourself, put the GUIs from the `@rpgjs/default-gui` package in your game
+If you don't want to create by yourself, You can add the plugin for the mobile
 
-In `src/client/map.ts`
+`npm install @rpgjs/mobile-gui`
+
+In `src/plugin.ts`
 ```ts
-import { RpgSceneMap, RpgGui, PrebuiltGui } from '@rpgjs/client'
+import mobileGui from '@rpgjs/mobile-gui'
 
-export class SceneMap extends RpgSceneMap {
-    onLoad() {
-        RpgGui.display(PrebuiltGui.Controls) 
-    }
-}
+export default [
+    // other plugins and ...
+    mobileGui
+]
+
 ```
 
 As soon as the map is opened, display the GUI for controls
-
-> [Put the created class in the RpgClient decorator](/classes/client.html#scenes)
 
 ## Offline Mode
 

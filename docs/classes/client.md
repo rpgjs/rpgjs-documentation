@@ -6,6 +6,7 @@ You need to create a class that inherits RpgClientEngine
 
 ```ts
 import { entryPoint, RpgClientEngine, RpgClient } from '@rpgjs/client'
+import io from 'socket.io'
 
 @RpgClient({
     // options of RpgClient decorator
@@ -13,7 +14,7 @@ import { entryPoint, RpgClientEngine, RpgClient } from '@rpgjs/client'
 class RPG extends RpgClientEngine { } 
 
 document.addEventListener('DOMContentLoaded', () => { 
-    entryPoint(RPG).start()
+    entryPoint(RPG, { io }).start()
 })
 ```
 1. Use `entryPoint` to create an instance of `RpgClientEngine`. 

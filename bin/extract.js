@@ -110,6 +110,37 @@ The realization of this property or method has not been completed.
 `
         }
 
+        const stability = tag('stability')
+
+        if (stability) {
+            switch (+stability.name) {
+                case 0:
+                    md[memberof.name] += `
+::: danger
+Stability: 0 - Deprecated
+This feature is known to be problematic, and changes are
+planned.  Do not rely on it.  Use of the feature may cause warnings.  Backwards
+compatibility should not be expected.
+:::
+`
+                    break;
+                    case 1:
+                    md[memberof.name] += `
+::: warning
+Stability: 1 - Experimental
+This feature is subject to change, and is gated by a command line flag.
+It may change or be removed in future versions.
+:::
+    `
+    break;
+            }
+        }
+
+        if (tag('since')) {
+            md[memberof.name] += `
+- **Since**: ${tag('since').name}`
+        }
+
         if (tag('enum')) {
 md[memberof.name] += `
 - **Enum**: \`${tag('enum').type}\`

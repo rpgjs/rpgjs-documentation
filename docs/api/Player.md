@@ -10,6 +10,7 @@
 - [Get Current Map](#get-current-map)
 - [Show Animation](#show-animation)
 - [Emit to client](#emit-to-client)
+- [Play Sound](#play-sound)
 - [Get/Set position](#get-set-position)
 - [Set Sizes](#set-sizes)
 - [Set Hitbox](#set-hitbox)
@@ -235,6 +236,49 @@ Emit data to clients with socket
 
 
 ---
+### Play Sound
+::: warning
+Stability: 1 - Experimental
+This feature is subject to change, and is gated by a command line flag.
+It may change or be removed in future versions.
+:::
+    
+- **Since**: 3.0.0-alpha.9
+- **Method**: `player.playSound(soundId,allMap=false)`
+- **Arguments**:
+    - {string} `soundId`. Sound identifier, defined on the client side (Optional: `false`)
+    - {boolean} `allMap`. Indicate if the sound is heard by the players on the card (Optional: `true`)
+- **Return**: void   
+- **Usage**:
+
+
+Allows to play a sound, heard only by the player or by the players of the map
+
+Here is a sound, client side:
+
+```ts
+import { Sound } from '@rpgjs/client'
+@Sound({
+     id: 'town-music',
+     sound: require('./sound/town.ogg')
+})
+export class TownMusic {}
+```
+
+Here is the call of the method, server side:
+
+```ts
+player.playSound('town-music')
+```
+
+If you want everyone to listen to the sound on the map:
+
+```ts
+player.playSound('town-music', true)
+```
+
+
+---
 ### Get/Set position
 - **Property**: `position`
 - **Type**:  { x: number, y: number, z: number } 
@@ -334,6 +378,7 @@ Changes the player's direction
 
 ```ts
 import { Direction } from '@rpgjs/server'
+import { Shape } from './Shape';
 
 player.changeDirection(Direction.Left)
 ```

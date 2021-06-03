@@ -9,6 +9,7 @@
 - [x](#x)
 - [y](#y)
 - [visible](#visible)
+- [sound](#sound)
 - [image](#image)
 - [framesWidth](#frameswidth)
 - [framesHeight](#framesheight)
@@ -167,6 +168,17 @@ The global value of visible
 
 
 ---
+### sound
+- **Property**: `sound`
+- **Type**: string
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Define the sound that will be played for all animations in the spritesheet. Remember to create the sound before with the @Sound decorator
+
+
+---
 ### image
 - **Property**: `image`
 - **Type**: string
@@ -300,6 +312,7 @@ Here are the properties:
 * `x`
 * `y`
 * `visible`
+* `sound`: The sound that will be played during the frame
 
 ---
 **Extract Animation of Spritesheet**
@@ -314,6 +327,7 @@ textures: {
          framesWidth: 10,
          framesHeight: 2,
          offset: {x: 0, y: 230},
+         sound: 'my-sound-id', // You can put a sound just for the animation
          animations: [
               [ { time: 0, frameX: 0, frameY: 0 } ]
          ]

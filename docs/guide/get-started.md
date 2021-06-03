@@ -55,39 +55,3 @@ The same line as above but start the development line with `RPG_TYPE` environmen
 Go to `http://localhost:3000`
 
 > To change the port: `PORT=4000 RPG_TYPE=rpg npm run dev`
-
-## Existing packages
-
-As of the installation, packages allowing to already have a game are present:
-
-* `@rpgjs/starter-kit-client`: Default spritesheets and tilesets
-* `@rpgjs/starter-kit-server`: Default maps and data (items, weapons, etc.)
-* `@rpgjs/default-gui`: Default GUIs
-
-So, in `src/client/rpg.ts`,
-
-You can reset 
-
-```ts
-import { RpgClient } from '@rpgjs/client'
-
-@RpgClient({
-    spritesheets: [],
-    sounds: [],
-    gui: []
-})
-export default class RPG extends RpgClientEngine { }
-```
-
-Same server side, in `src/server/rpg.ts`,
-
-```ts
-import { RpgServer, RpgServerEngine } from '@rpgjs/server'
-
-@RpgServer({
-    basePath: __dirname,
-    maps: []
-    database: {}
-})
-export default class RPG extends RpgServerEngine { } 
-```

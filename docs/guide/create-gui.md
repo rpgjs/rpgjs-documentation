@@ -161,6 +161,9 @@ export class Player extends RpgPlayer {
         this.setHitbox(20, 16)
         this.setGraphic('male1_2')
         await this.changeMap('medieval')
+    }
+
+    onJoinMap() {
         this.gui('my-hud').open() // Here, open the HUD after loading the map
     }
 }

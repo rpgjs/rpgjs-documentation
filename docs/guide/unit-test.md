@@ -49,26 +49,22 @@ test('check that after the connection, the player is on the map named town', () 
 
 ## Launch unit tests
 
-Check that you have the following configuration in the `package.json` file: 
+Add the code in `jest.config.js`:
 
-```json
-{
-    "scripts": {
-        "test": "jest"
-    },
-    "jest": {
-        "transform": {
-        "\\.ts$": "ts-jest",
-        "\\.tmx$": "<rootDir>/node_modules/@rpgjs/compiler/tmx-loader/index.js"
-        },
-        "moduleFileExtensions": [
-            "ts",
-            "js"
-        ]
-    }
-}
+```js
+const jestConfig = require('@rpgjs/compiler/jest')
+module.exports = jestConfig
 ```
+
+> If you want to extend the configuration of Jest:
+> ```js
+> const jestConfig = require('@rpgjs/compiler/jest')
+> module.exports = {
+>    ...jestConfig
+>    verbose: true
+> }
+> ```
 
 Run the following command line :
 
-`npm test`
+`NODE_ENV=test npx jest`
