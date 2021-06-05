@@ -5,39 +5,20 @@
 You need to create a class that inherits RpgClientEngine
 
 ```ts
-import { entryPoint, RpgClientEngine, RpgClient } from '@rpgjs/client'
-import io from 'socket.io'
-
-@RpgClient({
-    // options of RpgClient decorator
-})
-class RPG extends RpgClientEngine { } 
+import { entryPoint } from '@rpgjs/client'
+import modules from './to/path/modules'
+import io from 'socket.io-client'
 
 document.addEventListener('DOMContentLoaded', () => { 
-    entryPoint(RPG, { io }).start()
+    entryPoint(modules, { io }).start()
 })
 ```
 1. Use `entryPoint` to create an instance of `RpgClientEngine`. 
 2. Be sure to start the client part when the DOM is loaded.
 
-### RpgClientEngine Hooks 
+### RpgClient Entry Point
 
-Full Example:
-
-```ts
-import { entryPoint, RpgClientEngine, RpgClient } from '@rpgjs/client'
-
-@RpgClient({
-    // options of RpgClient decorator
-})
-export class RPG extends RpgClientEngine {
-    onConnected() { }
-
-    onConnectError(err) { }
-
-    onDisconnect() { }
-}
-```
+<ApiContent page="RpgClientEntryPoint" />
 
 ## @RpgClient decorator
 

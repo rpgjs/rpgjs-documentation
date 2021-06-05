@@ -1,24 +1,27 @@
 # RpgServer
 
-## RpgServerEngine
+## RpgServer EntryPoint
 
 You need to create a class that inherits RpgServerEngine
 
 ```ts
-import { entryPoint, RpgServerEngine, RpgServer } from '@rpgjs/server'
+import modules from './to/path/modules'
+import { entryPoint } from '@rpgjs/server'
 
-@RpgServer({
+const rpgGame = entryPoint(modules, {
+     io, // io is socket.io instance
      basePath: __dirname
-})
-class RPG extends RpgServerEngine { } 
-
-const rpgGame = entryPoint(RPG, io) // io is socket.io instance
+}) 
 
 rpgGame.start()
 ```
-1. Use the `entryPoint` function, which will group together `socket.io` and your class 
+1. Put the `modules` in the entry point with entryPoint. You need to put the socket.io instance and the project path (to find the maps)
 2. the function returns an instance of `RpgServerEngine`. As soon as your server is ready (listening on the port, etc.), start the RPG server.
 
-## @RpgServer decorator
+## Entry Point properties
+
+<ApiContent page="RpgServerEntryPoint" />
+
+## @RpgModule< RpgServer > decorator
 
 <ApiContent page="RpgServer" />

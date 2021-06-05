@@ -1,63 +1,20 @@
 ::: tip Summary
-- [selector](#selector)
-- [selectorGui](#selectorgui)
-- [selectorCanvas](#selectorcanvas)
-- [plugins](#plugins)
+- [imports](#imports)
 - [spritesheets](#spritesheets)
 - [gui](#gui)
 - [sounds](#sounds)
-- [spriteClass](#spriteclass)
+- [sprite](#sprite)
 - [scenes](#scenes)
-- [canvas](#canvas)
 :::
 ---
-### selector
-- **Property**: `selector`
-- **Type**: string
-- **Optional**: `true` 
-- **Usage**:
-
- 
-The element selector that will display the canvas. By default, `#rpg`
-
-
----
-### selectorGui
-- **Property**: `selectorGui`
-- **Type**: string
-- **Optional**: `true` 
-- **Usage**:
-
- 
-The selector that corresponds to the GUIs. By default, `#gui`
-If you didn't put a GUI element in the div, an element will be automatically created.
-
-
----
-### selectorCanvas
-- **Property**: `selectorCanvas`
-- **Type**: string
-- **Optional**: `true` 
-- **Usage**:
-
- 
-The selector that corresponds to the element contains canvas. By default, `#canvas`
-If you didn't put element in the main div, an element will be automatically created.
-
-
----
-### plugins
-::: warning
-The realization of this property or method has not been completed.
-:::
-
-- **Property**: `plugins`
+### imports
+- **Property**: `imports`
 - **Type**:  { client: null | Function, server: null | Function }[]
 - **Optional**: `true` 
 - **Usage**:
 
 
-Adding client-side plugins
+Adding sub-modules
 
 
 ---
@@ -72,7 +29,7 @@ Array containing the list of spritesheets
 An element contains a class with the `@Spritesheet` decorator
 
 ```ts
-import { Spritesheet, Animation, Direction, RpgClient, RpgClientEngine } from '@rpgjs/client'
+import { Spritesheet, Animation, Direction, RpgClient, RpgModule } from '@rpgjs/client'
 
 @Spritesheet({
      id: 'chest',
@@ -81,12 +38,12 @@ import { Spritesheet, Animation, Direction, RpgClient, RpgClientEngine } from '@
 })
 class Chest  { }
 
-@RpgClient({
+@RpgModule<RpgClient>({
      spritesheets: [
          Chest
      ]
 })
-class RPG extends RpgClientEngine {}
+class RpgClientEngine {}
 ```
 
 [Guide: Create Sprite](/guide/create-sprite.html)
@@ -103,7 +60,7 @@ class RPG extends RpgClientEngine {}
 Array containing the list of VueJS components
 
 ```ts
-import { RpgClient, RpgClientEngine } from '@rpgjs/client'
+import { RpgClient, RpgModule } from '@rpgjs/client'
 
 const component = {
      name: 'my-gui',
@@ -114,12 +71,12 @@ const component = {
      `
 }
 
-@RpgClient({
+@RpgModule<RpgClient>({
      gui: [
          component
      ]
 })
-class RPG extends RpgClientEngine {}
+class RpgClientEngine {}
 ```
 
 [Guide: Create GUI](/guide/create-gui.html)
@@ -137,7 +94,7 @@ Array containing the list of sounds
 An element contains a class with the `@Sound` decorator
 
 ```ts
-import { Sound } from '@rpgjs/client'
+import { Sound, RpgModule, RpgClient } from '@rpgjs/client'
 
 @Sound({
      sounds: {
@@ -146,16 +103,16 @@ import { Sound } from '@rpgjs/client'
 })
 class Sounds {}
 
-@RpgClient({
+@RpgModule<RpgClient>({
      sounds: [ Sounds ]
 })
-class RPG extends RpgClientEngine {}
+class RpgClientEngine {}
 ```
 
 
 ---
-### spriteClass
-- **Property**: `spriteClass`
+### sprite
+- **Property**: `sprite`
 - **Type**: RpgClass&lt;[RpgSprite](/classes/sprite)&gt;
 - **Optional**: `true` 
 - **Usage**:
@@ -164,18 +121,16 @@ class RPG extends RpgClientEngine {}
 Give the `RpgSprite` class. A Sprite represents a player or an event
 
 ```ts
-import { RpgPlayer, RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { RpgSprite, RpgSpriteHooks, RpgClient, RpgModule } from '@rpgjs/client'
 
-class Sprite extends RpgSprite {
-     onInit() {
-         console.log('sprite is initialized')
-     }
+export const sprite: RpgSpriteHooks = {
+   onInit(sprite: RpgSprite) {}
 }
 
-@RpgClient({
-     spriteClass: Sprite
+@RpgModule<RpgClient>({
+     sprite
 })
-class RPG extends RpgClientEngine { } 
+class RpgClientEngine {}
 ``` 
 
 
@@ -190,44 +145,18 @@ class RPG extends RpgClientEngine { }
 Reference the scenes of the game. Here you can put your own class that inherits RpgSceneMap
 
 ```ts
-import { RpgPlayer, RpgServer, RpgServerEngine, RpgSceneMap } from '@rpgjs/server'
+import { RpgSceneMapHooks, RpgClient, RpgModule } from '@rpgjs/client'
 
-class SceneMap extends RpgSceneMap {
-     onLoad() {
-         // is loaded
-     }
+export const sceneMap: RpgSceneMapHooks = {
+    
 }
 
-@RpgClient({
+@RpgModule<RpgClient>({
      scenes: {
-     // If you put the RpgSceneMap scene, Thhe key is called mandatory `map`
-         map: SceneMap
+         // If you put the RpgSceneMap scene, Thhe key is called mandatory `map`
+         map: sceneMap
      }
 })
-class RPG extends RpgClientEngine { } 
+class RpgClientEngine {}
 ``` 
-
-
----
-### canvas
-- **Property**: `canvas`
-- **Type**: object
-- **Optional**: `true` 
-- **Usage**:
-
- 
-Canvas Options
-
-* {boolean} [options.transparent=false] - If the render view is transparent, default false
-* {boolean} [options.autoDensity=false] - Resizes renderer view in CSS pixels to allow for
-  resolutions other than 1
-* {boolean} [options.antialias=false] - sets antialias
-* {number} [options.resolution=1] - The resolution / device pixel ratio of the renderer. The
- resolution of the renderer retina would be 2.
-* {boolean} [options.preserveDrawingBuffer=false] - enables drawing buffer preservation,
- enable this if you need to call toDataUrl on the webgl context.
-* {boolean} [options.clearBeforeRender=true] - This sets if the renderer will clear the canvas or
-     not before the new render pass.
-* {number} [options.backgroundColor=0x000000] - The background color of the rendered area
- (shown if not transparent).
 

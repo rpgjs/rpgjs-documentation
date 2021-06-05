@@ -1,39 +1,28 @@
-# RpgScene & RpgSceneMap
+# RpgScene Hooks & RpgScene
+
+## RpgScene Hooks
 
 [Put the created class in the RpgClient decorator](/classes/client.html#scenes)
+
+Example:
+
+```ts
+import { RpgSceneMapHooks, RpgSceneMap } from '@rpgjs/client'
+
+const sceneMap: RpgSceneMapHooks = {
+    onAfterLoading(scene: RpgSceneMap) {
+
+    }
+}
+```
+
+<ApiContent page="RpgSceneHooks" />
 
 ## RpgScene
 
 <ApiContent page="RpgScene" />
 
-## RpgScene Hooks
-
-Full Example:
-
-```ts
-import { RpgSceneMap, RpgSprite } from '@rpgjs/client'
-
-export class SceneMap extends RpgSceneMap {
-    // As soon as the scene is created
-    onInit() { }
-
-    // When the scene is loaded (Image of the loaded tileset, drawing completed and viewport assigned)
-    onLoad() { }
-
-    // When server data changes on the map (events, players, or other)
-    onChanges(obj: { data: any, partial: any }) { }
-
-    // the scene is drawn
-    onDraw(t: number) {}
-
-    // a sprite has been added on the scene
-    onAddSprite(sprite: RpgSprite) {}
-
-    // a sprite has been removed on the scene
-    onRemoveSprite(sprite: RpgSprite) {}
-}
-```
-
 ## RpgSceneMap
 
 <ApiContent page="RpgSceneMap" />
+

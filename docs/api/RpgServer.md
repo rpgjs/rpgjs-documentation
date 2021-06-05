@@ -1,50 +1,44 @@
 ::: tip Summary
-- [plugins](#plugins)
-- [playerClass](#playerclass)
+- [imports](#imports)
+- [player](#player)
 - [database](#database)
 - [maps](#maps)
-- [basePath](#basepath)
 - [damageFormulas](#damageformulas)
 :::
 ---
-### plugins
-::: warning
-The realization of this property or method has not been completed.
-:::
-
-- **Property**: `plugins`
+### imports
+- **Property**: `imports`
 - **Type**:  { client: null | Function, server: null | Function }[]
 - **Optional**: `true` 
 - **Usage**:
 
 
-Add server-side plugins
+Adding sub-modules
 
 
 ---
-### playerClass
-- **Property**: `playerClass`
+### player
+- **Property**: `player`
 - **Type**: RpgClassPlayer&lt;[RpgPlayer](/classes/player)&gt;
 - **Optional**: `true` 
 - **Usage**:
 
  
-Give the `RpgPlayer` class. Each time a player connects, an instance of `RpgPlayer` is created.
+Give the `player` object hooks. Each time a player connects, an instance of `RpgPlayer` is created.
 
 ```ts
-import { RpgPlayer, RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { RpgPlayer, RpgServer, RpgPlayerHooks, RpgModule } from '@rpgjs/server'
 
-class Player extends RpgPlayer {
-     onConnected() {
-         console.log('connected')
+const player: RpgPlayerHooks = {
+     onConnected(player: RpgPlayer) {
+         
      }
 }
 
-@RpgServer({
-     basePath: __dirname,
-     playerClass: Player
+@RpgModule<RpgServer>({
+     player
 })
-class RPG extends RpgServerEngine { } 
+class RpgServerEngine { } 
 ``` 
 
 
@@ -59,16 +53,15 @@ class RPG extends RpgServerEngine { }
 References all data in the server. it is mainly used to retrieve data according to their identifier
 
 ```ts
-import { RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { RpgServer, RpgModule } from '@rpgjs/server'
 import { Potion } from 'my-database/items/potion'
 
-@RpgServer({
-     basePath: __dirname,
+@RpgModule<RpgServer>({
      database: {
          Potion
      }
 })
-class RPG extends RpgServerEngine { } 
+class RpgServerEngine { } 
 ``` 
 
 
@@ -83,7 +76,7 @@ class RPG extends RpgServerEngine { }
 Array of all maps. Each element is an `RpgMap` class
 
 ```ts
-import { RpgMap, MapData, RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { RpgMap, MapData, RpgServer, RpgModule } from '@rpgjs/server'
 
 @MapData({
      id: 'town',
@@ -92,28 +85,12 @@ import { RpgMap, MapData, RpgServer, RpgServerEngine } from '@rpgjs/server'
 })
 class TownMap extends RpgMap { }
 
-@RpgServer({
-     basePath: __dirname,
+@RpgModule<RpgServer>({
      maps: [
          TownMap
      ]
 })
-class RPG extends RpgServerEngine { } 
-``` 
-
-
----
-### basePath
-- **Property**: `basePath`
-- **Type**: string
-- **Optional**: `false` 
-- **Usage**:
-
- 
-It allows you to know where the maps are located. Usually put `__dirname` for the current directory.
-
-```ts
-basePath: __dirname
+class RpgServerEngine { } 
 ``` 
 
 
@@ -144,12 +121,11 @@ damageFormulas: {
 Example:
 
 ```ts
-import { RpgServer, RpgServerEngine, Presets } from '@rpgjs/server'
+import { RpgModule, RpgServer, Presets } from '@rpgjs/server'
 
 const { ATK, PDEF } = Presets
 
-@RpgServer({
-     basePath: __dirname,
+@RpgModule<RpgServer>({
      damageFormulas: {
          damagePhysic(a, b) {
              let damage = a[ATK] - b[PDEF]
@@ -158,5 +134,5 @@ const { ATK, PDEF } = Presets
          }
      }
 })
-class RPG extends RpgServerEngine { } 
+class RpgServerEngine { } 
 ```
