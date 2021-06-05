@@ -15,7 +15,7 @@
 
 ## Create Map class
 
-1. Create a new file: `src/server/maps/medieval.ts`
+1. Create a new file: <PathTo to="mapDir" file="medieval.ts" />
 2. Then, the code must be as follows
 
 ```ts
@@ -34,20 +34,18 @@ export class MedievalMap extends RpgMap { }
 
 ## Add Map in your Game
 
-In `server/rpg.ts` :
+In <PathTo to="serverIndex" /> :
 
 ```ts
-import { RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { RpgServer, RpgModule } from '@rpgjs/server'
 import { MedievalMap } from './maps/medieval.ts'
 
-@RpgServer({
+@RpgModule<RpgServer>({
     maps:  [
         MedievalMap
-    ],
-    basePath: __dirname,
+    ]
 })
-export default class RPG extends RpgServerEngine { }
+export default class RpgServerEngine { }
 ```
 
-1. Add the map created in the property `maps` in the `@RpgServer` decorator.
-2. Put `basePath` of the project. It will be used to find the maps.
+1. Add the map created in the property `maps` in the `@RpgModule` decorator

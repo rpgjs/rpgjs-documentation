@@ -77,12 +77,12 @@ If you don't want to create by yourself, You can add the plugin for the mobile
 
 `npm install @rpgjs/mobile-gui`
 
-In `src/plugin.ts`
+In <PathTo to="moduleIndex" />
 ```ts
 import mobileGui from '@rpgjs/mobile-gui'
 
 export default [
-    // other plugins and ...
+    // other modules and ...
     mobileGui
 ]
 

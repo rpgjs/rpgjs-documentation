@@ -25,23 +25,23 @@ export class Potion { }
 
 ## Add the item to your game
 
-Add the `src/server/database/items/potion.ts` file
+Add the <PathTo to="databaseDir" file="items/potion.ts" /> file
 
 ```ts
-import { RpgServer, RpgServerEngine } from '@rpgjs/server'
+import { RpgServer, RpgModule } from '@rpgjs/server'
 import { Potion } from './database/items/potion.ts'
 
-@RpgServer({
+@RpgModule<RpgServer>({
     database: {
         Potion
     }
 })
-export default class RPG extends RpgServerEngine { }
+export default class RpgServerEngine { }
 ```
 
 ## Using the item in an event
 
-Add the `src/server/events/chara.ts` file
+Add the <PathTo to="eventDir" file="chara.ts" /> file
 
 ```ts
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'

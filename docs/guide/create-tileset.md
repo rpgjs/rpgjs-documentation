@@ -51,18 +51,18 @@ The `images` object allows to group several tilesets at the same time
 
 ## Add the tileset to the game
 
-1. Go to `src/client/rpg.ts`
+1. Go to <PathTo to="clientIndex" />
 
 ```ts
-import { RpgClient, RpgClientEngine } from '@rpgjs/client'
+import { RpgClient, RpgModule } from '@rpgjs/client'
 import { Tilesets } from './characters/medieval'
 
-@RpgClient({
+@RpgModule<RpgClient>({
     spritesheets: [
         Tilesets
     ]
 })
-export default class RPG extends RpgClientEngine {}
+export default class RpgClientEngine {}
 ```
 
 2. And add the `Tilesets`, class 

@@ -13,16 +13,16 @@
 ## Create Player class
 
 ```ts
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
-export class Player extends RpgPlayer {
-    onConnected() {
-        this.setGraphic('hero')
+export const player: RpgPlayerHooks = {
+    onConnected(player: RpgPlayer) {
+        player.setGraphic('hero')
     }
 }
 ```
 
-1. Create a `Player` class that inherits from RpgPlayer. The file, in our structure, is `src/server/player.ts`.
+1. Create a `player` object. The file, in our structure, is <PathTo to="serverDir" file="player.ts" />.
 2. We give it a graph to give an initial appearance to the player
 
 > Make sure the spritesheet is existing. Here, `hero` is the name of the client-side spritesheet. If it is not the case, see the sprite creation tutorial.
@@ -44,12 +44,12 @@ export class Player extends RpgPlayer {
 5. Go to the map by specifying the ID
 
 ```ts
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
-export class Player extends RpgPlayer {
-    async onConnected() {
-        this.setGraphic('hero')
-        await this.changeMap('medieval')
+export const player: RpgPlayerHooks = {
+    async onConnected(player: RpgPlayer) {
+        player.setGraphic('hero')
+        await player.changeMap('medieval')
     }
 }
 ```
@@ -61,12 +61,12 @@ export class Player extends RpgPlayer {
 Position the player on the map with X and Y positions
 
 ```ts
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
-export class Player extends RpgPlayer {
-    async onConnected() {
-        this.setGraphic('hero')
-        await this.changeMap('medieval', {
+export const player: RpgPlayerHooks = {
+    async onConnected(player: RpgPlayer) {
+        player.setGraphic('hero')
+        await player.changeMap('medieval', {
             x: 100,
             y: 100
         })
@@ -81,17 +81,17 @@ export class Player extends RpgPlayer {
 After loading the map, **do not continue** to do the rest of the code in the onConnected method because the properties will not be synchronized with the client
 
 ```ts
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
-export class Player extends RpgPlayer {
-    async onConnected() {
-        this.setGraphic('hero')
-        await this.changeMap('medieval', {
+export const player: RpgPlayerHooks = {
+    async onConnected(player: RpgPlayer) {
+        player.setGraphic('hero')
+        await player.changeMap('medieval', {
             x: 100,
             y: 100
         })
         // BAD PRACTICE, because not synchronized on the map
-        this.hp = 500
+        player.hp = 500
     }
 }
 ```
@@ -99,41 +99,37 @@ export class Player extends RpgPlayer {
 Make your code in the `onJoinMap()` hook:
 
 ```ts
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
-export class Player extends RpgPlayer {
-    onConnected() {
-        this.setGraphic('hero')
-        this.changeMap('medieval', {
+export const player: RpgPlayerHooks = {
+    async onConnected(player: RpgPlayer) {
+        player.setGraphic('hero')
+        await player.changeMap('medieval', {
             x: 100,
             y: 100
         })
-    }
-
+    },
     // GOOD PRACTICE
-    onJoinMap() {
-        this.hp = 500
+    onJoinMap(player: RpgPlayer) {
+        player.hp = 500
     }
 }
 ```
 
 ## Add Player class in your game engine
 
-In `src/server/rpg.ts`
+In <PathTo to="serverIndex" />
 
 ```ts
-import { RpgServer, RpgServerEngine } from '@rpgjs/server'
-import { Player } from './player'
+import { RpgServer, RpgModule } from '@rpgjs/server'
+import { player } from './player'
 import { MedievalMap } from './maps/medieval.ts'
 
-@RpgServer({
-    basePath: __dirname,
+@RpgModule<RpgServer>({
     maps:  [
         MedievalMap
     ],
-    playerClass: Player
+    player
 })
-export default class RPG extends RpgServerEngine {
-    
-}
+export default class RpgServerEngine { }
 ```

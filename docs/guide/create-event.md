@@ -14,7 +14,7 @@
 
 ## Create a character. Shared mode
 
-First of all, add a file in `src/server/events/chara.ts`
+First of all, add a file in <PathTo to="serverDir" file="chara.ts" />
 
 ```ts 
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
@@ -53,7 +53,7 @@ Then in each method, you can make commands, either on the event, on the player c
 
 ![start-event2](/assets/start-event2.png)
 
-5. Go to the `src/server/maps/medieval.ts` and add the event in the `events` array :
+5. Go to the <PathTo to="mapDir" file="medieval.ts" /> and add the event in the `events` array :
 
 ```ts
 import { RpgMap, MapData } from '@rpgjs/server'

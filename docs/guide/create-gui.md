@@ -15,17 +15,6 @@ We want to create a life bar. It will remain in hauy on the left side of the scr
 
 ![Hud](/assets/hud.png)
 
-## File structure
-
-We create a `hud.vue` file
-
-```
-* src
-    * client
-        * gui
-            hud.vue
-        * rpg.ts
-```
 
 ## Component
 
@@ -131,18 +120,18 @@ export default {
 
 ### Client Side
 
-1. Client Side (in `src/client/rpg.ts`)
+1. Client Side (in <PathTo to="clientIndex" />)
 
 ```ts{5-7}
 import { RpgClient, RpgClientEngine } from '@rpgjs/client'
 import hud from './gui/hud.vue'
 
-@RpgClient({
+@RpgModule<RpgClient>({
     gui: [
        hud
     ]
 })
-export default class RPG extends RpgClientEngine { }
+export default RpgClientEngine { }
 ```
 
 2. Add in the `gui` property, a new element: your VueJS component.
@@ -151,20 +140,20 @@ export default class RPG extends RpgClientEngine { }
 
 On the server side, you can call the menu at any time:
 
-In `src/server/player.ts`: 
+In <PathTo to="serverDir" file="player.ts" />:
 
 ```ts{8}
-import { RpgPlayer } from '@rpgjs/server'
+import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
-export class Player extends RpgPlayer {
-    async onConnected() {
-        this.setHitbox(20, 16)
-        this.setGraphic('male1_2')
-        await this.changeMap('medieval')
+export const player: RpgPlayerHooks = {
+    async onConnected(player: RpgPlayer) {
+        player.setHitbox(20, 16)
+        player.setGraphic('male1_2')
+        await player.changeMap('medieval')
     }
 
-    onJoinMap() {
-        this.gui('my-hud').open() // Here, open the HUD after loading the map
+    onJoinMap(player: RpgPlayer) {
+        player.gui('my-hud').open() // Here, open the HUD after loading the map
     }
 }
 ```
