@@ -70,6 +70,7 @@ const guideMenu = [{
   children: [
     '/guide/get-started',
     '/guide/structure',
+    '/guide/create-module',
     '/guide/create-tileset',
     '/guide/create-map',
     '/guide/animation-tile',
@@ -97,7 +98,6 @@ const guideMenu = [{
   sidebarDepth: 2,
   children: [
     '/guide/responsive-design',
-    '/guide/create-plugin',
     '/guide/webpack',
   ]
 }

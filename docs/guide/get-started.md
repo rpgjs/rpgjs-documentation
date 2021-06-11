@@ -27,7 +27,7 @@ RPGJS was created several years ago, with the aim of creating an RPG on the brow
 
 **Server-Side**
 
-- NodeJS >12
+- NodeJS >14
 
 ## Installation
 
@@ -40,11 +40,9 @@ npm install
 npm run dev
 ```
 
-And open a browser on `http://localhost:3001` (Development mode with browserSync)
+And open a browser on `http://localhost:3000`
 
- > Without browserSync: `http://localhost:3000`
- 
- > To change the port: `PORT=4000 npm run dev`. Then, you can go to port 4000 or 4001
+ > To change the port: `PORT=4000 npm run dev`. Then, you can go to port 4000
 
 **For RPG**:
 

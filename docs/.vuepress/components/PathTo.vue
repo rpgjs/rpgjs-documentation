@@ -4,7 +4,8 @@
 
 <script>
 
-const baseModule = 'src/game/main'
+const modDir = 'src/modules'
+const baseModule = modDir + '/main'
 const serverDir = baseModule + '/server'
 const paths = {
     clientIndex: baseModule + '/client/index.ts',
@@ -14,7 +15,8 @@ const paths = {
     mapDir: serverDir + '/maps',
     eventDir: serverDir + '/events',
     databaseDir: serverDir + '/database',
-    moduleIndex: 'src/game/index.ts'
+    moduleIndex: modDir + '/index.ts',
+    modDir
 }
 
 export default {

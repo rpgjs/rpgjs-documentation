@@ -11,30 +11,31 @@
 2. the file must end with `.spec.ts`
 
 ```ts
-import { RpgWorld } from '@rpgjs/server'
+import { RpgWorld, RpgPlayer } from '@rpgjs/server'
 import { testing } from '@rpgjs/testing'
-import RPGServer from '../src/server/rpg'
+import modules from '../src/modules'
 
-let client, socket, player
+let player: RpgPlayer
 
-beforeEach(() => {
-    const fixture = testing(RPGServer)
-    client = fixture.createClient()
-    socket = client.connection()
-    player = RpgWorld.getPlayer(client.id)
+beforeEach(async () => {
+    const fixture = testing(modules, {
+        basePath: __dirname + '/../'
+    })
+    const client = await fixture.createClient()
+    player = RpgWorld.getPlayer(client.playerId)
 })
 
 test('test player', () => {
     expect(player).toBeDefined()
 })
+
 ```
 
 In the `beforeEach()` function, you must: 
 
 1. Wrap your server class with the `testing()` function. It will allow you to emulate a client. 
 2. Create a client
-3. Connecting and recovering a fake socket
-4. Using the [RpgWorld class](/classes/world.html), retrieve the player according to his identifier
+3. Using the [RpgWorld class](/classes/world.html), retrieve the player according to his identifier
 
 You can make tests ! 
 
