@@ -1,6 +1,7 @@
 ::: tip Summary
 - [io](#io)
 - [basePath](#basepath)
+- [globalConfig](#globalconfig)
 :::
 ---
 ### io
@@ -26,4 +27,15 @@ It allows you to know where the maps are located. Usually put `__dirname` for th
 ```ts
 basePath: __dirname
 ``` 
+
+
+---
+### globalConfig
+- **Property**: `globalConfig`
+- **Type**: object
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The general configurations of the game.
 

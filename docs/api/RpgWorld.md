@@ -74,15 +74,16 @@ const players = RpgWorld.getPlayers()
 - **Usage**:
 
 
-Allows to recover all the objects of the map (players and events) 
+Recover all map objects: players and events. If you specify the `player` parameter, it also retrieves the events in scenario mode of the player in question
 
 ```ts
 import { RpgWorld } from '@rpgjs/server'
 
 const objects = RpgWorld.getObjectsOfMap('mapname')
+console.log(objects)
 ```
 
-If you specify the player, you can retrieve his events in Scenario mode
+Also retrieve events in Scenario mode:
 
 ```ts
 import { RpgWorld } from '@rpgjs/server'

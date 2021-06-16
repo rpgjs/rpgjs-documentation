@@ -4,6 +4,7 @@
 - [selector](#selector)
 - [selectorGui](#selectorgui)
 - [selectorCanvas](#selectorcanvas)
+- [globalConfig](#globalconfig)
 :::
 ---
 ### io
@@ -73,4 +74,15 @@ If you didn't put a GUI element in the div, an element will be automatically cre
  
 The selector that corresponds to the element contains canvas. By default, `#canvas`
 If you didn't put element in the main div, an element will be automatically created.
+
+
+---
+### globalConfig
+- **Property**: `globalConfig`
+- **Type**: object
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The general configurations of the game. For example, default keyboard keys, cursor noise. This is information that external modules can reuse
 

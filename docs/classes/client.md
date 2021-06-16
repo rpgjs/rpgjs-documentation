@@ -1,6 +1,6 @@
 # RpgClient
 
-## RpgClientEngine
+## RpgClient Entry Point
 
 You need to create a class that inherits RpgClientEngine
 
@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 1. Use `entryPoint` to create an instance of `RpgClientEngine`. 
 2. Be sure to start the client part when the DOM is loaded.
-
-### RpgClient Entry Point
 
 <ApiContent page="RpgClientEntryPoint" />
 

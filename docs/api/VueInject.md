@@ -9,6 +9,8 @@
 - [rpgSocket](#rpgsocket)
 - [rpgGui](#rpggui)
 - [rpgSound](#rpgsound)
+- [rpgResource](#rpgresource)
+- [rpgEngine](#rpgengine)
 :::
 ---
 ### rpgScene
@@ -199,9 +201,6 @@ export default {
 }
 ``` 
 
-* `object`: The whole player
-* `paramsChanged`: Only the representation of the properties that have been changed on this player
-
 
 ---
 ### rpgSocket
@@ -259,6 +258,47 @@ export default {
      inject: ['rpgSound'],
      mounted() {
         this.rpgSound.get('my-sound-id').play()
+     }
+}
+``` 
+
+
+---
+### rpgResource
+- **Property**: `rpgResource`
+- **Type**:  { spritesheets: Map, sounds: Map } 
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Find the game's image and sound library
+
+```js
+export default {
+     inject: ['rpgResource'],
+     mounted() {
+        const resourceImage = this.rpgResource.spritesheets.get('image_id')
+        const resourceSound = this.rpgResource.sounds.get('sound_id')
+     }
+}
+``` 
+
+
+---
+### rpgEngine
+- **Property**: `rpgEngine`
+- **Type**: [[RpgClient](/classes/client)Engine](/classes/client-engine.html#rpgclientengine)
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Get RpgClientEngine instance
+
+```js
+export default {
+     inject: ['rpgEngine'],
+     mounted() {
+        const vueInstance = this.rpgEngine.renderer.app
      }
 }
 ``` 

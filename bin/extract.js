@@ -44,6 +44,7 @@ const types = {
     RpgMap: '/classes/map',
     RpgEvent: '/classes/event',
     RpgServer: '/classes/server',
+    RpgClientEngine: '/classes/client-engine.html#rpgclientengine',
     RpgClient: '/classes/client',
     RpgSprite: '/classes/sprite',
     RpgGui: '/classes/gui',
@@ -55,7 +56,8 @@ const types = {
     'PIXI.Container': 'https://pixijs.download/dev/docs/PIXI.Container.html',
     'PIXI.Sprite': 'https://pixijs.download/dev/docs/PIXI.Sprite.html',
     'PIXI.Viewport': 'https://github.com/davidfig/pixi-viewport',
-    Observable: 'https://rxjs.dev/guide/observable'
+    Observable: 'https://rxjs.dev/guide/observable',
+    KeyboardControls: '/classes/keyboard.html'
 }
 
 function toLink(type) {

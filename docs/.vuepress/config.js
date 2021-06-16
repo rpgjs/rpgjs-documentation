@@ -17,11 +17,13 @@ const apiMenu = [
     sidebarDepth: 2,
     children: [
       '/classes/client',
+      '/classes/client-engine',
       '/classes/sprite',
       '/classes/spritesheet',
       '/classes/scene-map',
       '/classes/gui',
       '/classes/sound',
+      '/classes/keyboard',
       '/classes/vue-inject'
     ]
   },

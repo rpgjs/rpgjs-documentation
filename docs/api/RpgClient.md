@@ -1,5 +1,6 @@
 ::: tip Summary
 - [imports](#imports)
+- [engine](#engine)
 - [spritesheets](#spritesheets)
 - [gui](#gui)
 - [sounds](#sounds)
@@ -15,6 +16,32 @@
 
 
 Adding sub-modules
+
+
+---
+### engine
+- **Property**: `engine`
+- **Type**: RpgEngineHooks
+- **Optional**: `true` 
+- **Usage**:
+
+
+Object containing the hooks concerning the engine
+
+```ts
+import { RpgClientEngine, RpgSpriteHooks, RpgModule, RpgClient } from '@rpgjs/client'
+
+const engine: RpgEngineHooks = {
+     onConnected(engine: RpgClientEngine) {
+         console.log('client is connected')
+     }
+}
+
+@RpgModule<RpgClient>({
+     engine
+})
+class RpgClientModule {}
+```
 
 
 ---
@@ -113,7 +140,7 @@ class RpgClientEngine {}
 ---
 ### sprite
 - **Property**: `sprite`
-- **Type**: RpgClass&lt;[RpgSprite](/classes/sprite)&gt;
+- **Type**: [RpgSprite](/classes/sprite)Hooks
 - **Optional**: `true` 
 - **Usage**:
 
@@ -137,7 +164,7 @@ class RpgClientEngine {}
 ---
 ### scenes
 - **Property**: `scenes`
-- **Type**:  [sceneName: string]: Class of [[RpgScene](/classes/scene-map)Map](/classes/scene-map) 
+- **Type**:  [sceneName: string]: [[RpgScene](/classes/scene-map)Map](/classes/scene-map)Hooks 
 - **Optional**: `true` 
 - **Usage**:
 

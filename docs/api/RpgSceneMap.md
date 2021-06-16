@@ -1,6 +1,18 @@
 ::: tip Summary
+- [tilemap](#tilemap)
 - [viewport](#viewport)
 :::
+---
+### tilemap
+- **Property**: `tilemap`
+- **Type**: TileMap
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Get the tilemap
+
+
 ---
 ### viewport
 - **Property**: `viewport`
