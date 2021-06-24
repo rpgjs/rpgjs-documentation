@@ -91,6 +91,8 @@ const guideMenu = [{
   collapsable: false,
   sidebarDepth: 2,
   children: [
+    '/gui/theme',
+    '/gui/reuse-gui',
     '/guide/create-gui',
   ]
 },
@@ -99,6 +101,7 @@ const guideMenu = [{
   collapsable: false,
   sidebarDepth: 2,
   children: [
+    '/guide/inputs',
     '/guide/responsive-design',
     '/guide/webpack',
   ]
@@ -134,6 +137,7 @@ module.exports = {
         '/commands/': apiMenu,
         '/database/': apiMenu,
         '/guide/': guideMenu,
+        '/gui/': guideMenu,
         '/advanced/': guideMenu
       },
     plugins: ['@vuepress/active-header-links']

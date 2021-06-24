@@ -99,6 +99,12 @@ In the module, you can specify the map, player, etc.
 
 [See RpgServer options](/classes/server.html#rpgmodule-rpgserver-decorator)
 
+## Generate a module in command line
+
+Go to the root of the project:
+
+`npx rpgjs generate module <directory-name>`
+
 ## Module with options
 
 Encapsulate the class in a function. This will allow you to pass custom options to the module

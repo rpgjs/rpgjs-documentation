@@ -4,6 +4,7 @@
 
 <script>
 
+const configDir = 'src/config'
 const modDir = 'src/modules'
 const baseModule = modDir + '/main'
 const serverDir = baseModule + '/server'
@@ -16,7 +17,9 @@ const paths = {
     eventDir: serverDir + '/events',
     databaseDir: serverDir + '/database',
     moduleIndex: modDir + '/index.ts',
-    modDir
+    modDir,
+    configDir,
+    themeFile: configDir + '/theme.scss'
 }
 
 export default {

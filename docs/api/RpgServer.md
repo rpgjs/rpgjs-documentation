@@ -1,5 +1,6 @@
 ::: tip Summary
 - [imports](#imports)
+- [engine](#engine)
 - [player](#player)
 - [database](#database)
 - [maps](#maps)
@@ -14,6 +15,32 @@
 
 
 Adding sub-modules
+
+
+---
+### engine
+- **Property**: `engine`
+- **Type**: [RpgServer](/classes/server)EngineHooks
+- **Optional**: `true` 
+- **Usage**:
+
+
+Object containing the hooks concerning the engine
+
+```ts
+import { RpgServerEngine, RpgServerEngineHooks, RpgModule, RpgClient } from '@rpgjs/server'
+
+const engine: RpgEngineHooks = {
+     onStart(server: RpgServerEngine) {
+         console.log('server is started')
+     }
+}
+
+@RpgModule<RpgServer>({
+     engine
+})
+class RpgServerModule {}
+```
 
 
 ---

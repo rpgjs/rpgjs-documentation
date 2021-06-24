@@ -298,7 +298,7 @@ Get RpgClientEngine instance
 export default {
      inject: ['rpgEngine'],
      mounted() {
-        const vueInstance = this.rpgEngine.renderer.app
+        const vueInstance = this.rpgEngine.vueInstance
      }
 }
 ``` 

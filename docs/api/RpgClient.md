@@ -21,7 +21,7 @@ Adding sub-modules
 ---
 ### engine
 - **Property**: `engine`
-- **Type**: RpgEngineHooks
+- **Type**: [[RpgClient](/classes/client)Engine](/classes/client-engine.html#rpgclientengine)Hooks
 - **Optional**: `true` 
 - **Usage**:
 
@@ -29,9 +29,9 @@ Adding sub-modules
 Object containing the hooks concerning the engine
 
 ```ts
-import { RpgClientEngine, RpgSpriteHooks, RpgModule, RpgClient } from '@rpgjs/client'
+import { RpgClientEngine, RpgClientEngineHooks, RpgModule, RpgClient } from '@rpgjs/client'
 
-const engine: RpgEngineHooks = {
+const engine: RpgClientEngineHooks = {
      onConnected(engine: RpgClientEngine) {
          console.log('client is connected')
      }
