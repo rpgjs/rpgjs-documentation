@@ -20,6 +20,7 @@ export default [
     defaultGui
 ]
 ```
+
 ## The windows
 
 In a VueJS file, use the `rpg-window` component:

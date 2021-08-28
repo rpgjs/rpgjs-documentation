@@ -93,6 +93,7 @@ const guideMenu = [{
   children: [
     '/gui/theme',
     '/gui/reuse-gui',
+    '/gui/notification-gui',
     '/guide/create-gui',
   ]
 },
@@ -102,6 +103,7 @@ const guideMenu = [{
   sidebarDepth: 2,
   children: [
     '/guide/inputs',
+    '/guide/gamepad',
     '/guide/responsive-design',
     '/guide/webpack',
   ]

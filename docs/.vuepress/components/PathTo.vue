@@ -17,6 +17,7 @@ const paths = {
     eventDir: serverDir + '/events',
     databaseDir: serverDir + '/database',
     moduleIndex: modDir + '/index.ts',
+    modIndex: modDir + '/index.ts',
     modDir,
     configDir,
     themeFile: configDir + '/theme.scss'

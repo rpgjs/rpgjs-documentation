@@ -1,5 +1,6 @@
 ::: tip Summary
 - [onStart](#onstart)
+- [onStep](#onstep)
 - [onInput](#oninput)
 - [onConnected](#onconnected)
 - [onDisconnect](#ondisconnect)
@@ -14,6 +15,17 @@
 
 
 When the engine is started. If you send false, you prevent the client from connecting to the server
+
+
+---
+### onStep
+- **Property**: `onStep`
+- **Type**:  (engine: [[RpgClient](/classes/client)Engine](/classes/client-engine.html#rpgclientengine), t: number) =&gt; boolean | any 
+- **Optional**: `true` 
+- **Usage**:
+
+
+Each frame
 
 
 ---

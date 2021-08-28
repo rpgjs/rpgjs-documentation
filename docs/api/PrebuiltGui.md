@@ -13,7 +13,8 @@
 | PrebuiltGui.Disconnect | rpg-disconnect |
 | PrebuiltGui.Gameover | rpg-gameover |
 | PrebuiltGui.Save | rpg-save |
-| PrebuiltGui.Controls | rpg-controls | 
+| PrebuiltGui.Controls | rpg-controls |
+| PrebuiltGui.Notification | rpg-notification | 
 - **Usage**:
 
  

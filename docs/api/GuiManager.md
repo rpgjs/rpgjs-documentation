@@ -1,6 +1,7 @@
 ::: tip Summary
 - [Show Text ](#show-text)
 - [Show Choices ](#show-choices)
+- [Displays a notification](#displays-a-notification)
 - [Call Main Menu](#call-main-menu)
 - [Call Shop Menu](#call-shop-menu)
 - [Call custom GUI](#call-custom-gui)
@@ -117,6 +118,22 @@ const choice = await player.showChoices('What color do you prefer?', [
 // If the player selects the first
 console.log(choice) // { text: 'Black', value: 'black' }
 ```
+
+
+---
+### Displays a notification
+- **Method**: `player.showNotification()`
+- **Arguments**:
+    - {string} `message`. - The message to display in the notification (Optional: `false`)
+    - {object} `options`. - An object containing options for the notification (Optional: `false`)
+    - {number} `options.time`. - The time to display the notification for (in ms). Default: 2000ms (Optional: `false`)
+    - {string} `options.icon`. - The icon to display in the notification. Put the identifier of the spritesheet (defined on the client side) (Optional: `false`)
+    - {string} `options.sound`. - The sound to play when the notification is shown. Set the sound ID (defined on the client side) (Optional: `false`)
+- **Return**: void   
+- **Usage**:
+
+
+Displays a notification . Opens the GUI named `rpg-notification`
 
 
 ---
