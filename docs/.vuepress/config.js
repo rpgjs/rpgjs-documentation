@@ -117,6 +117,17 @@ const guideMenu = [{
   ]
 } */]
 
+const pluginMenu = [{
+  title: 'Plugins',
+  collapsable: false,
+  sidebarDepth: 1,
+  children: [
+    '/plugins/chat',
+    '/plugins/save',
+    '/plugins/title-screen'
+  ]
+}]
+
 module.exports = {
     title: 'RPGJS v3 Documentation',
     description: 'Create your RPG or MMORPG in Javascript',
@@ -132,6 +143,10 @@ module.exports = {
         }, {
           text: 'API',
           link: '/commands/common'
+        },
+        {
+          text: 'Plugins',
+          link: '/plugins/chat'
         }
       ],
       sidebar:  {
@@ -140,7 +155,8 @@ module.exports = {
         '/database/': apiMenu,
         '/guide/': guideMenu,
         '/gui/': guideMenu,
-        '/advanced/': guideMenu
+        '/advanced/': guideMenu,
+        '/plugins/': pluginMenu
       },
     plugins: ['@vuepress/active-header-links']
   }

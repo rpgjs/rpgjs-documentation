@@ -11,6 +11,10 @@ Two methods will be necessary:
 * [player.load(json)](/commands/common.html#load-progress)
 * [player.save()](/commands/common.html#save-progress)
 
+## Screens
+
 You decide when you want to save the player's game.
 
-<Partial page="todo" />
+If you want screens to save or load a game, use the following plugins:
+- [Plugin Save Screen (for RPG)](/plugins/save.html)
+- [Plugin Title Screen (with load screen or login)](/plugins/title-screen.html)

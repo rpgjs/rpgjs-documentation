@@ -10,6 +10,7 @@
 - [Get Current Map](#get-current-map)
 - [Show Animation](#show-animation)
 - [Emit to client](#emit-to-client)
+- [Listen to data from the client](#listen-to-data-from-the-client)
 - [Play Sound](#play-sound)
 - [Get/Set position](#get-set-position)
 - [Set Sizes](#set-sizes)
@@ -233,6 +234,19 @@ player.showAnimation('sword_stroke', 'default', true)
 
 
 Emit data to clients with socket
+
+
+---
+### Listen to data from the client
+- **Method**: `player.on(key,cb)`
+- **Arguments**:
+    - {string} `key`.  (Optional: `false`)
+    - {function} `cb`.  (Optional: `false`)
+- **Return**: void   
+- **Usage**:
+
+
+Listen to the data (socket) sent by the client
 
 
 ---

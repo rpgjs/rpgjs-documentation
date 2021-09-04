@@ -1,6 +1,7 @@
 ::: tip Summary
 - [app](#app)
 - [database](#database)
+- [globalConfig](#globalconfig)
 - [damageFormulas](#damageformulas)
 - [io](#io)
 :::
@@ -24,6 +25,18 @@ Express App Instance. If you have assigned this variable before starting the gam
 
 
 List of the data
+
+
+---
+### globalConfig
+- **Property**: `globalConfig`
+- **Type**: object
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+retrieve the global configurations assigned at the entry point
 
 
 ---
