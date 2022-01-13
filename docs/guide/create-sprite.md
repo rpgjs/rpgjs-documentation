@@ -1,4 +1,4 @@
-# Create a sprite
+# Step 4. Create a sprite
 
 ## Prerequisites
 

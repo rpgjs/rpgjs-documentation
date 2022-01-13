@@ -1,7 +1,6 @@
 ::: tip Summary
 - [Read/Give a name](#read-give-a-name)
 - [Set Graphic](#set-graphic)
-- [Set Vision](#set-vision)
 - [Change Map](#change-map)
 - [Teleport on the map](#teleport-on-the-map)
 - [Load progress](#load-progress)
@@ -15,6 +14,9 @@
 - [Get/Set position](#get-set-position)
 - [Set Sizes](#set-sizes)
 - [Set Hitbox](#set-hitbox)
+- [Attach Shape](#attach-shape)
+- [Get Shapes](#get-shapes)
+- [Get In-Shapes](#get-in-shapes)
 - [Get Direction](#get-direction)
 - [Change direction](#change-direction)
 :::
@@ -42,36 +44,6 @@ player.name = 'Link'
 Give the spritesheet identifier
 
 > You must, on the client side, create the spritesheet in question. Guide: [Create Sprite](/guide/create-sprite.html)
-
-
----
-### Set Vision
-::: warning
-The realization of this property or method has not been completed.
-:::
-
-- **Method**: `player.setVision(obj)`
-- **Arguments**:
-    - {object} `obj`.  (Optional: `false`) 
-- **Usage**:
-
-
-Define a vision for the event. 
-
-The object in parameter
-- type: `box`
-- height: Height
-- width: Width
-
-the `onInVision()` and `onOutVision()` methods are triggered on the `RpgPlayer` class
-
-```ts
-player.setVision({
-     type: 'box',
-     width: 100, 
-     height: 100
-})
-```
 
 
 ---
@@ -358,6 +330,53 @@ player.setHitbox({
 
 
 ---
+### Attach Shape
+- **Since**: beta.3
+- **Method**: `player.attachShape(parameters)`
+- **Arguments**:
+    - { { width: number, height: number, positioning?, name?, properties?: object } } `obj`. - positioning: Indicate where the shape is placed.
+- properties: An object in order to retrieve information when interacting with the shape
+- name: The name of the shape (Optional: `false`)
+- **Return**: [RpgShape](/classes/shape)   
+- **Usage**:
+
+
+Attach a shape to the player (and allow interaction with it)
+
+```ts
+import { ShapePositioning } from '@rpgjs/server'
+
+player.attachShape({
+     width: 100,
+     height: 100,
+     positioning: ShapePositioning.Center
+})
+```
+
+
+---
+### Get Shapes
+- **Since**: beta.3
+- **Method**: `player.getShapes()`
+- **Return**: [RpgShape](/classes/shape)[]   
+- **Usage**:
+
+
+Returns all shapes assigned to this player
+
+
+---
+### Get In-Shapes
+- **Since**: beta.3
+- **Method**: `player.getInShapes()`
+- **Return**: [RpgShape](/classes/shape)[]   
+- **Usage**:
+
+
+Retrieves all shapes where the player is located
+
+
+---
 ### Get Direction
 - **Method**: `player.getDirection()`
 - **Return**: string  right, up or down 
@@ -392,7 +411,6 @@ Changes the player's direction
 
 ```ts
 import { Direction } from '@rpgjs/server'
-import { Shape } from './Shape';
 
 player.changeDirection(Direction.Left)
 ```

@@ -1,4 +1,4 @@
-# Create a tileset for the map
+# Step 2. Create a tileset for the map
 
 ## Prerequisites
 
@@ -28,8 +28,8 @@ The size of the tiles must not exceed the dimensions of the image. For example, 
 :::
 
 
-1. Place the image in `src/client/maps/assets`
-2. Then create the following file in `src/client/characters/medieval.ts`
+1. Place the image in <PathTo to="baseModule" file="client/maps/assets" />
+2. Then create the following file in <PathTo to="baseModule" file="client/characters/medieval.ts" />
 
 ```ts
 import { Spritesheet } from '@rpgjs/client'

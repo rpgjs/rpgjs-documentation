@@ -51,6 +51,7 @@ const types = {
     RpgSceneMap: '/classes/scene-map',
     RpgScene: '/classes/scene-map',
     Sound: '/classes/sound',
+    RpgShape: '/classes/shape',
     Timeline: '/classes/spritesheet.html#create-animation-with-timeline-system',
     SpriteSheet: '/classes/spritesheet',
     'PIXI.Container': 'https://pixijs.download/dev/docs/PIXI.Container.html',

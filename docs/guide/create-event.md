@@ -1,4 +1,4 @@
-# Create an in-game event
+# Step 7. Create an in-game event
 
 ## Prerequisites
 

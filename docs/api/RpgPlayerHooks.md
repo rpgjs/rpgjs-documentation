@@ -6,6 +6,8 @@
 - [onLevelUp](#onlevelup)
 - [onDead](#ondead)
 - [onDisconnected](#ondisconnected)
+- [onInShape](#oninshape)
+- [onOutShape](#onoutshape)
 :::
 ---
 ### onJoinMap
@@ -94,4 +96,28 @@ It may change or be removed in future versions.
 
 
  When the player leaves the server
+
+
+---
+### onInShape
+- **Since**: beta.3
+- **Property**: `onInShape`
+- **Type**:  (player: [RpgPlayer](/classes/player), shape: [RpgShape](/classes/shape)) =&gt; any 
+- **Optional**: `true` 
+- **Usage**:
+
+
+ When the player enters the shape
+
+
+---
+### onOutShape
+- **Since**: beta.3
+- **Property**: `onOutShape`
+- **Type**:  (player: [RpgPlayer](/classes/player), shape: [RpgShape](/classes/shape)) =&gt; any 
+- **Optional**: `true` 
+- **Usage**:
+
+
+ When the player leaves the shape
 

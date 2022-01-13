@@ -1,4 +1,4 @@
-# Get Started
+# Step 1. Get Started
 
 ## What is RPGJS?
 
@@ -8,8 +8,11 @@ RPGJS was created several years ago, with the aim of creating an RPG on the brow
 
 - Typescript v4
 - Webpack v4 (for compilation)
-- NodeJS >v14 (for server)
-- Socket.io v3 (for real time)
+- NodeJS v14 (for server)
+
+> Currently, RPGJS is not compatible with NodeJS 16+.
+
+- Socket.io v4 (for real time)
 - PixiJS v5 (for WebGL rendering)
 - VueJS v3 (for GUIs)
 - Jest v26 (for unit tests)
@@ -27,14 +30,14 @@ RPGJS was created several years ago, with the aim of creating an RPG on the brow
 
 **Server-Side**
 
-- NodeJS >14
+- NodeJS 14
 
 ## Installation
 
 **For MMORPG**:
 
 ```bash
-npx degit rpgjs/template my-rpg-game
+npx degit rpgjs/starter my-rpg-game
 cd my-rpg-game
 npm install
 npm run dev

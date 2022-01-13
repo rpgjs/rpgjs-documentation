@@ -23,3 +23,7 @@ class TownMap extends RpgMap {
     onLeave(player: RpgPlayer) {}
 }
 ```
+
+## RpgMap methods
+
+<ApiContent page="Map" />

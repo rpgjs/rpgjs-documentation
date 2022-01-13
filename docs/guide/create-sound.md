@@ -1,4 +1,4 @@
-# Put sounds and music
+# Step 8. Put sounds and music
 
 ## Prerequisites
 

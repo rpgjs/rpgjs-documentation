@@ -1,4 +1,4 @@
-# Save the player's progress
+# Step 10. Save the player's progress
 
 ## It is necessary to know
 

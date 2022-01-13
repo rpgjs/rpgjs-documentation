@@ -8,6 +8,7 @@ const apiMenu = [
       '/classes/player',
       '/classes/map',
       '/classes/event',
+      '/classes/shape',
       '/classes/world'
     ]
   },
@@ -23,6 +24,7 @@ const apiMenu = [
       '/classes/scene-map',
       '/classes/gui',
       '/classes/sound',
+      '/classes/resource',
       '/classes/keyboard',
       '/classes/vue-inject'
     ]
@@ -71,19 +73,26 @@ const guideMenu = [{
   sidebarDepth: 1,
   children: [
     '/guide/get-started',
-    '/guide/structure',
-    '/guide/create-module',
     '/guide/create-tileset',
     '/guide/create-map',
-    '/guide/animation-tile',
     '/guide/create-sprite',
     '/guide/player-start',
     '/guide/create-event',
     '/guide/create-sound',
     '/guide/create-database',
     '/guide/save',
-    '/guide/unit-test',
     '/guide/production',
+  ]
+},
+{
+  title: 'Guide (advanced)',
+  collapsable: false,
+  sidebarDepth: 1,
+  children: [
+    '/guide/create-module',
+    '/guide/animation-tile',
+    '/guide/create-shape',
+    '/guide/unit-test',
   ]
 }, 
 {
@@ -124,7 +133,8 @@ const pluginMenu = [{
   children: [
     '/plugins/chat',
     '/plugins/save',
-    '/plugins/title-screen'
+    '/plugins/title-screen',
+    '/plugins/emotion-bubble'
   ]
 }]
 

@@ -3,6 +3,8 @@
 - [socket](#socket)
 - [globalConfig](#globalconfig)
 - [controls](#controls)
+- [Add Spritesheet](#add-spritesheet)
+- [Add Sound](#add-sound)
 - [Start Client Engine](#start-client-engine)
 - [objects](#objects)
 - [Connect to server](#connect-to-server)
@@ -56,6 +58,28 @@ retrieve the global configurations assigned at the entry point
 
  
 Get the class managing the keyboard
+
+
+---
+### Add Spritesheet
+- **Since**: beta.3
+- **Method**: `addSpriteSheet(spritesheetClass`
+- **Return**: void   
+- **Usage**:
+
+
+Adds Spritesheet classes
+
+
+---
+### Add Sound
+- **Since**: beta.3
+- **Method**: `addSpriteSheet(soundClass`
+- **Return**: void   
+- **Usage**:
+
+
+Adds Sound classes
 
 
 ---

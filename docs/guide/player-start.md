@@ -1,4 +1,4 @@
-# Set Player start in map
+# Step 6. Set Player start in map
 
 ## Prerequisites
 
@@ -17,13 +17,15 @@ import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
 export const player: RpgPlayerHooks = {
     onConnected(player: RpgPlayer) {
+        player.hitbox(32, 16)
         player.setGraphic('hero')
     }
 }
 ```
 
 1. Create a `player` object. The file, in our structure, is <PathTo to="serverDir" file="player.ts" />.
-2. We give it a graph to give an initial appearance to the player
+2. Indicates the hitbox (width, height) at the foot of the character.
+3. We give it a graph to give an initial appearance to the player
 
 > Make sure the spritesheet is existing. Here, `hero` is the name of the client-side spritesheet. If it is not the case, see the sprite creation tutorial.
 
@@ -48,6 +50,7 @@ import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
 export const player: RpgPlayerHooks = {
     async onConnected(player: RpgPlayer) {
+        player.hitbox(32, 16)
         player.setGraphic('hero')
         await player.changeMap('medieval')
     }
@@ -65,6 +68,7 @@ import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
 export const player: RpgPlayerHooks = {
     async onConnected(player: RpgPlayer) {
+        player.hitbox(32, 16)
         player.setGraphic('hero')
         await player.changeMap('medieval', {
             x: 100,
@@ -85,6 +89,7 @@ import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
 export const player: RpgPlayerHooks = {
     async onConnected(player: RpgPlayer) {
+        player.hitbox(32, 16)
         player.setGraphic('hero')
         await player.changeMap('medieval', {
             x: 100,
@@ -103,6 +108,7 @@ import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'
 
 export const player: RpgPlayerHooks = {
     async onConnected(player: RpgPlayer) {
+        player.hitbox(32, 16)
         player.setGraphic('hero')
         await player.changeMap('medieval', {
             x: 100,

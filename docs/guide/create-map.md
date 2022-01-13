@@ -1,4 +1,4 @@
-# Create map
+# Step 3. Create map
 
 ## Prerequisites
 
@@ -12,6 +12,9 @@
 2. Maps are cached. If the server is not restarted, it will draw from memory to retrieve the map. If this is the first time it is opened, there will be a file reading (MMORPG) or an ajax request (RPG).
 
 ## Create map with Tiled Map Editor
+
+1. Save the TMX file in <PathTo to="mapDir" file="client/tmx/medieval.tmx" />
+2. Remember to put the TXS files in the same folder
 
 ## Create Map class
 
@@ -49,3 +52,7 @@ export default class RpgServerEngine { }
 ```
 
 1. Add the map created in the property `maps` in the `@RpgModule` decorator
+
+::: tip
+Here you have referenced the cards in the game, but it does not display the card. To display the map on the client side, [you need to use `player.changeMap()`](/guide/player-start.html#start-position)
+:::
