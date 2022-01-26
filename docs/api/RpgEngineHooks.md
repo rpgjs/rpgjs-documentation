@@ -10,7 +10,7 @@
 ---
 ### onStart
 - **Property**: `onStart`
-- **Type**: <Type type=' (engine:<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>) =&gt; boolean | any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>) =&gt; boolean | any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -21,7 +21,7 @@ When the engine is started. If you send false, you prevent the client from conne
 ---
 ### onStep
 - **Property**: `onStep`
-- **Type**: <Type type=' (engine:<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, t: number) =&gt; boolean | any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, t: number) =&gt; boolean | any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -32,7 +32,7 @@ Each frame
 ---
 ### onInput
 - **Property**: `onInput`
-- **Type**: <Type type=' (engine:<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, obj: { input: string, playerId: number }) =&gt; any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, obj: { input: string, playerId: number }) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -43,7 +43,7 @@ Recover keys from the pressed keyboard
 ---
 ### onConnected
 - **Property**: `onConnected`
-- **Type**: <Type type=' (engine:<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, socket: any) =&gt; any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, socket: any) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -54,7 +54,7 @@ Called when the user is connected to the server
 ---
 ### onDisconnect
 - **Property**: `onDisconnect`
-- **Type**: <Type type=' (engine:<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, reason: any, socket: any) =&gt; any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, reason: any, socket: any) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -65,7 +65,7 @@ Called when the user is disconnected to the server
 ---
 ### onConnectError
 - **Property**: `onConnectError`
-- **Type**: <Type type=' (engine:<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, err: any, socket: any) =&gt; any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>, err: any, socket: any) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 

@@ -41,7 +41,7 @@ parameters: {
 ---
 ### startingEquipment
 - **Property**: `startingEquipment`
-- **Type**: <Type type='Array&lt<a href="/database/weapon.html">WeaponClass</a> |<a href="/database/armor.html">ArmorClass</a>&gt;' />
+- **Type**: <Type type='Array&lt <a href="/database/weapon.html">WeaponClass</a> | <a href="/database/armor.html">ArmorClass</a>&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -58,7 +58,7 @@ startingEquipment: [Sword]
 ---
 ### class
 - **Property**: `class`
-- **Type**: <Type type='<a href="/database/class.html">ClassClass</a>' />
+- **Type**: <Type type=' <a href="/database/class.html">ClassClass</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -145,7 +145,7 @@ The realization of this property or method has not been completed.
 | ------------- |------------:|
 |  |
 - **Property**: `statesEfficiency`
-- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/state.html">StateClass</a>} |<a href="/database/state.html">StateClass</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, element: <a href="/database/state.html">StateClass</a>} | <a href="/database/state.html">StateClass</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 
@@ -196,7 +196,7 @@ To help, you can use the Efficiency enumerations
 | Efficiency.VULNERABLE | 1.5 value |
 | Efficiency.VERY_VULNERABLE | 2 value |
 - **Property**: `elementsEfficiency`
-- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>} |<a href="/database/element.html">Element</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, element: <a href="/database/element.html">Element</a>} | <a href="/database/element.html">Element</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 

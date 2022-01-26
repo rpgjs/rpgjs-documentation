@@ -8,11 +8,12 @@
 - [onDisconnected](#ondisconnected)
 - [onInShape](#oninshape)
 - [onOutShape](#onoutshape)
+- [onMove](#onmove)
 :::
 ---
 ### onJoinMap
 - **Property**: `onJoinMap`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, map:<a href="/classes/map">RpgMap</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, map: <a href="/classes/map">RpgMap</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -23,7 +24,7 @@
 ---
 ### onConnected
 - **Property**: `onConnected`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -34,7 +35,7 @@
 ---
 ### onInput
 - **Property**: `onInput`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, data: { input: any }) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, data: { input: Direction | Control | string, moving: boolean }) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -45,7 +46,7 @@
 ---
 ### onLeaveMap
 - **Property**: `onLeaveMap`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, map:<a href="/classes/map">RpgMap</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, map: <a href="/classes/map">RpgMap</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -62,7 +63,7 @@ It may change or be removed in future versions.
 :::
     
 - **Property**: `onLevelUp`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, nbLevel: number) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, nbLevel: number) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -79,7 +80,7 @@ It may change or be removed in future versions.
 :::
     
 - **Property**: `onDead`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -90,7 +91,7 @@ It may change or be removed in future versions.
 ---
 ### onDisconnected
 - **Property**: `onDisconnected`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -102,7 +103,7 @@ It may change or be removed in future versions.
 ### onInShape
 - **Since**: beta.3
 - **Property**: `onInShape`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, shape:<a href="/classes/shape">RpgShape</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, shape: <a href="/classes/shape">RpgShape</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -114,10 +115,22 @@ It may change or be removed in future versions.
 ### onOutShape
 - **Since**: beta.3
 - **Property**: `onOutShape`
-- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, shape:<a href="/classes/shape">RpgShape</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, shape: <a href="/classes/shape">RpgShape</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
 
  When the player leaves the shape
+
+
+---
+### onMove
+- **Since**: 3.beta-4
+- **Property**: `onMove`
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>) =&gt; any ' />
+- **Optional**: `true` 
+- **Usage**:
+
+
+When the x, y positions change
 

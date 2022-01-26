@@ -1,4 +1,4 @@
-# RpgClientEngine & Hooks
+# RpgClientEngine
 
 ## RpgEngineHooks
 

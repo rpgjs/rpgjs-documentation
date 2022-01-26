@@ -7,7 +7,7 @@
 ---
 ### valuesChange
 - **Property**: `valuesChange`
-- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ data: object, partial: object }&gt;' />
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ data: object, partial: object }&gt;' />
 - **Optional**: `true`
 - **Read Only** 
 - **Usage**:
@@ -97,7 +97,7 @@ animation.onFinish = () => {
 - **Method**: `scene.getSprite(id)`
 - **Arguments**:
     - {<Type type='string' />} `id`.  (Optional: `false`)
-- **Return**: <Type type='<a href="/classes/sprite">RpgSprite</a>' />   
+- **Return**: <Type type=' <a href="/classes/sprite">RpgSprite</a>' />   
 - **Usage**:
 
 
@@ -107,7 +107,7 @@ Retrieve a sprite according to its identifier
 ---
 ### Get Current Player
 - **Method**: `scene.getCurrentPlayer()`
-- **Return**: <Type type='<a href="/classes/sprite">RpgSprite</a>' />   
+- **Return**: <Type type=' <a href="/classes/sprite">RpgSprite</a>' />   
 - **Usage**:
 
 

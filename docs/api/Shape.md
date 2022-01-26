@@ -72,7 +72,7 @@ Whether the player is in this shape
 ---
 ### Get Player Owner
 - **Method**: `shape.getPlayerOwner()`
-- **Return**: <Type type='<a href="/classes/player">RpgPlayer</a> | undefined' />   
+- **Return**: <Type type=' <a href="/commands/common.html">RpgPlayer</a> | undefined' />   
 - **Usage**:
 
 

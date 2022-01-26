@@ -86,7 +86,7 @@ Indicate if the item can be used. If not, an error will be sent
 ---
 ### effects
 - **Property**: `effects`
-- **Type**: <Type type='Array&lt<a href="/database/effect.html">Effect</a>&gt;' />
+- **Type**: <Type type='Array&lt <a href="/database/effect.html">Effect</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 
@@ -113,7 +113,7 @@ List of effects applied by the object, weapon, armor or condition
 | Efficiency.VULNERABLE | 1.5 value |
 | Efficiency.VERY_VULNERABLE | 2 value |
 - **Property**: `elements`
-- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>} |<a href="/database/element.html">Element</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, element: <a href="/database/element.html">Element</a>} | <a href="/database/element.html">Element</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 
@@ -213,7 +213,7 @@ In the case of a state or the equipment of a weapon or armor, the parameters wil
 ---
 ### addStates
 - **Property**: `addStates`
-- **Type**: <Type type='Array&lt;{ rate: number, state:<a href="/database/state.html">StateClass</a> } |<a href="/database/state.html">StateClass</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, state: <a href="/database/state.html">StateClass</a> } | <a href="/database/state.html">StateClass</a>&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -233,7 +233,7 @@ addStates: [{ rate: 0.5, state: Paralize }]
 ---
 ### removeStates
 - **Property**: `removeStates`
-- **Type**: <Type type='Array&lt;{ rate: number, state:<a href="/database/state.html">StateClass</a> } |<a href="/database/state.html">StateClass</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, state: <a href="/database/state.html">StateClass</a> } | <a href="/database/state.html">StateClass</a>&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 

@@ -43,7 +43,7 @@
     - {<Type type='number' />} `duration`.  (Optional: `false`)
     - {<Type type=' (obj?: number, time?: number) =&gt; TransformOptions[] ' />} `cb`.  (Optional: `true`)
     - {<Type type=' [property: string]: { to:number, from: number: easing?: Function } ' />} `transform`.  (Optional: `true`)
-- **Return**: <Type type='<a href="/classes/spritesheet.html#create-animation-with-timeline-system">Timeline</a>' />   
+- **Return**: <Type type=' <a href="/classes/spritesheet.html#create-animation-with-timeline-system">Timeline</a>' />   
 - **Usage**:
 
 

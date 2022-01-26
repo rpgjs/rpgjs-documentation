@@ -6,7 +6,7 @@
 - **Since**: 3.beta-4
 - **Method**: `sceneMap.createDynamicMap(mapData)`
 - **Arguments**:
-    - {<Type type='object |<a href="/classes/map">RpgMap</a>' />} `mapData`. The same property as [@MapData decorator](https://docs.rpgjs.dev/classes/map.html#mapdata-decorator) (Optional: `false`)
+    - {<Type type='object | <a href="/classes/map">RpgMap</a>' />} `mapData`. The same property as [@MapData decorator](https://docs.rpgjs.dev/classes/map.html#mapdata-decorator) (Optional: `false`)
 - **Return**: <Type type='void' />  
 - **Example**: 
 ```ts

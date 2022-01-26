@@ -52,7 +52,7 @@ The name of the map.
 ---
 ### events
 - **Property**: `events`
-- **Type**: <Type type='Array&lt;Class<a href="/classes/event">RpgEvent</a>&gt; | { event: Class<a href="/classes/event">RpgEvent</a>, x: number, y: number }' />
+- **Type**: <Type type='Class of <a href="/classes/event">RpgEvent</a>[] | { event: Class <a href="/classes/event">RpgEvent</a>, x: number, y: number }' />
 - **Optional**: `true` 
 - **Usage**:
 

@@ -8,8 +8,8 @@
 ### Get Skill
 - **Method**: `player.getSkill(skillClass)`
 - **Arguments**:
-    - {<Type type='<a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
-- **Return**: <Type type='instance of<a href="/database/skill.html">SkillClass</a> | null' />   
+    - {<Type type=' <a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
+- **Return**: <Type type='instance of <a href="/database/skill.html">SkillClass</a> | null' />   
 - **Usage**:
 
 
@@ -25,8 +25,8 @@ player.getSkill(Fire)
 ### Learn Skill
 - **Method**: `player.learnSkill(skillClass)`
 - **Arguments**:
-    - {<Type type='<a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
-- **Return**: <Type type='instance of<a href="/database/skill.html">SkillClass</a>' />   
+    - {<Type type=' <a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
+- **Return**: <Type type='instance of <a href="/database/skill.html">SkillClass</a>' />   
 - **Usage**:
 
 
@@ -45,7 +45,7 @@ player.learnSkill(Fire)
 ### Forget Skill
 - **Method**: `player.learnSkill(skillClass)`
 - **Arguments**:
-    - {<Type type='<a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
+    - {<Type type=' <a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
 - **Throws**:
 
 If trying to forget a skill not learned
@@ -56,7 +56,7 @@ If trying to forget a skill not learned
 }
 ```
 ---
-- **Return**: <Type type='instance of<a href="/database/skill.html">SkillClass</a>' />   
+- **Return**: <Type type='instance of <a href="/database/skill.html">SkillClass</a>' />   
 - **Usage**:
 
 
@@ -84,8 +84,8 @@ The realization of this property or method has not been completed.
 
 - **Method**: `player.useSkill(skillClass,otherPlayer)`
 - **Arguments**:
-    - {<Type type='<a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
-    - {<Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt; |<a href="/classes/player">RpgPlayer</a>' />} `otherPlayer`.  (Optional: `true`)
+    - {<Type type=' <a href="/database/skill.html">SkillClass</a>' />} `skillClass`.  (Optional: `false`)
+    - {<Type type='Array&lt <a href="/commands/common.html">RpgPlayer</a>&gt; | <a href="/commands/common.html">RpgPlayer</a>' />} `otherPlayer`.  (Optional: `true`)
 - **Throws**:
 
 If the player has the `Effect.CAN_NOT_SKILL` effect 
@@ -123,7 +123,7 @@ If the chance to use the skill has failed (defined with the `hitRate` property)
 `onUseFailed()` method is called on the SkillClass
 
 ---
-- **Return**: <Type type='instance of<a href="/database/skill.html">SkillClass</a>' />   
+- **Return**: <Type type='instance of <a href="/database/skill.html">SkillClass</a>' />   
 - **Usage**:
 
 

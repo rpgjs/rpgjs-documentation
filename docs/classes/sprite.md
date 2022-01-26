@@ -1,4 +1,4 @@
-# RpgSprite & RpgSprite Hooks
+# RpgSprite
 
 Each time an event or player appears on the map, an `RpgSprite` is called. It contains the graphics of the player but also a container to put tiles of the map on top of the sprite (for overlay). Don't pay attention to this system, it is part of the RpgJS engine.
 
@@ -6,7 +6,7 @@ However, `RpgSprite` inherits from [PIXI.Sprite](https://pixijs.download/dev/doc
 
 [Put the created class in the RpgClient decorator](/classes/client.html#rpgclient-decorator)
 
-## RpgSprite Hooks
+## Hooks
 
 ```ts
 import { RpgSprite, RpgSpriteHooks } from '@rpgjs/client'
@@ -23,4 +23,8 @@ const sprite: RpgSpriteHooks = {
 ## RpgSprite
 
 <ApiContent page="RpgSprite" />
+
+## RpgSpriteLogic
+
+<ApiContent page="RpgSpriteLogic" />
 

@@ -51,7 +51,7 @@ retrieve the global configurations assigned at the entry point
 ---
 ### controls
 - **Property**: `controls`
-- **Type**: <Type type='<a href="/classes/keyboard.html">KeyboardControls</a>' />
+- **Type**: <Type type=' <a href="/classes/keyboard.html">KeyboardControls</a>' />
 - **Optional**: `true`
 - **Read Only** 
 - **Usage**:
@@ -95,7 +95,7 @@ Starts the client side and connects to the server
 ---
 ### objects
 - **Property**: `objects`
-- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>&lt; {
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>&lt; {
      [id: string]: {
          object: any,
          paramsChanged: any
@@ -150,7 +150,7 @@ VueJS Parent component instance
 ---
 ### scene
 - **Property**: `scene`
-- **Type**: <Type type='<a href="/classes/scene-map">RpgScene</a>' />
+- **Type**: <Type type=' <a href="/classes/scene-map">RpgScene</a>' />
 - **Optional**: `true`
 - **Read Only** 
 - **Usage**:

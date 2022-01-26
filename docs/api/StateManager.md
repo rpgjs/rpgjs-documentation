@@ -8,7 +8,7 @@
 ---
 ### Get States Defense
 - **Property**: `player.statesDefense`
-- **Type**: <Type type='Array&lt;{ rate: number, state:<a href="/database/state.html">StateClass</a>}&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, state: <a href="/database/state.html">StateClass</a>}&gt;' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:
@@ -48,7 +48,7 @@ console.log(player.statesDefense) // [{ rate: 1, state: instance of Paralyze }]
 ---
 ### Set/Get States Efficiency
 - **Property**: `player.statesEfficiency`
-- **Type**: <Type type='Array&lt;{ rate: number, state:<a href="/database/state.html">StateClass</a>}&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, state: <a href="/database/state.html">StateClass</a>}&gt;' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -87,8 +87,8 @@ console.log(player.statesEfficiency) // [{ rate: 1, state: instance of Paralyze 
 ### Get State
 - **Method**: `player.getState(stateClass)`
 - **Arguments**:
-    - {<Type type='<a href="/database/state.html">StateClass</a>' />} `stateClass`.  (Optional: `false`)
-- **Return**: <Type type='instance of<a href="/database/state.html">StateClass</a> | null' />   
+    - {<Type type=' <a href="/database/state.html">StateClass</a>' />} `stateClass`.  (Optional: `false`)
+- **Return**: <Type type='instance of <a href="/database/state.html">StateClass</a> | null' />   
 - **Usage**:
 
 
@@ -108,7 +108,7 @@ The realization of this property or method has not been completed.
 
 - **Method**: `player.addState(stateClass,chance=1)`
 - **Arguments**:
-    - {<Type type='<a href="/database/state.html">StateClass</a>' />} `stateClass`.  (Optional: `false`)
+    - {<Type type=' <a href="/database/state.html">StateClass</a>' />} `stateClass`.  (Optional: `false`)
     - {<Type type='number' />} `chance`. 1 by default (Optional: `true`)
 - **Throws**:
 
@@ -120,7 +120,7 @@ If the chance to add the state has failed (defined with the `chance` param)
 }
 ```
 ---
-- **Return**: <Type type='instance of<a href="/database/state.html">StateClass</a>' />   
+- **Return**: <Type type='instance of <a href="/database/state.html">StateClass</a>' />   
 - **Usage**:
 
 
@@ -141,7 +141,7 @@ catch (err) {
 ### Remove State
 - **Method**: `player.removeState(stateClass,chance=1)`
 - **Arguments**:
-    - {<Type type='<a href="/database/state.html">StateClass</a>' />} `stateClass`.  (Optional: `false`)
+    - {<Type type=' <a href="/database/state.html">StateClass</a>' />} `stateClass`.  (Optional: `false`)
     - {<Type type='number' />} `chance`. 1 by default (Optional: `true`)
 - **Throws**:
 
@@ -161,7 +161,7 @@ If the status does not exist
 }
 ```
 ---
-- **Return**: <Type type='instance of<a href="/database/state.html">StateClass</a>' />   
+- **Return**: <Type type='instance of <a href="/database/state.html">StateClass</a>' />   
 - **Usage**:
 
 

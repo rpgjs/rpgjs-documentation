@@ -1,4 +1,4 @@
-# RpgServerEngine & Hooks
+# RpgServerEngine
 
 ## Example to use (in module)
 

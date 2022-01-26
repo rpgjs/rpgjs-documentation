@@ -15,7 +15,7 @@
 ---
 ### rpgScene
 - **Property**: `rpgScene`
-- **Type**: <Type type='Function returns<a href="/classes/scene-map">RpgScene</a>' />
+- **Type**: <Type type='Function returns <a href="/classes/scene-map">RpgScene</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -36,7 +36,7 @@ export default {
 ---
 ### rpgStage
 - **Property**: `rpgStage`
-- **Type**: <Type type='<a href="https://pixijs.download/dev/docs/PIXI.Container.html">PIXI.Container</a>' />
+- **Type**: <Type type=' <a href="https://pixijs.download/dev/docs/PIXI.Container.html">PIXI.Container</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -57,7 +57,7 @@ export default {
 ---
 ### rpgObjects
 - **Property**: `rpgObjects`
-- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ [objectId]: { object: object, paramsChanged: object } }&gt;' />
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ [objectId]: { object: object, paramsChanged: object } }&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -94,7 +94,7 @@ It is an observable that returns an object:
 ---
 ### rpgCurrentPlayer
 - **Property**: `rpgCurrentPlayer`
-- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ object: object, paramsChanged: object }&gt;' />
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ object: object, paramsChanged: object }&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -179,7 +179,7 @@ export default {
 ---
 ### rpgKeypress
 - **Property**: `rpgKeypress`
-- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ inputName: string, control: { actionName: string, options: any } }&gt;' />
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ inputName: string, control: { actionName: string, options: any } }&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -205,7 +205,7 @@ export default {
 ---
 ### rpgSocket
 - **Property**: `rpgSocket`
-- **Type**: <Type type='Function returns<a href="/classes/scene-map">RpgScene</a>' />
+- **Type**: <Type type='Function returns <a href="/classes/scene-map">RpgScene</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -226,7 +226,7 @@ export default {
 ---
 ### rpgGui
 - **Property**: `rpgGui`
-- **Type**: <Type type='<a href="/classes/gui">RpgGui</a>' />
+- **Type**: <Type type=' <a href="/classes/gui">RpgGui</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -246,7 +246,7 @@ export default {
 ---
 ### rpgSound
 - **Property**: `rpgSound`
-- **Type**: <Type type='Rp<a href="/classes/sound">Sound</a>' />
+- **Type**: <Type type='Rp <a href="/classes/sound">Sound</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -287,7 +287,7 @@ export default {
 ---
 ### rpgEngine
 - **Property**: `rpgEngine`
-- **Type**: <Type type='<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>' />
+- **Type**: <Type type=' <a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>' />
 - **Optional**: `true` 
 - **Usage**:
 

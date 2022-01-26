@@ -7,7 +7,7 @@
 ### Has Effect
 - **Method**: `player.hasEffect(effect)`
 - **Arguments**:
-    - {<Type type='<a href="/database/effect.html">Effect</a>' />} `effect`.  (Optional: `false`)
+    - {<Type type=' <a href="/database/effect.html">Effect</a>' />} `effect`.  (Optional: `false`)
 - **Return**: <Type type='boolean' />   
 - **Usage**:
 
@@ -22,7 +22,7 @@ const bool = player.hasEffect(Effect.CAN_NOT_SKILL)
 ---
 ### Get Effects
 - **Property**: `player.effects`
-- **Type**: <Type type='Array&lt<a href="/database/effect.html">Effect</a>&gt;' />
+- **Type**: <Type type='Array&lt <a href="/database/effect.html">Effect</a>&gt;' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -36,7 +36,7 @@ console.log(player.effects)
 ---
 ### Set Effects
 - **Property**: `player.effects`
-- **Type**: <Type type='Array&lt<a href="/database/effect.html">Effect</a>&gt;' />
+- **Type**: <Type type='Array&lt <a href="/database/effect.html">Effect</a>&gt;' />
 - **Optional**: `false` 
 - **Usage**:
 

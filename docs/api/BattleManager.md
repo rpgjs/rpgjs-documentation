@@ -5,7 +5,7 @@
 ### Apply Damage
 - **Method**: `player.applyDamage(otherPlayer,skill)`
 - **Arguments**:
-    - {<Type type='<a href="/classes/player">RpgPlayer</a>' />} `otherPlayer`. The attacking player (Optional: `false`)
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a>' />} `otherPlayer`. The attacking player (Optional: `false`)
     - {<Type type='any' />} `skill`.  (Optional: `true`)
 - **Return**: <Type type='object' />   
 - **Usage**:

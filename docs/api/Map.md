@@ -1,4 +1,5 @@
 ::: tip Summary
+- [Data of map](#data-of-map)
 - [Width of a tile](#width-of-a-tile)
 - [Height of a tile](#height-of-a-tile)
 - [Layers of map](#layers-of-map)
@@ -16,6 +17,16 @@
 - [Change Tile in map](#change-tile-in-map)
 - [Create Dynamic Event](#create-dynamic-event)
 :::
+---
+### Data of map
+- **Property**: `data`
+- **Type**: <Type type='object' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+
 ---
 ### Width of a tile
 - **Property**: `tileWidth`
@@ -82,7 +93,7 @@
 - **Method**: `map.createShape(obj)`
 - **Arguments**:
     - {<Type type='object' />} `obj`.  (Optional: `false`)
-- **Return**: <Type type='<a href="/classes/shape">RpgShape</a>' />   
+- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>' />   
 - **Usage**:
 
 
@@ -115,7 +126,7 @@ Delete a shape
 ---
 ### Get Shapes
 - **Method**: `map.getShapes()`
-- **Return**: <Type type='<a href="/classes/shape">RpgShape</a>[]' />   
+- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[]' />   
 - **Usage**:
 
 
@@ -127,7 +138,7 @@ Return all shapes on the map
 - **Method**: `map.getShape(name)`
 - **Arguments**:
     - {<Type type='string' />} `name`. Name of shape (Optional: `false`)
-- **Return**: <Type type='<a href="/classes/shape">RpgShape</a>[] | undefined' />   
+- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[] | undefined' />   
 - **Usage**:
 
 
@@ -232,7 +243,7 @@ Edit a tile on the map. All players on the map will see the modified tile
 - **Method**: `map.createDynamicEvent(eventObj`
 - **Arguments**:
     - {<Type type=' { x: number, y: number, z?: number, event: eventClass } ' />} `eventsList`.  (Optional: `false`)
-- **Return**: <Type type=' { [eventId: string]:<a href="/classes/event">RpgEvent</a> } ' />   
+- **Return**: <Type type=' { [eventId: string]: <a href="/classes/event">RpgEvent</a> } ' />   
 - **Usage**:
 
 

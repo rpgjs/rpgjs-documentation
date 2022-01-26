@@ -1,4 +1,4 @@
-# RpgScene Hooks & RpgScene
+# RpgScene
 
 ## RpgScene Hooks
 

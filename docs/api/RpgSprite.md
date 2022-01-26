@@ -3,13 +3,15 @@
 - [isPlayer](#isplayer)
 - [isEvent](#isevent)
 - [isCurrentPlayer](#iscurrentplayer)
+- [logic](#logic)
 - [Get Positions of Graphic](#get-positions-of-graphic)
 :::
 ---
 ### dir
 - **Property**: `dir`
 - **Type**: <Type type='Direction' />
-- **Optional**: `false` 
+- **Optional**: `false`
+- **Read Only** 
 - **Usage**:
 
  
@@ -20,7 +22,8 @@ the direction of the sprite
 ### isPlayer
 - **Property**: `isPlayer`
 - **Type**: <Type type='boolean' />
-- **Optional**: `false` 
+- **Optional**: `false`
+- **Read Only** 
 - **Usage**:
 
  
@@ -31,7 +34,8 @@ To know if the sprite is a player
 ### isEvent
 - **Property**: `isEvent`
 - **Type**: <Type type='boolean' />
-- **Optional**: `false` 
+- **Optional**: `false`
+- **Read Only** 
 - **Usage**:
 
  
@@ -42,11 +46,25 @@ To know if the sprite is an event
 ### isCurrentPlayer
 - **Property**: `isCurrentPlayer`
 - **Type**: <Type type='boolean' />
-- **Optional**: `false` 
+- **Optional**: `false`
+- **Read Only** 
 - **Usage**:
 
  
 To know if the sprite is the sprite controlled by the player
+
+
+---
+### logic
+- **Since**: 3.beta-4
+- **Property**: `logic`
+- **Type**: <Type type=' <a href="/classes/sprite">RpgSprite</a>Logic' />
+- **Optional**: `false`
+- **Read Only** 
+- **Usage**:
+
+ 
+Retrieves the logic of the sprite
 
 
 ---

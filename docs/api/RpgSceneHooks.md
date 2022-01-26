@@ -10,7 +10,7 @@
 ---
 ### onAddSprite
 - **Property**: `onAddSprite`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgScene</a>, sprite:<a href="/classes/sprite">RpgSprite</a>) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgScene</a>, sprite: <a href="/classes/sprite">RpgSprite</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -21,7 +21,7 @@ a sprite has been added on the scene
 ---
 ### onRemoveSprite
 - **Property**: `onRemoveSprite`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgScene</a>, sprite:<a href="/classes/sprite">RpgSprite</a>) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgScene</a>, sprite: <a href="/classes/sprite">RpgSprite</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -32,7 +32,7 @@ a sprite has been removed on the scene
 ---
 ### onBeforeLoading
 - **Property**: `onBeforeLoading`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgScene</a>) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgScene</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -43,7 +43,7 @@ Before the scene is loaded
 ---
 ### onAfterLoading
 - **Property**: `onAfterLoading`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgScene</a>) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgScene</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -54,7 +54,7 @@ Before the scene is loaded
 ---
 ### onChanges
 - **Property**: `onChanges`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgScene</a>, obj: { data: any, partial: any }) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgScene</a>, obj: { data: any, partial: any }) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -65,7 +65,7 @@ When server data changes on the map (events, players, or other)
 ---
 ### onDraw
 - **Property**: `onDraw`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgScene</a>, t: number) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgScene</a>, t: number) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -76,7 +76,7 @@ When server data changes on the map (events, players, or other)
 ---
 ### onMapLoading
 - **Property**: `onMapLoading`
-- **Type**: <Type type=' (scene:<a href="/classes/scene-map">RpgSceneMap</a>, loader: PIXI.Loader) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map">RpgSceneMap</a>, loader: PIXI.Loader) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 

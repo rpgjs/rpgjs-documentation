@@ -8,7 +8,7 @@
 ---
 ### Subscribe to the world
 - **Property**: `RpgWorld.changes`
-- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>' />
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -34,8 +34,8 @@ RpgWorld.changes
 ### Get Player
 - **Method**: `RpgWorld.getPlayer(player)`
 - **Arguments**:
-    - {<Type type='<a href="/classes/player">RpgPlayer</a> | string' />} `player`. identifier (Optional: `false`)
-- **Return**: <Type type='<a href="/classes/player">RpgPlayer</a>' />   
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a> | string' />} `player`. identifier (Optional: `false`)
+- **Return**: <Type type=' <a href="/commands/common.html">RpgPlayer</a>' />   
 - **Usage**:
 
 
@@ -51,7 +51,7 @@ const player = RpgWorld.getPlayer(player) // player is RpgPlayer (player.id) or 
 ---
 ### Get all Players
 - **Method**: `RpgWorld.getPlayers()`
-- **Return**: <Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt;' />   
+- **Return**: <Type type='Array&lt <a href="/commands/common.html">RpgPlayer</a>&gt;' />   
 - **Usage**:
 
 
@@ -69,8 +69,8 @@ const players = RpgWorld.getPlayers()
 - **Method**: `RpgWorld.getObjectsOfMap(map,playerId?)`
 - **Arguments**:
     - {<Type type='string' />} `map`. Map Name (Optional: `false`)
-    - {<Type type='<a href="/classes/player">RpgPlayer</a> | string' />} `playerId`. player identifier (Optional: `false`)
-- **Return**: <Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt;' />   
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a> | string' />} `playerId`. player identifier (Optional: `false`)
+- **Return**: <Type type='Array&lt <a href="/commands/common.html">RpgPlayer</a>&gt;' />   
 - **Usage**:
 
 
@@ -97,7 +97,7 @@ const objects = RpgWorld.getObjectsOfMap('mapname', 'playerid')
 - **Method**: `RpgWorld.getPlayersOfMap(map)`
 - **Arguments**:
     - {<Type type='string' />} `map`. Map Name (Optional: `false`)
-- **Return**: <Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt;' />   
+- **Return**: <Type type='Array&lt <a href="/commands/common.html">RpgPlayer</a>&gt;' />   
 - **Usage**:
 
 

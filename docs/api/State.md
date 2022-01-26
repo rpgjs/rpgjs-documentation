@@ -40,7 +40,7 @@ The description of the item.
 ---
 ### effects
 - **Property**: `effects`
-- **Type**: <Type type='Array&lt<a href="/database/effect.html">Effect</a>&gt;' />
+- **Type**: <Type type='Array&lt <a href="/database/effect.html">Effect</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 
@@ -66,7 +66,7 @@ The realization of this property or method has not been completed.
 | ------------- |------------:|
 |  |
 - **Property**: `statesEfficiency`
-- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/state.html">StateClass</a>} |<a href="/database/state.html">StateClass</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, element: <a href="/database/state.html">StateClass</a>} | <a href="/database/state.html">StateClass</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 
@@ -117,7 +117,7 @@ To help, you can use the Efficiency enumerations
 | Efficiency.VULNERABLE | 1.5 value |
 | Efficiency.VERY_VULNERABLE | 2 value |
 - **Property**: `elementsEfficiency`
-- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>} |<a href="/database/element.html">Element</a>&gt;' />
+- **Type**: <Type type='Array&lt;{ rate: number, element: <a href="/database/element.html">Element</a>} | <a href="/database/element.html">Element</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
 

@@ -130,7 +130,7 @@ player.frequency = Frequency.Low
 ### Give an itinerary
 - **Method**: `player.moveRoutes(routes)`
 - **Arguments**:
-    - {<Type type='Array&lt<a href="/commands/move.html#move">Move</a>&gt;' />} `routes`.  (Optional: `false`)
+    - {<Type type='Array&lt <a href="/commands/move.html#move">Move</a>&gt;' />} `routes`.  (Optional: `false`)
 - **Return**: <Type type='Promise' />  
 - **Example**: 
 
@@ -183,7 +183,7 @@ the function contains two parameters:
 ### Infinite Move Routes
 - **Method**: `player.infiniteMoveRoute(routes)`
 - **Arguments**:
-    - {<Type type='Array&lt<a href="/commands/move.html#move">Move</a>&gt;' />} `routes`.  (Optional: `false`)
+    - {<Type type='Array&lt <a href="/commands/move.html#move">Move</a>&gt;' />} `routes`.  (Optional: `false`)
 - **Return**: <Type type='void' />  
 - **Example**: 
 

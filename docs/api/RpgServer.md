@@ -20,7 +20,7 @@ Adding sub-modules
 ---
 ### engine
 - **Property**: `engine`
-- **Type**: <Type type='<a href="/classes/server-engine">RpgServerEngine</a>Hooks' />
+- **Type**: <Type type=' <a href="/classes/server-engine">RpgServerEngine</a>Hooks' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -46,7 +46,7 @@ class RpgServerModule {}
 ---
 ### player
 - **Property**: `player`
-- **Type**: <Type type='RpgClassPlayer&lt<a href="/classes/player">RpgPlayer</a>&gt;' />
+- **Type**: <Type type='RpgClassPlayer&lt <a href="/commands/common.html">RpgPlayer</a>&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -95,7 +95,7 @@ class RpgServerEngine { }
 ---
 ### maps
 - **Property**: `maps`
-- **Type**: <Type type='RpgClassMap&lt<a href="/classes/map">RpgMap</a>&gt;[]' />
+- **Type**: <Type type='RpgClassMap&lt <a href="/classes/map">RpgMap</a>&gt;[]' />
 - **Optional**: `true` 
 - **Usage**:
 

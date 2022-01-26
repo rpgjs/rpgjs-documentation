@@ -1,4 +1,4 @@
-# RpgPlayer Hooks
+# RpgPlayer
 
 An `RpgPlayer` instance is created each time a player is connected. In an event, you often find a `player` parameter of type `RpgPlayer`. You have a series of methods to apply to the player
 
