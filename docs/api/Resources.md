@@ -5,7 +5,7 @@
 ---
 ### Get/Set image link
 - **Property**: `spritesheets`
-- **Type**:  Map&lt; string, string &gt; 
+- **Type**: <Type type=' Map&lt; string, string &gt; ' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -19,7 +19,7 @@ Get/Set images in resources
 ---
 ### Get/Set sound link
 - **Property**: `sounds`
-- **Type**:  Map&lt; string, string &gt; 
+- **Type**: <Type type=' Map&lt; string, string &gt; ' />
 - **Optional**: `false` 
 - **Usage**:
 

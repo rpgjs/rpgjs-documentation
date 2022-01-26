@@ -16,7 +16,7 @@
 ---
 ### Set initial level
 - **Property**: `player.initialLevel`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `1` 
 - **Usage**:
@@ -30,7 +30,7 @@ player.initialLevel = 5
 ---
 ### Set final level
 - **Property**: `player.finalLevel`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `99` 
 - **Usage**:
@@ -44,7 +44,7 @@ player.finalLevel = 50
 ---
 ### Change Experience Curve
 - **Property**: `player.expCurve`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `false`
 - **Default**: `
 ` 
@@ -60,7 +60,7 @@ With Object-based syntax, you can use following options:
 ---
 ### Change HP
 - **Property**: `player.hp`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `MaxHPValue` 
 - **Usage**:
@@ -78,7 +78,7 @@ player.hp = 100
 ---
 ### Change SP
 - **Property**: `player.sp`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `MaxSPValue` 
 - **Usage**:
@@ -95,7 +95,7 @@ player.sp = 200
 ---
 ### Change Experience
 - **Property**: `player.exp`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `0` 
 - **Usage**:
@@ -119,7 +119,7 @@ console.log(player.level) // 2
 ---
 ### Change Level
 - **Property**: `player.level`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `1` 
 - **Usage**:
@@ -143,7 +143,7 @@ console.log(player.level) // 50
 ---
 ### Experience for next level ?
 - **Property**: `player.expForNextlevel`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:
@@ -156,7 +156,7 @@ console.log(player.expForNextlevel) // 150
 ---
 ### Get Param Value
 - **Property**: `player.param`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:
@@ -177,9 +177,10 @@ console.log(player.param[MAXHP])
 ---
 ### Set Parameters Modifier
 - **Property**: `paramsModifier`
-- **Type**: Object
+- **Type**: <Type type='Object' />
 - **Optional**: `true`
 - **Example**: 
+
 ```ts
 import { Presets } from '@rpgjs/server'
 
@@ -237,9 +238,9 @@ In the case of a state or the equipment of a weapon or armor, the parameters wil
 ### Add custom parameters
 - **Method**: `player.addParameter(name,curve)`
 - **Arguments**:
-    - {name} `name`.  (Optional: `false`)
-    - {object} `curve`. Scheme of the object: { start: number, end: number } (Optional: `false`)
-- **Return**: void   
+    - {<Type type='name' />} `name`.  (Optional: `false`)
+    - {<Type type='object' />} `curve`. Scheme of the object: { start: number, end: number } (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
  
@@ -264,8 +265,8 @@ player.param[SPEED] // 14
 ### Recovery HP and/or SP
 - **Method**: `player.recovery(params)`
 - **Arguments**:
-    - {object} `params`. Scheme of the object: { hp: number, sp: number }. The values of the numbers must be in 0 and 1 (Optional: `false`)
-- **Return**: void   
+    - {<Type type='object' />} `params`. Scheme of the object: { hp: number, sp: number }. The values of the numbers must be in 0 and 1 (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
  
@@ -286,7 +287,7 @@ console.log(player.hp) // 400
 ---
 ### All Recovery
 - **Method**: `player.allRecovery()`
-- **Return**: void   
+- **Return**: <Type type='void' />   
 - **Usage**:
 
  

@@ -12,7 +12,7 @@
 ---
 ### onJoinMap
 - **Property**: `onJoinMap`
-- **Type**:  (player: [RpgPlayer](/classes/player), map: [RpgMap](/classes/map)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, map:<a href="/classes/map">RpgMap</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -23,7 +23,7 @@
 ---
 ### onConnected
 - **Property**: `onConnected`
-- **Type**:  (player: [RpgPlayer](/classes/player)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -34,7 +34,7 @@
 ---
 ### onInput
 - **Property**: `onInput`
-- **Type**:  (player: [RpgPlayer](/classes/player), data: { input: any }) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, data: { input: any }) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -45,7 +45,7 @@
 ---
 ### onLeaveMap
 - **Property**: `onLeaveMap`
-- **Type**:  (player: [RpgPlayer](/classes/player), map: [RpgMap](/classes/map)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, map:<a href="/classes/map">RpgMap</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -62,7 +62,7 @@ It may change or be removed in future versions.
 :::
     
 - **Property**: `onLevelUp`
-- **Type**:  (player: [RpgPlayer](/classes/player), nbLevel: number) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, nbLevel: number) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -79,7 +79,7 @@ It may change or be removed in future versions.
 :::
     
 - **Property**: `onDead`
-- **Type**:  (player: [RpgPlayer](/classes/player)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -90,7 +90,7 @@ It may change or be removed in future versions.
 ---
 ### onDisconnected
 - **Property**: `onDisconnected`
-- **Type**:  (player: [RpgPlayer](/classes/player)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -102,7 +102,7 @@ It may change or be removed in future versions.
 ### onInShape
 - **Since**: beta.3
 - **Property**: `onInShape`
-- **Type**:  (player: [RpgPlayer](/classes/player), shape: [RpgShape](/classes/shape)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, shape:<a href="/classes/shape">RpgShape</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -114,7 +114,7 @@ It may change or be removed in future versions.
 ### onOutShape
 - **Since**: beta.3
 - **Property**: `onOutShape`
-- **Type**:  (player: [RpgPlayer](/classes/player), shape: [RpgShape](/classes/shape)) =&gt; any 
+- **Type**: <Type type=' (player:<a href="/classes/player">RpgPlayer</a>, shape:<a href="/classes/shape">RpgShape</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 

@@ -9,8 +9,8 @@
 ### Get Control
 - **Method**: `getControl(inputName)`
 - **Arguments**:
-    - {string} `inputName`.  (Optional: `false`)
-- **Return**:  { actionName: string, options: any } | undefined    
+    - {<Type type='string' />} `inputName`.  (Optional: `false`)
+- **Return**: <Type type=' { actionName: string, options: any } | undefined ' />   
 - **Usage**:
 
 
@@ -30,8 +30,8 @@ if (control) {
 ### Apply Control
 - **Method**: `applyControl(controlName,isDown)`
 - **Arguments**:
-    - {string} `controlName`.  (Optional: `false`)
-    - {boolean} `isDown`.  (Optional: `true`) 
+    - {<Type type='string' />} `controlName`.  (Optional: `false`)
+    - {<Type type='boolean' />} `isDown`.  (Optional: `true`) 
 - **Usage**:
 
 
@@ -56,7 +56,7 @@ client.controls.applyControl(Control.Up, false) // keyup
 ---
 ### Stop Inputs
 - **Method**: `stopInputs()`
-- **Return**: void   
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -66,7 +66,7 @@ Stop listening to the inputs. Pressing a key won't do anything
 ---
 ### Listen Inputs
 - **Method**: `listenInputs()`
-- **Return**: void   
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -87,7 +87,7 @@ Listen to the inputs again
 | Control.Back | back |
 - **Method**: `setInputs(inputs)`
 - **Arguments**:
-    - {object} `inputs`.  (Optional: `false`) 
+    - {<Type type='object' />} `inputs`.  (Optional: `false`) 
 - **Usage**:
 
 

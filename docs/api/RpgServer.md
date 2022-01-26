@@ -9,7 +9,7 @@
 ---
 ### imports
 - **Property**: `imports`
-- **Type**:  { client: null | Function, server: null | Function }[]
+- **Type**: <Type type=' { client: null | Function, server: null | Function }[]' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -20,7 +20,7 @@ Adding sub-modules
 ---
 ### engine
 - **Property**: `engine`
-- **Type**: [RpgServer](/classes/server)EngineHooks
+- **Type**: <Type type='<a href="/classes/server-engine">RpgServerEngine</a>Hooks' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -46,7 +46,7 @@ class RpgServerModule {}
 ---
 ### player
 - **Property**: `player`
-- **Type**: RpgClassPlayer&lt;[RpgPlayer](/classes/player)&gt;
+- **Type**: <Type type='RpgClassPlayer&lt<a href="/classes/player">RpgPlayer</a>&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -72,7 +72,7 @@ class RpgServerEngine { }
 ---
 ### database
 - **Property**: `database`
-- **Type**:  { [dataName]: data } 
+- **Type**: <Type type=' { [dataName]: data } ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -95,7 +95,7 @@ class RpgServerEngine { }
 ---
 ### maps
 - **Property**: `maps`
-- **Type**: RpgClassMap&lt;[RpgMap](/classes/map)&gt;[]
+- **Type**: <Type type='RpgClassMap&lt<a href="/classes/map">RpgMap</a>&gt;[]' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -120,11 +120,27 @@ class TownMap extends RpgMap { }
 class RpgServerEngine { } 
 ``` 
 
+It is possible to just give the object as well
+
+```ts
+@RpgModule<RpgServer>({
+     maps: [
+         {
+             id: 'town',
+             file: require('./tmx/mymap.tmx'),
+             name: 'Town'
+         }
+     ]
+})
+class RpgServerEngine { } 
+``` 
+
+
 
 ---
 ### damageFormulas
 - **Property**: `damageFormulas`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `false` 
 - **Usage**:
 

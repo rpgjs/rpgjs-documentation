@@ -5,7 +5,7 @@
 ---
 ### tilemap
 - **Property**: `tilemap`
-- **Type**: TileMap
+- **Type**: <Type type='TileMap' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -16,7 +16,7 @@ Get the tilemap
 ---
 ### viewport
 - **Property**: `viewport`
-- **Type**: [PIXI.Viewport](https://github.com/davidfig/pixi-viewport)
+- **Type**: <Type type='<a href="https://github.com/davidfig/pixi-viewport">PIXI.Viewport</a>' />
 - **Optional**: `false` 
 - **Usage**:
 

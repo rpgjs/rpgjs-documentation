@@ -9,8 +9,8 @@
 ### Get a GUI
 - **Method**: `RpgGui.get(id)`
 - **Arguments**:
-    - {string} `id`.  (Optional: `false`)
-- **Return**:  { data: any, display: boolean }    
+    - {<Type type='string' />} `id`.  (Optional: `false`)
+- **Return**: <Type type=' { data: any, display: boolean } ' />   
 - **Usage**:
 
 
@@ -27,7 +27,7 @@ console.log(gui.display) // false
 ---
 ### Get all GUI
 - **Method**: `RpgGui.getAll()`
-- **Return**:  { [guiName]: { data: any, display: boolean }  }   
+- **Return**: <Type type=' { [guiName]: { data: any, display: boolean }  }' />   
 - **Usage**:
 
 
@@ -45,8 +45,8 @@ console.log(gui) // { 'rpg-dialog': { data: {}, display: true } }
 ### GUI Exists ?
 - **Method**: `RpgGui.exists(id)`
 - **Arguments**:
-    - {string} `id`.  (Optional: `false`)
-- **Return**: boolean   
+    - {<Type type='string' />} `id`.  (Optional: `false`)
+- **Return**: <Type type='boolean' />   
 - **Usage**:
 
 
@@ -63,9 +63,9 @@ RpgGui.exists('my-gui') // true
 ### Display GUI
 - **Method**: `RpgGui.display(id,data)`
 - **Arguments**:
-    - {string} `id`.  (Optional: `false`)
-    - {object} `data`.  (Optional: `true`)
-- **Return**: void   
+    - {<Type type='string' />} `id`.  (Optional: `false`)
+    - {<Type type='object' />} `data`.  (Optional: `true`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -82,8 +82,8 @@ RpgGui.display('my-gui')
 ### Hide GUI
 - **Method**: `RpgGui.hide(id)`
 - **Arguments**:
-    - {string} `id`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type='string' />} `id`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 

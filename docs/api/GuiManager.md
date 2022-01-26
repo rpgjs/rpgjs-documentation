@@ -11,9 +11,9 @@
 ### Show Text 
 - **Method**: `player.showText(text,options)`
 - **Arguments**:
-    - {string} `text`.  (Optional: `false`)
-    - {object} `options`. the different options, see usage below (Optional: `true`)
-- **Return**: Promise   
+    - {<Type type='string' />} `text`.  (Optional: `false`)
+    - {<Type type='object' />} `options`. the different options, see usage below (Optional: `true`)
+- **Return**: <Type type='Promise' />   
 - **Usage**:
 
 
@@ -99,10 +99,10 @@ player.showText('Hello World', {
 ### Show Choices 
 - **Method**: `player.showChoices(text,choices)`
 - **Arguments**:
-    - {string} `text`.  (Optional: `false`)
-    - {Array&lt;{ text: string, value: any }&gt;} `choices`.  (Optional: `false`)
-    - {object} `options`. Same options as the openDialog method (Optional: `true`)
-- **Return**: Promise&lt;Choice | null&gt;   
+    - {<Type type='string' />} `text`.  (Optional: `false`)
+    - {<Type type='Array&lt;{ text: string, value: any }&gt;' />} `choices`.  (Optional: `false`)
+    - {<Type type='object' />} `options`. Same options as the openDialog method (Optional: `true`)
+- **Return**: <Type type='Promise&lt;Choice | null&gt;' />   
 - **Usage**:
 
 
@@ -124,12 +124,12 @@ console.log(choice) // { text: 'Black', value: 'black' }
 ### Displays a notification
 - **Method**: `player.showNotification()`
 - **Arguments**:
-    - {string} `message`. - The message to display in the notification (Optional: `false`)
-    - {object} `options`. - An object containing options for the notification (Optional: `false`)
-    - {number} `options.time`. - The time to display the notification for (in ms). Default: 2000ms (Optional: `false`)
-    - {string} `options.icon`. - The icon to display in the notification. Put the identifier of the spritesheet (defined on the client side) (Optional: `false`)
-    - {string} `options.sound`. - The sound to play when the notification is shown. Set the sound ID (defined on the client side) (Optional: `false`)
-- **Return**: void   
+    - {<Type type='string' />} `message`. - The message to display in the notification (Optional: `false`)
+    - {<Type type='object' />} `options`. - An object containing options for the notification (Optional: `false`)
+    - {<Type type='number' />} `options.time`. - The time to display the notification for (in ms). Default: 2000ms (Optional: `false`)
+    - {<Type type='string' />} `options.icon`. - The icon to display in the notification. Put the identifier of the spritesheet (defined on the client side) (Optional: `false`)
+    - {<Type type='string' />} `options.sound`. - The sound to play when the notification is shown. Set the sound ID (defined on the client side) (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -139,7 +139,7 @@ Displays a notification . Opens the GUI named `rpg-notification`
 ---
 ### Call Main Menu
 - **Method**: `player.callMainMenu()`
-- **Return**: void   
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -149,7 +149,7 @@ Calls main menu. Opens the GUI named `rpg-main-menu`
 ---
 ### Call Shop Menu
 - **Method**: `player.callShop()`
-- **Return**: void   
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -160,8 +160,8 @@ Calls shop menu. Opens the GUI named `rpg-shop`
 ### Call custom GUI
 - **Method**: `player.gui(guiId)`
 - **Arguments**:
-    - {string} `guiId`.  (Optional: `false`)
-- **Return**: Gui   
+    - {<Type type='string' />} `guiId`.  (Optional: `false`)
+- **Return**: <Type type='Gui' />   
 - **Usage**:
 
 
@@ -198,9 +198,9 @@ await gui.open({ hello: 'world' }, {
 ### Close custom GUI
 - **Method**: `player.removeGui(guiId,data)`
 - **Arguments**:
-    - {string} `guiId`.  (Optional: `false`)
-    - {object} `data`. Passing data if you close the GUI  (Optional: `true`)
-- **Return**: Gui   
+    - {<Type type='string' />} `guiId`.  (Optional: `false`)
+    - {<Type type='object' />} `data`. Passing data if you close the GUI  (Optional: `true`)
+- **Return**: <Type type='Gui' />   
 - **Usage**:
 
 

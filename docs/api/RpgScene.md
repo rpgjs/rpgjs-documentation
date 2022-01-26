@@ -7,7 +7,7 @@
 ---
 ### valuesChange
 - **Property**: `valuesChange`
-- **Type**: [Observable](https://rxjs.dev/guide/observable)&lt;{ data: object, partial: object }&gt;
+- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>&lt;{ data: object, partial: object }&gt;' />
 - **Optional**: `true`
 - **Read Only** 
 - **Usage**:
@@ -16,15 +16,20 @@
 Listen to all the synchronized values of the scene with the server
 
 ```ts 
-import { RpgSceneMap } from '@rpgjs/client'
+import { RpgClient, RpgModule, RpgSceneMap, RpgSprite } from '@rpgjs/client'
 
-export class SceneMap extends RpgSceneMap {
-     onLoad() {
-         this.valuesChange.subscribe((obj) => {
-             console.log(obj.data, obj.partial)
-         })
+ @RpgModule<RpgClient>({ 
+     scenes: {
+         map: {
+             onAfterLoading(scene: RpgSceneMap, sprite: RpgSprite) {
+               scene.valuesChange.subscribe((obj) => {
+                  console.log(obj.data, obj.partial)
+               })
+             }
+         }
      }
-}
+ })
+ export default class RpgClientModuleEngine {}
 ```
 
 - `data` represents all the current data of the scene (`users`, `events` and others)
@@ -38,8 +43,8 @@ export class SceneMap extends RpgSceneMap {
 ### Show Animation
 - **Method**: `scene.showAnimation(object)`
 - **Arguments**:
-    - {object} `object`.  (Optional: `false`)
-- **Return**: Animation   
+    - {<Type type='object' />} `object`.  (Optional: `false`)
+- **Return**: <Type type='Animation' />   
 - **Usage**:
 
 
@@ -54,16 +59,22 @@ The object is the following:
 * `loop`: Display the animation in a loop (false by default)
 
 ```ts 
-import { RpgSceneMap } from '@rpgjs/client'
+import { RpgClient, RpgModule, RpgSceneMap, RpgSprite } from '@rpgjs/client'
 
-export class SceneMap extends RpgSceneMap {
-     onLoad() {
-         const animation = this.showAnimation({
-             graphic: 'my-spritesheet',
-             animationName: 'my-anim'
-         })
+
+@RpgModule<RpgClient>({ 
+     scenes: {
+         map: {
+             onAfterLoading(scene: RpgSceneMap, sprite: RpgSprite) {
+               const animation = scene.showAnimation({
+                  graphic: 'my-spritesheet',
+                   animationName: 'my-anim'
+               })
+             }
+         }
      }
-}
+ })
+ export default class RpgClientModuleEngine {}
 ```
 
 The return is an animation containing two methods:
@@ -85,8 +96,8 @@ animation.onFinish = () => {
 ### Get Sprite
 - **Method**: `scene.getSprite(id)`
 - **Arguments**:
-    - {string} `id`.  (Optional: `false`)
-- **Return**: [RpgSprite](/classes/sprite)   
+    - {<Type type='string' />} `id`.  (Optional: `false`)
+- **Return**: <Type type='<a href="/classes/sprite">RpgSprite</a>' />   
 - **Usage**:
 
 
@@ -96,7 +107,7 @@ Retrieve a sprite according to its identifier
 ---
 ### Get Current Player
 - **Method**: `scene.getCurrentPlayer()`
-- **Return**: [RpgSprite](/classes/sprite)   
+- **Return**: <Type type='<a href="/classes/sprite">RpgSprite</a>' />   
 - **Usage**:
 
 

@@ -7,9 +7,9 @@
 ### Set variable
 - **Method**: `player.setVariable(key,val)`
 - **Arguments**:
-    - {string} `key`.  (Optional: `false`)
-    - {any} `val`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+    - {<Type type='any' />} `val`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
  
@@ -24,8 +24,8 @@ player.setVariable('OPEN_CHEST', true)
 ### Get variable
 - **Method**: `player.setVariable(key,val)`
 - **Arguments**:
-    - {string} `key`.  (Optional: `false`)
-- **Return**: any   
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+- **Return**: <Type type='any' />   
 - **Usage**:
 
  
@@ -40,8 +40,8 @@ const val = player.getVariable('OPEN_CHEST')
 ### Remove variable
 - **Method**: `player.removeVariable(key)`
 - **Arguments**:
-    - {string} `key`.  (Optional: `false`)
-- **Return**: boolean  if a variable existed and has been removed, or false if the variable does not exist. 
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+- **Return**: <Type type='boolean' />  if a variable existed and has been removed, or false if the variable does not exist. 
 - **Usage**:
 
  

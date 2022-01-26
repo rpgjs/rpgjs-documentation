@@ -23,7 +23,7 @@
 | Speed.Faster | 7 |
 | Speed.Fastest | 10 |
 - **Property**: `player.speed`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `3` 
 - **Usage**:
@@ -46,7 +46,7 @@ player.speed = Speed.Slow
 ---
 ### Block movement
 - **Property**: `player.canMove`
-- **Type**: boolean
+- **Type**: <Type type='boolean' />
 - **Optional**: `false`
 - **Default**: `true` 
 - **Usage**:
@@ -62,7 +62,7 @@ player.canMove = false
 ---
 ### Go through to other player
 - **Property**: `player.throughOtherPlayer`
-- **Type**: boolean
+- **Type**: <Type type='boolean' />
 - **Optional**: `false`
 - **Default**: `true` 
 - **Usage**:
@@ -78,7 +78,7 @@ player.throughOtherPlayer = true
 ---
 ### Go through the player
 - **Property**: `player.through`
-- **Type**: boolean
+- **Type**: <Type type='boolean' />
 - **Optional**: `false`
 - **Default**: `false` 
 - **Usage**:
@@ -105,7 +105,7 @@ player.through = true
 | Frequency.Highest | 25 |
 | Frequency.None | 0 |
 - **Property**: `player.speed`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `0` 
 - **Usage**:
@@ -130,9 +130,10 @@ player.frequency = Frequency.Low
 ### Give an itinerary
 - **Method**: `player.moveRoutes(routes)`
 - **Arguments**:
-    - {Array&lt;[Move](/commands/move.html#move)&gt;} `routes`.  (Optional: `false`)
-- **Return**: Promise  
+    - {<Type type='Array&lt<a href="/commands/move.html#move">Move</a>&gt;' />} `routes`.  (Optional: `false`)
+- **Return**: <Type type='Promise' />  
 - **Example**: 
+
 ```ts
 import { Move } from '@rpgjs/server'
 
@@ -182,9 +183,10 @@ the function contains two parameters:
 ### Infinite Move Routes
 - **Method**: `player.infiniteMoveRoute(routes)`
 - **Arguments**:
-    - {Array&lt;[Move](/commands/move.html#move)&gt;} `routes`.  (Optional: `false`)
-- **Return**: void  
+    - {<Type type='Array&lt<a href="/commands/move.html#move">Move</a>&gt;' />} `routes`.  (Optional: `false`)
+- **Return**: <Type type='void' />  
 - **Example**: 
+
 ```ts
 import { Move } from '@rpgjs/server'
 
@@ -203,9 +205,10 @@ You can stop the movement at any time with `breakRoutes()` and replay it with `r
 ### Stop an infinite movement
 - **Method**: `player.breakRoutes(force=false)`
 - **Arguments**:
-    - {boolean} `force`. Forces the stop of the infinite movement (Optional: `true`)
-- **Return**: void  
+    - {<Type type='boolean' />} `force`. Forces the stop of the infinite movement (Optional: `true`)
+- **Return**: <Type type='void' />  
 - **Example**: 
+
 ```ts
 import { Move } from '@rpgjs/server'
 
@@ -222,8 +225,9 @@ Works only for infinite movements. You must first use the method `infiniteMoveRo
 ---
 ### Replay an infinite movement
 - **Method**: `player.replayRoutes()`
-- **Return**: void  
+- **Return**: <Type type='void' />  
 - **Example**: 
+
 ```ts
 import { Move } from '@rpgjs/server'
 

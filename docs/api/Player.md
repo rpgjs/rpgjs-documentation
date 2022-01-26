@@ -2,6 +2,7 @@
 - [Read/Give a name](#read-give-a-name)
 - [Set Graphic](#set-graphic)
 - [Change Map](#change-map)
+- [Create Dynamic Event](#create-dynamic-event)
 - [Teleport on the map](#teleport-on-the-map)
 - [Load progress](#load-progress)
 - [Save progress](#save-progress)
@@ -23,7 +24,7 @@
 ---
 ### Read/Give a name
 - **Property**: `player.name`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -36,8 +37,8 @@ player.name = 'Link'
 ### Set Graphic
 - **Method**: `player.setGraphic(graphic)`
 - **Arguments**:
-    - {string} `graphic`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type='string' />} `graphic`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -50,9 +51,9 @@ Give the spritesheet identifier
 ### Change Map
 - **Method**: `player.changeMap(mapId,positions)`
 - **Arguments**:
-    - {string} `mapId`.  (Optional: `false`)
-    - { {x: number, y: number, z?: number} | string } `positions`.  (Optional: `true`)
-- **Return**: Promise&lt;[RpgMap](/classes/map)&gt;   
+    - {<Type type='string' />} `mapId`.  (Optional: `false`)
+    - {<Type type=' {x: number, y: number, z?: number} | string ' />} `positions`.  (Optional: `true`)
+- **Return**: <Type type='Promise&lt<a href="/classes/map">RpgMap</a>&gt;' />   
 - **Usage**:
 
 
@@ -64,11 +65,43 @@ You don't have to give positions but you can put a starting position in the TMX 
 
 
 ---
+### Create Dynamic Event
+- **Since**: 3.beta-4
+- **Method**: `player.createDynamicEvent(eventObj`
+- **Arguments**:
+    - {<Type type=' { x: number, y: number, z?: number, event: eventClass } ' />} `eventsList`.  (Optional: `true`)
+- **Return**: <Type type=' { [eventId: string]:<a href="/classes/event">RpgEvent</a> } ' />   
+- **Usage**:
+
+
+Dynamically create an event in Scenario mode on the current map
+
+```ts
+@EventData({
+ name: 'EV-1'
+})
+class MyEvent extends RpgEvent {
+ onAction() {
+     console.log('ok')
+ }
+} 
+
+player.createDynamicEvent({
+     x: 100,
+     y: 100,
+     event: MyEvent
+})
+```
+
+You can also put an array of objects to create several events at once
+
+
+---
 ### Teleport on the map
 - **Method**: `player.teleport(positions)`
 - **Arguments**:
-    - { {x: number, y: number, z?: number} | string } `positions`.  (Optional: `true`)
-- **Return**:  {x: number, y: number, z: number}    
+    - {<Type type=' {x: number, y: number, z?: number} | string ' />} `positions`.  (Optional: `true`)
+- **Return**: <Type type=' {x: number, y: number, z: number} ' />   
 - **Usage**:
 
 
@@ -97,8 +130,8 @@ player.teleport() // { x: 0, y: 0, z: 0 }
 ### Load progress
 - **Method**: `player.load(json)`
 - **Arguments**:
-    - {string} `json`. The JSON sent by the method save() (Optional: `false`)
-- **Return**: string   
+    - {<Type type='string' />} `json`. The JSON sent by the method save() (Optional: `false`)
+- **Return**: <Type type='string' />   
 - **Usage**:
 
 
@@ -114,7 +147,7 @@ player.load(json)
 ---
 ### Save progress
 - **Method**: `player.save()`
-- **Return**: string   
+- **Return**: <Type type='string' />   
 - **Usage**:
 
 
@@ -131,7 +164,7 @@ player.load(json)
 ---
 ### Run Sync Changes
 - **Method**: `player.syncChanges()`
-- **Return**: void   
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -142,7 +175,7 @@ The method calls the `onChanges` method on events and synchronizes all map data 
 ---
 ### Get Current Map
 - **Method**: `player.getCurrentMap()`
-- **Return**: [RpgMap](/classes/map)   
+- **Return**: <Type type='<a href="/classes/map">RpgMap</a>' />   
 - **Usage**:
 
 
@@ -153,10 +186,10 @@ Retrieves data from the current map
 ### Show Animation
 - **Method**: `player.showAnimation(graphic,animationName,replaceGraphic=false)`
 - **Arguments**:
-    - {string} `graphic`. spritesheet identifier (Optional: `false`)
-    - {string} `animationName`. Name of the animation in the spritesheet (Optional: `false`)
-    - {boolean} `replaceGraphic`. Replace the event graphic with the animation. After the end of the animation, the original graphic is reapplied (Optional: `true`)
-- **Return**: void   
+    - {<Type type='string' />} `graphic`. spritesheet identifier (Optional: `false`)
+    - {<Type type='string' />} `animationName`. Name of the animation in the spritesheet (Optional: `false`)
+    - {<Type type='boolean' />} `replaceGraphic`. Replace the event graphic with the animation. After the end of the animation, the original graphic is reapplied (Optional: `true`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -199,9 +232,9 @@ player.showAnimation('sword_stroke', 'default', true)
 ### Emit to client
 - **Method**: `player.emit(key,value)`
 - **Arguments**:
-    - {string} `key`.  (Optional: `false`)
-    - {any} `value`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+    - {<Type type='any' />} `value`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -212,9 +245,9 @@ Emit data to clients with socket
 ### Listen to data from the client
 - **Method**: `player.on(key,cb)`
 - **Arguments**:
-    - {string} `key`.  (Optional: `false`)
-    - {function} `cb`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+    - {<Type type='function' />} `cb`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -232,9 +265,9 @@ It may change or be removed in future versions.
 - **Since**: 3.0.0-alpha.9
 - **Method**: `player.playSound(soundId,allMap=false)`
 - **Arguments**:
-    - {string} `soundId`. Sound identifier, defined on the client side (Optional: `false`)
-    - {boolean} `allMap`. Indicate if the sound is heard by the players on the card (Optional: `true`)
-- **Return**: void   
+    - {<Type type='string' />} `soundId`. Sound identifier, defined on the client side (Optional: `false`)
+    - {<Type type='boolean' />} `allMap`. Indicate if the sound is heard by the players on the card (Optional: `true`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -267,7 +300,7 @@ player.playSound('town-music', true)
 ---
 ### Get/Set position
 - **Property**: `position`
-- **Type**:  { x: number, y: number, z: number } 
+- **Type**: <Type type=' { x: number, y: number, z: number } ' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -281,8 +314,8 @@ z is the depth layer. By default, its value is 0. Collisions and overlays will b
 ### Set Sizes
 - **Method**: `player.setSizes(key,value)`
 - **Arguments**:
-    - { { width: number, height: number, hitbox?: { width: number, height: number } } } `obj`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type=' { width: number, height: number, hitbox?: { width: number, height: number } } ' />} `obj`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -313,9 +346,9 @@ player.setSizes({
 ### Set Hitbox
 - **Method**: `player.setHitbox(width,height)`
 - **Arguments**:
-    - {number} `width`.  (Optional: `false`)
-    - {number} `height`.  (Optional: `false`)
-- **Return**: void   
+    - {<Type type='number' />} `width`.  (Optional: `false`)
+    - {<Type type='number' />} `height`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
 - **Usage**:
 
 
@@ -334,10 +367,10 @@ player.setHitbox({
 - **Since**: beta.3
 - **Method**: `player.attachShape(parameters)`
 - **Arguments**:
-    - { { width: number, height: number, positioning?, name?, properties?: object } } `obj`. - positioning: Indicate where the shape is placed.
+    - {<Type type=' { width: number, height: number, positioning?, name?, properties?: object } ' />} `obj`. - positioning: Indicate where the shape is placed.
 - properties: An object in order to retrieve information when interacting with the shape
 - name: The name of the shape (Optional: `false`)
-- **Return**: [RpgShape](/classes/shape)   
+- **Return**: <Type type='<a href="/classes/shape">RpgShape</a>' />   
 - **Usage**:
 
 
@@ -358,7 +391,7 @@ player.attachShape({
 ### Get Shapes
 - **Since**: beta.3
 - **Method**: `player.getShapes()`
-- **Return**: [RpgShape](/classes/shape)[]   
+- **Return**: <Type type='<a href="/classes/shape">RpgShape</a>[]' />   
 - **Usage**:
 
 
@@ -369,7 +402,7 @@ Returns all shapes assigned to this player
 ### Get In-Shapes
 - **Since**: beta.3
 - **Method**: `player.getInShapes()`
-- **Return**: [RpgShape](/classes/shape)[]   
+- **Return**: <Type type='<a href="/classes/shape">RpgShape</a>[]' />   
 - **Usage**:
 
 
@@ -379,7 +412,7 @@ Retrieves all shapes where the player is located
 ---
 ### Get Direction
 - **Method**: `player.getDirection()`
-- **Return**: string  right, up or down 
+- **Return**: <Type type='string' />  right, up or down 
 - **Usage**:
 
 
@@ -402,8 +435,8 @@ player.getDirection()
 | Direction.Down | down |
 - **Method**: `player.changeDirection(direction)`
 - **Arguments**:
-    - {Direction} `direction`.  (Optional: `false`)
-- **Return**: boolean  direction has changed 
+    - {<Type type='Direction' />} `direction`.  (Optional: `false`)
+- **Return**: <Type type='boolean' />  direction has changed 
 - **Usage**:
 
 

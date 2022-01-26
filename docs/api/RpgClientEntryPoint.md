@@ -9,7 +9,7 @@
 ---
 ### io
 - **Property**: `io`
-- **Type**: SocketIO or other
+- **Type**: <Type type='SocketIO or other' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -20,7 +20,7 @@ Represents socket io client but you can put something else (which is the same sc
 ---
 ### canvas
 - **Property**: `canvas`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -44,7 +44,7 @@ Canvas Options
 ---
 ### selector
 - **Property**: `selector`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -55,7 +55,7 @@ The element selector that will display the canvas. By default, `#rpg`
 ---
 ### selectorGui
 - **Property**: `selectorGui`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -67,7 +67,7 @@ If you didn't put a GUI element in the div, an element will be automatically cre
 ---
 ### selectorCanvas
 - **Property**: `selectorCanvas`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -79,7 +79,7 @@ If you didn't put element in the main div, an element will be automatically crea
 ---
 ### globalConfig
 - **Property**: `globalConfig`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `true` 
 - **Usage**:
 

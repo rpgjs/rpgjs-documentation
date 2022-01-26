@@ -21,6 +21,8 @@ const files = [
     ...open('packages/common/src'),
     ...open('packages/server/src'),
     ...open('packages/server/src/decorators'),
+    ...open('packages/server/src/Scenes'),
+    ...open('packages/server/src/Game'),
     ...open('packages/client/src/Sprite'),
     ...open('packages/client/src/Sound'),
     ...open('packages/client/src/Scene'),
@@ -29,46 +31,57 @@ const files = [
     ...open('packages/common/src/gui')
 ]
 
-const types = {
-    Effect: '/database/effect.html',
-    Element: '/database/element.html',
-    StateClass: '/database/state.html',
-    ItemClass: '/database/item.html',
-    SkillClass: '/database/skill.html',
-    WeaponClass: '/database/weapon.html',
-    ArmorClass: '/database/armor.html',
-    ActorClass: '/database/actor.html',
-    ClassClass: '/database/class.html',
-    Move: '/commands/move.html#move',
-    RpgPlayer: '/classes/player',
-    RpgMap: '/classes/map',
-    RpgEvent: '/classes/event',
-    RpgServer: '/classes/server',
-    RpgClientEngine: '/classes/client-engine.html#rpgclientengine',
-    RpgClient: '/classes/client',
-    RpgSprite: '/classes/sprite',
-    RpgGui: '/classes/gui',
-    RpgSceneMap: '/classes/scene-map',
-    RpgScene: '/classes/scene-map',
-    Sound: '/classes/sound',
-    RpgShape: '/classes/shape',
-    Timeline: '/classes/spritesheet.html#create-animation-with-timeline-system',
-    SpriteSheet: '/classes/spritesheet',
-    'PIXI.Container': 'https://pixijs.download/dev/docs/PIXI.Container.html',
-    'PIXI.Sprite': 'https://pixijs.download/dev/docs/PIXI.Sprite.html',
-    'PIXI.Viewport': 'https://github.com/davidfig/pixi-viewport',
-    Observable: 'https://rxjs.dev/guide/observable',
-    KeyboardControls: '/classes/keyboard.html'
-}
+const types = [
+    [ 'Effect', '/database/effect.html' ],
+    [ 'Element', '/database/element.html' ],
+    [ 'StateClass', '/database/state.html' ],
+    [ 'ItemClass', '/database/item.html' ],
+    [ 'SkillClass', '/database/skill.html' ],
+    [ 'WeaponClass', '/database/weapon.html' ],
+    [ 'ArmorClass', '/database/armor.html' ],
+    [ 'ActorClass', '/database/actor.html' ],
+    [ 'ClassClass', '/database/class.html' ],
+    [ 'Move', '/commands/move.html#move' ],
+    [ 'RpgPlayer', '/commands/common.html' ],
+    [ 'RpgMap', '/classes/map' ],
+    [ 'RpgEvent', '/classes/event' ],
+    [ 'RpgServerEngine', '/classes/server-engine' ],
+    [ 'RpgServer', '/classes/server' ],
+    [ 'RpgClientEngine', '/classes/client-engine.html#rpgclientengine' ],
+    [ 'RpgClient', '/classes/client' ],
+    [ 'RpgSprite', '/classes/sprite' ],
+    [ 'RpgGui', '/classes/gui' ],
+    [ 'RpgSceneMap', '/classes/scene-map' ],
+    [ 'RpgScene', '/classes/scene-map' ],
+    [ 'Sound', '/classes/sound' ],
+    [ 'RpgShape', '/classes/shape' ],
+    [
+      'Timeline',
+      '/classes/spritesheet.html#create-animation-with-timeline-system'
+    ],
+    [ 'SpriteSheet', '/classes/spritesheet' ],
+    [
+      'PIXI.Container',
+      'https://pixijs.download/dev/docs/PIXI.Container.html'
+    ],
+    [
+      'PIXI.Sprite',
+      'https://pixijs.download/dev/docs/PIXI.Sprite.html'
+    ],
+    [ 'PIXI.Viewport', 'https://github.com/davidfig/pixi-viewport' ],
+    [ 'Observable', 'https://rxjs.dev/guide/observable' ],
+    [ 'KeyboardControls', '/classes/keyboard.html' ]
+  ]
 
 function toLink(type) {
-    for (let list in types) {
-        let regexp = new RegExp(`(${list})`, 'g')
-        type = type.replace(regexp, `[$1](${types[list]})`)
-        type = type.replace(/>/g, '&gt;')
-        type = type.replace(/</g, '&lt;')
+    type = type.replace(/>/g, '&gt;')
+    type = type.replace(/</g, '&lt;')
+    for (let [list, link] of types) {
+        let regexp = new RegExp(`([^>](${list}))|(^${list})`, 'g')
+        type = type.replace(regexp, ` <a href="${link}">${list}</a>`)
     }
-    return type
+   
+    return `<Type type='${type}' />`
 }
 
 function createSummary(summary) {
@@ -211,7 +224,7 @@ md[memberof.name] += `
 
         if (tag('example')) {
             md[memberof.name] += `
-- **Example**: 
+- **Example**: ${tag('example').name}
 ${tag('example').description}`          
         }
 

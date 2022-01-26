@@ -4,7 +4,7 @@
 ---
 ### Change Gold
 - **Property**: `player.gold`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `false`
 - **Default**: `0` 
 - **Usage**:

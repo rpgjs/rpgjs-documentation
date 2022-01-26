@@ -4,8 +4,10 @@ const apiMenu = [
     collapsable: false,
     sidebarDepth: 2,
     children: [
+      '/classes/server-engine',
       '/classes/server',
       '/classes/player',
+      '/classes/scene-map-server',
       '/classes/map',
       '/classes/event',
       '/classes/shape',
@@ -150,13 +152,18 @@ module.exports = {
         {
           text: 'Guide',
           link: '/guide/get-started'
-        }, {
+        }, 
+        {
           text: 'API',
           link: '/commands/common'
         },
         {
           text: 'Plugins',
           link: '/plugins/chat'
+        },
+        {
+          text: 'Community',
+          link: 'https://community.rpgjs.dev'
         }
       ],
       sidebar:  {

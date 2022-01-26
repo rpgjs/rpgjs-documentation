@@ -40,10 +40,10 @@
 | Ease.easeOutBounce | easeOutBounce |
 - **Method**: `timeline.add(duration,cb?,transform?)`
 - **Arguments**:
-    - {number} `duration`.  (Optional: `false`)
-    - { (obj?: number, time?: number) =&gt; TransformOptions[] } `cb`.  (Optional: `true`)
-    - { [property: string]: { to:number, from: number: easing?: Function } } `transform`.  (Optional: `true`)
-- **Return**: [Timeline](/classes/spritesheet.html#create-animation-with-timeline-system)   
+    - {<Type type='number' />} `duration`.  (Optional: `false`)
+    - {<Type type=' (obj?: number, time?: number) =&gt; TransformOptions[] ' />} `cb`.  (Optional: `true`)
+    - {<Type type=' [property: string]: { to:number, from: number: easing?: Function } ' />} `transform`.  (Optional: `true`)
+- **Return**: <Type type='<a href="/classes/spritesheet.html#create-animation-with-timeline-system">Timeline</a>' />   
 - **Usage**:
 
 
@@ -94,7 +94,7 @@ function myEase(t: number, b: number, c: number, d: number): number { }
 ---
 ### Create the animation array
 - **Method**: `timeline.create()`
-- **Return**: FrameOptions[][]  animation array 
+- **Return**: <Type type='FrameOptions[][]' />  animation array 
 - **Usage**:
 
 

@@ -6,7 +6,7 @@
 ---
 ### mode
 - **Property**: `mode`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -30,7 +30,7 @@ export class CharaEvent extends RpgEvent { }
 ---
 ### hitbox
 - **Property**: `hitbox`
-- **Type**:  { width: number, height: number }
+- **Type**: <Type type=' { width: number, height: number }' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -41,7 +41,7 @@ The hitbox of the event. By default, this is the size of the tile of the map
 ---
 ### name
 - **Property**: `name`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `false` 
 - **Usage**:
 

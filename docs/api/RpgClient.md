@@ -10,7 +10,7 @@
 ---
 ### imports
 - **Property**: `imports`
-- **Type**:  { client: null | Function, server: null | Function }[]
+- **Type**: <Type type=' { client: null | Function, server: null | Function }[]' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -21,7 +21,7 @@ Adding sub-modules
 ---
 ### engine
 - **Property**: `engine`
-- **Type**: [[RpgClient](/classes/client)Engine](/classes/client-engine.html#rpgclientengine)Hooks
+- **Type**: <Type type='<a href="/classes/client-engine.html#rpgclientengine">RpgClientEngine</a>Hooks' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -47,7 +47,7 @@ class RpgClientModule {}
 ---
 ### spritesheets
 - **Property**: `spritesheets`
-- **Type**: Array&lt;Class&gt;
+- **Type**: <Type type='Array&lt;Class&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -79,7 +79,7 @@ class RpgClientEngine {}
 ---
 ### gui
 - **Property**: `gui`
-- **Type**: Array&lt;Component of VueJS&gt;
+- **Type**: <Type type='Array&lt;Component of VueJS&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -112,7 +112,7 @@ class RpgClientEngine {}
 ---
 ### sounds
 - **Property**: `sounds`
-- **Type**: Array&lt;Class&gt;
+- **Type**: <Type type='Array&lt;Class&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -140,7 +140,7 @@ class RpgClientEngine {}
 ---
 ### sprite
 - **Property**: `sprite`
-- **Type**: [RpgSprite](/classes/sprite)Hooks
+- **Type**: <Type type='<a href="/classes/sprite">RpgSprite</a>Hooks' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -164,7 +164,7 @@ class RpgClientEngine {}
 ---
 ### scenes
 - **Property**: `scenes`
-- **Type**:  [sceneName: string]: [[RpgScene](/classes/scene-map)Map](/classes/scene-map)Hooks 
+- **Type**: <Type type=' [sceneName: string]:<a href="/classes/scene-map">RpgSceneMap</a>Hooks ' />
 - **Optional**: `true` 
 - **Usage**:
 

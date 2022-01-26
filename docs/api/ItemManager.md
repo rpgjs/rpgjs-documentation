@@ -12,9 +12,10 @@
 ### Get Item
 - **Method**: `player.getItem(itemClass)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. Identifier of the object if the parameter is a string (Optional: `false`)
-- **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) }  
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. Identifier of the object if the parameter is a string (Optional: `false`)
+- **Return**: <Type type='{ nb: number, item: instance of<a href="/database/item.html">ItemClass</a> }' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 
@@ -32,9 +33,10 @@ Retrieves the information of an object: the number and the instance
 ### Has Item
 - **Method**: `player.hasItem(itemClass)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. Identifier of the object if the parameter is a string (Optional: `false`)
-- **Return**: boolean  
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. Identifier of the object if the parameter is a string (Optional: `false`)
+- **Return**: <Type type='boolean' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 
@@ -50,10 +52,11 @@ Check if the player has the item in his inventory.
 ### Add Item
 - **Method**: `player.addItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html)} `itemClass`.  (Optional: `false`)
-    - {number} `nb`. Default 1 (Optional: `true`)
-- **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) }  
+    - {<Type type='<a href="/database/item.html">ItemClass</a>' />} `itemClass`.  (Optional: `false`)
+    - {<Type type='number' />} `nb`. Default 1 (Optional: `true`)
+- **Return**: <Type type='{ nb: number, item: instance of<a href="/database/item.html">ItemClass</a> }' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 player.addItem(Potion, 5)
@@ -71,8 +74,8 @@ Add an item in the player's inventory. You can give more than one by specifying 
 ### Remove Item
 - **Method**: `player.removeItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
-    - {number} `nb`. Default 1 (Optional: `true`)
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. string is item id (Optional: `false`)
+    - {<Type type='number' />} `nb`. Default 1 (Optional: `true`)
 - **Throws**:
 
 If the object is not in the inventory, an exception is raised
@@ -83,8 +86,9 @@ If the object is not in the inventory, an exception is raised
 }
 ```
 ---
-- **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) } | undefined  
+- **Return**: <Type type='{ nb: number, item: instance of<a href="/database/item.html">ItemClass</a> } | undefined' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 
@@ -108,8 +112,8 @@ Deletes an item. Decreases the value `nb`. If the number falls to 0, then the it
 ### Buy Item
 - **Method**: `player.buyItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
-    - {number} `nb`. Default 1 (Optional: `true`)
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. string is item id (Optional: `false`)
+    - {<Type type='number' />} `nb`. Default 1 (Optional: `true`)
 - **Throws**:
 
 If you have not set a price on the item
@@ -128,8 +132,9 @@ If the player does not have enough money
 }
 ```
 ---
-- **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) }  
+- **Return**: <Type type='{ nb: number, item: instance of<a href="/database/item.html">ItemClass</a> }' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 
@@ -153,8 +158,8 @@ Purchases an item and reduces the amount of gold
 ### Sell Item
 - **Method**: `player.sellItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
-    - {number} `nbToSell`. Default 1 (Optional: `true`)
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. string is item id (Optional: `false`)
+    - {<Type type='number' />} `nbToSell`. Default 1 (Optional: `true`)
 - **Throws**:
 
 If you have not set a price on the item
@@ -181,8 +186,9 @@ If the number of items for sale exceeds the number of actual items in the invent
 }
 ```
 ---
-- **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) }  
+- **Return**: <Type type='{ nb: number, item: instance of<a href="/database/item.html">ItemClass</a> }' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 
@@ -207,7 +213,7 @@ Sell an item and the player wins the amount of the item divided by 2
 ### Use an Item
 - **Method**: `player.useItem(item,nb=1)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. string is item id (Optional: `false`)
 - **Throws**:
 
 If the player has the `Effect.CAN_NOT_ITEM` effect
@@ -246,8 +252,9 @@ Chance to use the item has failed. Chances of use is defined with `ItemClass.hit
 `onUseFailed()` method is called on the ItemClass
 
 ---
-- **Return**: { nb: number, item: instance of [ItemClass](/database/item.html) }  
+- **Return**: <Type type='{ nb: number, item: instance of<a href="/database/item.html">ItemClass</a> }' />  
 - **Example**: 
+
 ```ts
 import Potion from 'your-database/potion'
 
@@ -273,8 +280,8 @@ catch (err) {
 ### Equip Weapon or Armor
 - **Method**: `player.equip(itemClass,equip=true)`
 - **Arguments**:
-    - {[ItemClass](/database/item.html) | string} `itemClass`. string is item id (Optional: `false`)
-    - {number} `equip`. Equip the object if true or un-equipped if false (Optional: `true`)
+    - {<Type type='<a href="/database/item.html">ItemClass</a> | string' />} `itemClass`. string is item id (Optional: `false`)
+    - {<Type type='number' />} `equip`. Equip the object if true or un-equipped if false (Optional: `true`)
 - **Throws**:
 
 If the item is not in the inventory
@@ -301,8 +308,9 @@ If the item Is already equipped
  }
  ```
 ---
-- **Return**: void  
+- **Return**: <Type type='void' />  
 - **Example**: 
+
 ```ts
 import Sword from 'your-database/sword'
 

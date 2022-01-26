@@ -6,7 +6,7 @@
 ---
 ### io
 - **Property**: `io`
-- **Type**: SocketIO or other
+- **Type**: <Type type='SocketIO or other' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -17,7 +17,7 @@ Represents socket io but you can put something else (which is of the same scheme
 ---
 ### basePath
 - **Property**: `basePath`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -32,7 +32,7 @@ basePath: __dirname
 ---
 ### globalConfig
 - **Property**: `globalConfig`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `true` 
 - **Usage**:
 

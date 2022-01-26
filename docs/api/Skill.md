@@ -13,7 +13,7 @@
 ---
 ### id
 - **Property**: `id`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -23,7 +23,7 @@ The id of the item. The identifier makes it possible to find an object in the da
 ---
 ### name
 - **Property**: `name`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -33,7 +33,7 @@ The name of the item.
 ---
 ### description
 - **Property**: `description`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -43,7 +43,7 @@ The description of the item.
 ---
 ### spCost
 - **Property**: `spCost`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -54,7 +54,7 @@ Indicates how much SP will be removed when the skill is used.
 ---
 ### power
 - **Property**: `power`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -65,7 +65,7 @@ Indicates the power of the skill
 ---
 ### coefficient
 - **Property**: `coefficient`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -90,7 +90,7 @@ Below, The ATK parameter will be taken into account, added and multiplied by 2.
 ---
 ### variance
 - **Property**: `variance`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -100,7 +100,7 @@ The variance of the damage. For example, if you put `20` and the damage is 500 t
 ---
 ### hitRate
 - **Property**: `hitRate`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -120,9 +120,10 @@ The rate of chance, between 0 and 1 that the skill will take effect
 | Efficiency.VULNERABLE | 1.5 value |
 | Efficiency.VERY_VULNERABLE | 2 value |
 - **Property**: `elements`
-- **Type**: Array&lt;{ rate: number, element: [Element](/database/element.html)} | [Element](/database/element.html)&gt;
+- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>} |<a href="/database/element.html">Element</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
+
 Example 1
 
 ```ts
@@ -159,7 +160,7 @@ To help, you can use the Efficiency enumerations
 ---
 ### removeStates
 - **Property**: `removeStates`
-- **Type**: Array&lt;{ rate: number, state: [StateClass](/database/state.html) } | [StateClass](/database/state.html)&gt;
+- **Type**: <Type type='Array&lt;{ rate: number, state:<a href="/database/state.html">StateClass</a> } |<a href="/database/state.html">StateClass</a>&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 

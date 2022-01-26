@@ -10,7 +10,7 @@
 ---
 ### name 
 - **Property**: `name`
-- **Type**:  string 
+- **Type**: <Type type=' string ' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -20,7 +20,7 @@ Get/Set name
 ---
 ### positioning 
 - **Property**: `positioning`
-- **Type**:  ShapePositioning 
+- **Type**: <Type type=' ShapePositioning ' />
 - **Optional**: `false`
 - **Default**: `default` 
 - **Usage**:
@@ -31,7 +31,7 @@ Get/Set positioning
 ---
 ### x 
 - **Property**: `x`
-- **Type**:  number 
+- **Type**: <Type type=' number ' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -41,7 +41,7 @@ Get/Set x
 ---
 ### y 
 - **Property**: `y`
-- **Type**:  number 
+- **Type**: <Type type=' number ' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -51,7 +51,7 @@ Get/Set y
 ---
 ### Properties 
 - **Property**: `Properties`
-- **Type**:  object 
+- **Type**: <Type type=' object ' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -61,8 +61,8 @@ Get/Set properties
 
 ---
 ### Player is in this shape ?
-- **Method**: `shape.playerIsIn(player:`
-- **Return**: boolean   
+- **Method**: `shape.playerIsIn(player)`
+- **Return**: <Type type='boolean' />   
 - **Usage**:
 
 
@@ -72,7 +72,7 @@ Whether the player is in this shape
 ---
 ### Get Player Owner
 - **Method**: `shape.getPlayerOwner()`
-- **Return**: [RpgPlayer](/classes/player) [ undefined]   
+- **Return**: <Type type='<a href="/classes/player">RpgPlayer</a> | undefined' />   
 - **Usage**:
 
 

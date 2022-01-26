@@ -9,7 +9,7 @@
 ---
 ### skillsToLearn
 - **Property**: `skillsToLearn`
-- **Type**: Array&lt;{ level: number, skill: [SkillClass](/database/skill.html) }&gt;
+- **Type**: <Type type='Array&lt;{ level: number, skill:<a href="/database/skill.html">SkillClass</a> }&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -26,7 +26,7 @@ skillsToLearn: [{ level: 5, skill: Fire }]
 ---
 ### id
 - **Property**: `id`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -36,7 +36,7 @@ The id of the item. The identifier makes it possible to find an object in the da
 ---
 ### name
 - **Property**: `name`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -46,7 +46,7 @@ The name of the item.
 ---
 ### description
 - **Property**: `description`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -65,9 +65,10 @@ The realization of this property or method has not been completed.
 | ------------- |------------:|
 |  |
 - **Property**: `statesEfficiency`
-- **Type**: Array&lt;{ rate: number, element: [StateClass](/database/state.html)} | [StateClass](/database/state.html)&gt;
+- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/state.html">StateClass</a>} |<a href="/database/state.html">StateClass</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
+
 Example 1
 
 ```ts
@@ -115,9 +116,10 @@ To help, you can use the Efficiency enumerations
 | Efficiency.VULNERABLE | 1.5 value |
 | Efficiency.VERY_VULNERABLE | 2 value |
 - **Property**: `elementsEfficiency`
-- **Type**: Array&lt;{ rate: number, element: [Element](/database/element.html)} | [Element](/database/element.html)&gt;
+- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>} |<a href="/database/element.html">Element</a>&gt;' />
 - **Optional**: `true`
 - **Example**: 
+
 Example 1
 
 ```ts

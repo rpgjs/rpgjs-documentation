@@ -6,8 +6,8 @@
 ### Set Class
 - **Method**: `player.setClass(ClassClass)`
 - **Arguments**:
-    - {[ClassClass](/database/class.html)} `class`.  (Optional: `false`)
-- **Return**: instance of [ClassClass](/database/class.html)   
+    - {<Type type='<a href="/database/class.html">ClassClass</a>' />} `class`.  (Optional: `false`)
+- **Return**: <Type type='instance of<a href="/database/class.html">ClassClass</a>' />   
 - **Usage**:
 
  
@@ -24,8 +24,8 @@ player.setClass(Fighter)
 ### Set Actor
 - **Method**: `player.setActor(ActorClass)`
 - **Arguments**:
-    - {[ActorClass](/database/actor.html)} `actorClass`.  (Optional: `false`)
-- **Return**: instance of [ActorClass](/database/actor.html)   
+    - {<Type type='<a href="/database/actor.html">ActorClass</a>' />} `actorClass`.  (Optional: `false`)
+- **Return**: <Type type='instance of<a href="/database/actor.html">ActorClass</a>' />   
 - **Usage**:
 
  

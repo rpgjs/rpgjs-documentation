@@ -8,7 +8,7 @@
 ---
 ### Subscribe to the world
 - **Property**: `RpgWorld.changes`
-- **Type**: [Observable](https://rxjs.dev/guide/observable)
+- **Type**: <Type type='<a href="https://rxjs.dev/guide/observable">Observable</a>' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -34,8 +34,8 @@ RpgWorld.changes
 ### Get Player
 - **Method**: `RpgWorld.getPlayer(player)`
 - **Arguments**:
-    - {[RpgPlayer](/classes/player) | string} `player`. identifier (Optional: `false`)
-- **Return**: [RpgPlayer](/classes/player)   
+    - {<Type type='<a href="/classes/player">RpgPlayer</a> | string' />} `player`. identifier (Optional: `false`)
+- **Return**: <Type type='<a href="/classes/player">RpgPlayer</a>' />   
 - **Usage**:
 
 
@@ -51,7 +51,7 @@ const player = RpgWorld.getPlayer(player) // player is RpgPlayer (player.id) or 
 ---
 ### Get all Players
 - **Method**: `RpgWorld.getPlayers()`
-- **Return**: Array&lt;[RpgPlayer](/classes/player)&gt;   
+- **Return**: <Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt;' />   
 - **Usage**:
 
 
@@ -68,9 +68,9 @@ const players = RpgWorld.getPlayers()
 ### Get all objects of map
 - **Method**: `RpgWorld.getObjectsOfMap(map,playerId?)`
 - **Arguments**:
-    - {string} `map`. Map Name (Optional: `false`)
-    - {[RpgPlayer](/classes/player) | string} `playerId`. player identifier (Optional: `false`)
-- **Return**: Array&lt;[RpgPlayer](/classes/player)&gt;   
+    - {<Type type='string' />} `map`. Map Name (Optional: `false`)
+    - {<Type type='<a href="/classes/player">RpgPlayer</a> | string' />} `playerId`. player identifier (Optional: `false`)
+- **Return**: <Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt;' />   
 - **Usage**:
 
 
@@ -96,8 +96,8 @@ const objects = RpgWorld.getObjectsOfMap('mapname', 'playerid')
 ### Get all Players a map
 - **Method**: `RpgWorld.getPlayersOfMap(map)`
 - **Arguments**:
-    - {string} `map`. Map Name (Optional: `false`)
-- **Return**: Array&lt;[RpgPlayer](/classes/player)&gt;   
+    - {<Type type='string' />} `map`. Map Name (Optional: `false`)
+- **Return**: <Type type='Array&lt<a href="/classes/player">RpgPlayer</a>&gt;' />   
 - **Usage**:
 
 

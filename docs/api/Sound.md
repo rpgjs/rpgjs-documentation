@@ -8,7 +8,7 @@
 ---
 ### sounds
 - **Property**: `sounds`
-- **Type**:  { [id: string]: string } 
+- **Type**: <Type type=' { [id: string]: string } ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -28,7 +28,7 @@ sounds: {
 ---
 ### id
 - **Property**: `id`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -41,7 +41,7 @@ Sound identifier.
 ---
 ### sound
 - **Property**: `sound`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -59,7 +59,7 @@ sound: require('./assets/sound.ogg')
 ---
 ### loop
 - **Property**: `loop`
-- **Type**: boolean
+- **Type**: <Type type='boolean' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -70,7 +70,7 @@ The sound will restart at the beginning when it is finished.
 ---
 ### volume
 - **Property**: `volume`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 

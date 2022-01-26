@@ -22,7 +22,7 @@
 ---
 ### opacity
 - **Property**: `opacity`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -33,7 +33,7 @@ The global value of opacity (between 0 and 1)
 ---
 ### pivot
 - **Property**: `pivot`
-- **Type**: Array&lt;number&gt;
+- **Type**: <Type type='Array&lt;number&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -52,7 +52,7 @@ pivot: [0.5, 0.8]
 ---
 ### anchor
 - **Property**: `anchor`
-- **Type**: Array&lt;number&gt;
+- **Type**: <Type type='Array&lt;number&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -71,7 +71,7 @@ anchor: [0.5, 0.8]
 ---
 ### angle
 - **Property**: `angle`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -84,7 +84,7 @@ Rotation. This will rotate the display object's projection by this angle (in rad
 ---
 ### rotation
 - **Property**: `rotation`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -97,7 +97,7 @@ Rotation. This is an alias for rotation, but in degrees.
 ---
 ### scale
 - **Property**: `scale`
-- **Type**: Array&lt;number&gt;
+- **Type**: <Type type='Array&lt;number&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -116,7 +116,7 @@ scale: [0.5, 0.8]
 ---
 ### skew
 - **Property**: `skew`
-- **Type**: Array&lt;number&gt;
+- **Type**: <Type type='Array&lt;number&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -137,7 +137,7 @@ The array has two elements: [x, y].  If y is omitted, both x and y will be set t
 ---
 ### x
 - **Property**: `x`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -148,7 +148,7 @@ The global value of X translation
 ---
 ### y
 - **Property**: `y`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -159,7 +159,7 @@ The global value of Y translation
 ---
 ### visible
 - **Property**: `visible`
-- **Type**: boolean
+- **Type**: <Type type='boolean' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -170,7 +170,7 @@ The global value of visible
 ---
 ### sound
 - **Property**: `sound`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -181,7 +181,7 @@ Define the sound that will be played for all animations in the spritesheet. Reme
 ---
 ### image
 - **Property**: `image`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -199,7 +199,7 @@ image: require('./assets/hero.png')
 ---
 ### framesWidth
 - **Property**: `framesWidth`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -210,7 +210,7 @@ The number of frames on the width
 ---
 ### framesHeight
 - **Property**: `framesHeight`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -221,7 +221,7 @@ The number of frames on the height
 ---
 ### width
 - **Property**: `width`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -232,7 +232,7 @@ The width of the image (in pixels)
 ---
 ### height
 - **Property**: `height`
-- **Type**: number
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -243,7 +243,7 @@ The height of the image (in pixels)
 ---
 ### images
 - **Property**: `images`
-- **Type**:  { [id: string]: string } 
+- **Type**: <Type type=' { [id: string]: string } ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -263,7 +263,7 @@ images: {
 ---
 ### id
 - **Property**: `id`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -276,7 +276,7 @@ Spritesheet identifier.
 ---
 ### textures
 - **Property**: `textures`
-- **Type**:  { [animName: string]: { animations: Array&lt;Array&lt;FrameOptions&gt;&gt; | Function, ...other } } 
+- **Type**: <Type type=' { [animName: string]: { animations: Array&lt;Array&lt;FrameOptions&gt;&gt; | Function, ...other } } ' />
 - **Optional**: `true` 
 - **Usage**:
 

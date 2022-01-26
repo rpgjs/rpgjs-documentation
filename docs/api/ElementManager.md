@@ -6,7 +6,7 @@
 ---
 ### Get Elements Defense
 - **Property**: `player.elementsDefense`
-- **Type**: Array&lt;{ rate: number, element: [Element](/database/element.html)}&gt;
+- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>}&gt;' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:
@@ -45,7 +45,7 @@ console.log(player.elementsDefense) // [{ rate: 1, element: 'fire' }]
 ---
 ### Set/Get Elements Efficiency
 - **Property**: `player.elementsEfficiency`
-- **Type**: Array&lt;{ rate: number, element: [Element](/database/element.html)}&gt;
+- **Type**: <Type type='Array&lt;{ rate: number, element:<a href="/database/element.html">Element</a>}&gt;' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -78,7 +78,7 @@ console.log(player.elementsEfficiency) // [{ rate: 1, element: 'fire' }, { rate:
 ---
 ### Get Elements
 - **Property**: `player.elements`
-- **Type**: Array&lt;[Element](/database/element.html)&gt;
+- **Type**: <Type type='Array&lt<a href="/database/element.html">Element</a>&gt;' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:

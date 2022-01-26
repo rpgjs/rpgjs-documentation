@@ -9,8 +9,8 @@
 ---
 ### id
 - **Property**: `id`
-- **Type**: string
-- **Optional**: `false` 
+- **Type**: <Type type='string' />
+- **Optional**: `true` 
 - **Usage**:
 
  
@@ -20,7 +20,7 @@ Map identifier. Allows to go to the map (for example with player.changeMap())
 ---
 ### file
 - **Property**: `file`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `false` 
 - **Usage**:
 
@@ -42,7 +42,7 @@ class TownMap extends RpgMap { }
 ---
 ### name
 - **Property**: `name`
-- **Type**: string
+- **Type**: <Type type='string' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -52,7 +52,7 @@ The name of the map.
 ---
 ### events
 - **Property**: `events`
-- **Type**: Array&lt;Class [RpgEvent](/classes/event)&gt; | { event: Class [RpgEvent](/classes/event), x: number, y: number }
+- **Type**: <Type type='Array&lt;Class<a href="/classes/event">RpgEvent</a>&gt; | { event: Class<a href="/classes/event">RpgEvent</a>, x: number, y: number }' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -88,7 +88,7 @@ events: [{ event: NpcEvent, x: 10, y: 30 }]
 ---
 ### sounds
 - **Property**: `sounds`
-- **Type**: Array&lt;string&gt;
+- **Type**: <Type type='Array&lt;string&gt;' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -122,7 +122,7 @@ See [https://docs.rpgjs.dev/classes/sound.html#properties](RpgSound Decorator)
 ---
 ### syncSchema
 - **Property**: `syncSchema`
-- **Type**: object
+- **Type**: <Type type='object' />
 - **Optional**: `true` 
 - **Usage**:
 
