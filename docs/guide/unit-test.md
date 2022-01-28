@@ -12,7 +12,7 @@
 
 ```ts
 import { RpgWorld, RpgPlayer } from '@rpgjs/server'
-import { testing } from '@rpgjs/testing'
+import { testing, clear } from '@rpgjs/testing'
 import modules from '../src/modules'
 
 let player: RpgPlayer
@@ -29,6 +29,9 @@ test('test player', () => {
     expect(player).toBeDefined()
 })
 
+afterEach(() => {
+    clear()
+})
 ```
 
 In the `beforeEach()` function, you must: 
@@ -36,6 +39,7 @@ In the `beforeEach()` function, you must:
 1. Wrap your server class with the `testing()` function. It will allow you to emulate a client. 
 2. Create a client
 3. Using the [RpgWorld class](/classes/world.html), retrieve the player according to his identifier
+4. Add the `clear()` function in `afterEach` to empty the cards and players in memory, and start from 0 for the next test
 
 You can make tests ! 
 
