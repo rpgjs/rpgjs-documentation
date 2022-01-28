@@ -13,7 +13,7 @@
 ---
 ### onJoinMap
 - **Property**: `onJoinMap`
-- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, map: <a href="/classes/map">RpgMap</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, map: <a href="/classes/map.html">RpgMap</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -46,7 +46,7 @@
 ---
 ### onLeaveMap
 - **Property**: `onLeaveMap`
-- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, map: <a href="/classes/map">RpgMap</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, map: <a href="/classes/map.html">RpgMap</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -101,9 +101,8 @@ It may change or be removed in future versions.
 
 ---
 ### onInShape
-- **Since**: beta.3
 - **Property**: `onInShape`
-- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, shape: <a href="/classes/shape">RpgShape</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, shape: <a href="/classes/shape.html">RpgShape</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -113,9 +112,8 @@ It may change or be removed in future versions.
 
 ---
 ### onOutShape
-- **Since**: beta.3
 - **Property**: `onOutShape`
-- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, shape: <a href="/classes/shape">RpgShape</a>) =&gt; any ' />
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, shape: <a href="/classes/shape.html">RpgShape</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -125,7 +123,7 @@ It may change or be removed in future versions.
 
 ---
 ### onMove
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Property**: `onMove`
 - **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>) =&gt; any ' />
 - **Optional**: `true` 

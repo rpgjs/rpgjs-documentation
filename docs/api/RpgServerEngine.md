@@ -67,7 +67,7 @@ Combat formulas
 
 ---
 ### Add in database
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Method**: `server.addInDatabase(id,data)`
 - **Arguments**:
     - {<Type type='number' />} `id`. resource id (Optional: `false`)
@@ -111,7 +111,7 @@ Sends all packages to clients. The sending is done automatically but you can dec
 
 ---
 ### sceneMap
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Property**: `sceneMap`
 - **Type**: <Type type='SceneMap' />
 - **Optional**: `true` 

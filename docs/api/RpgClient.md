@@ -140,7 +140,7 @@ class RpgClientEngine {}
 ---
 ### sprite
 - **Property**: `sprite`
-- **Type**: <Type type=' <a href="/classes/sprite">RpgSprite</a>Hooks' />
+- **Type**: <Type type=' <a href="/classes/sprite.html">RpgSprite</a>Hooks' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -164,7 +164,7 @@ class RpgClientEngine {}
 ---
 ### scenes
 - **Property**: `scenes`
-- **Type**: <Type type=' [sceneName: string]: <a href="/classes/scene-map">RpgSceneMap</a>Hooks ' />
+- **Type**: <Type type=' [sceneName: string]: <a href="/classes/scene-map.html">RpgSceneMap</a>Hooks ' />
 - **Optional**: `true` 
 - **Usage**:
 

@@ -1,12 +1,12 @@
 ::: tip Summary
-- [Get/Set position](#get-set-position)
-- [Get/Set position](#get-set-position)
+- [Get Collision of tiles](#get-collision-of-tiles)
+- [Get Collision of other players/events](#get-collision-of-other-players-events)
 - [Get Tile](#get-tile)
 - [Get Shapes](#get-shapes)
 :::
 ---
-### Get/Set position
-- **Since**: 3.beta-4
+### Get Collision of tiles
+- **Since**: 3.0.0-beta.4
 - **Property**: `tiles`
 - **Type**: <Type type=' TileInfo[] ' />
 - **Optional**: `false`
@@ -19,8 +19,8 @@ Recovers all the colliding tiles of the current player
 
 
 ---
-### Get/Set position
-- **Since**: 3.beta-4
+### Get Collision of other players/events
+- **Since**: 3.0.0-beta.4
 - **Property**: `otherPlayersCollision`
 - **Type**: <Type type='  <a href="/commands/common.html">RpgPlayer</a> | Rpgvent)[] ' />
 - **Optional**: `false`
@@ -34,7 +34,7 @@ Recovers all other players and events colliding with the current player's hitbox
 
 ---
 ### Get Tile
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Method**: `player.getTile(x,y,z?)`
 - **Arguments**:
     - {<Type type='number' />} `x`.  (Optional: `false`)
@@ -78,9 +78,9 @@ Example of returns:
 
 ---
 ### Get Shapes
-- **Since**: beta.3
+- **Since**: 3.0.0-beta.3
 - **Method**: `player.getShapes()`
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[]' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[]' />   
 - **Usage**:
 
 

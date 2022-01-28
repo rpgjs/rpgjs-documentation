@@ -62,8 +62,8 @@ Get the class managing the keyboard
 
 ---
 ### Add Spritesheet
-- **Since**: beta.3
-- **Method**: `addSpriteSheet(spritesheetClass`
+- **Since**: 3.0.0-beta.3
+- **Method**: `addSpriteSheet(spritesheetClass|spritesheetClass[])`
 - **Return**: <Type type='void' />   
 - **Usage**:
 
@@ -73,8 +73,8 @@ Adds Spritesheet classes
 
 ---
 ### Add Sound
-- **Since**: beta.3
-- **Method**: `addSpriteSheet(soundClass`
+- **Since**: 3.0.0-beta.3
+- **Method**: `addSpriteSheet(soundClass|soundClass[])`
 - **Return**: <Type type='void' />   
 - **Usage**:
 
@@ -95,7 +95,7 @@ Starts the client side and connects to the server
 ---
 ### objects
 - **Property**: `objects`
-- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable">Observable</a>&lt; {
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable.html">Observable</a>&lt; {
      [id: string]: {
          object: any,
          paramsChanged: any
@@ -150,7 +150,7 @@ VueJS Parent component instance
 ---
 ### scene
 - **Property**: `scene`
-- **Type**: <Type type=' <a href="/classes/scene-map">RpgScene</a>' />
+- **Type**: <Type type=' <a href="/classes/scene-map.html">RpgScene</a>' />
 - **Optional**: `true`
 - **Read Only** 
 - **Usage**:

@@ -1,8 +1,10 @@
 const parser = require('comment-parser')
 const fs = require('fs')
+const compareVersions = require("compare-versions")
 
 const baseUrl = __dirname + '/../../RPGJS/'
 const destination  = __dirname + '/../docs/api/'
+const changelog = __dirname + '/../docs/others/'
 
 const open = function(path) {
     return fs
@@ -43,23 +45,23 @@ const types = [
     [ 'ClassClass', '/database/class.html' ],
     [ 'Move', '/commands/move.html#move' ],
     [ 'RpgPlayer', '/commands/common.html' ],
-    [ 'RpgMap', '/classes/map' ],
-    [ 'RpgEvent', '/classes/event' ],
-    [ 'RpgServerEngine', '/classes/server-engine' ],
-    [ 'RpgServer', '/classes/server' ],
+    [ 'RpgMap', '/classes/map.html' ],
+    [ 'RpgEvent', '/classes/event.html' ],
+    [ 'RpgServerEngine', '/classes/server-engine.html' ],
+    [ 'RpgServer', '/classes/server.html' ],
     [ 'RpgClientEngine', '/classes/client-engine.html#rpgclientengine' ],
-    [ 'RpgClient', '/classes/client' ],
-    [ 'RpgSprite', '/classes/sprite' ],
-    [ 'RpgGui', '/classes/gui' ],
-    [ 'RpgSceneMap', '/classes/scene-map' ],
-    [ 'RpgScene', '/classes/scene-map' ],
-    [ 'Sound', '/classes/sound' ],
-    [ 'RpgShape', '/classes/shape' ],
+    [ 'RpgClient', '/classes/client.html' ],
+    [ 'RpgSprite', '/classes/sprite.html' ],
+    [ 'RpgGui', '/classes/gui.html' ],
+    [ 'RpgSceneMap', '/classes/scene-map.html' ],
+    [ 'RpgScene', '/classes/scene-map.html' ],
+    [ 'Sound', '/classes/sound.html' ],
+    [ 'RpgShape', '/classes/shape.html' ],
     [
       'Timeline',
       '/classes/spritesheet.html#create-animation-with-timeline-system'
     ],
-    [ 'SpriteSheet', '/classes/spritesheet' ],
+    [ 'SpriteSheet', '/classes/spritesheet.html' ],
     [
       'PIXI.Container',
       'https://pixijs.download/dev/docs/PIXI.Container.html'
@@ -69,7 +71,7 @@ const types = [
       'https://pixijs.download/dev/docs/PIXI.Sprite.html'
     ],
     [ 'PIXI.Viewport', 'https://github.com/davidfig/pixi-viewport' ],
-    [ 'Observable', 'https://rxjs.dev/guide/observable' ],
+    [ 'Observable', 'https://rxjs.dev/guide/observable.html' ],
     [ 'KeyboardControls', '/classes/keyboard.html' ]
   ]
 
@@ -96,6 +98,7 @@ function createSummary(summary) {
 
 let md = {}
 let summary = {}
+let byVersion = {}
 for (let file of files) {
     const code = fs.readFileSync(file, 'utf-8')
     const comments = parser(code, {
@@ -106,6 +109,11 @@ for (let file of files) {
         const { tags, description } = comment
         const tag = name => tags.find(tag => tag.tag == name)
         const memberofs = tags.filter(tag => tag.tag == 'memberof')
+        const version = tag('since')?.name
+        if (!byVersion[version]) byVersion[version] = `
+## Version ${version}
+
+`
         for (let memberof of memberofs) {  
             if (!md[memberof.name]) md[memberof.name] = ''
             md[memberof.name] += `
@@ -114,6 +122,8 @@ for (let file of files) {
         const title = tag('title') ? `${tag('title').name} ${tag('title').description}` : tag('prop')?.name
         if (!summary[memberof.name]) summary[memberof.name] = []
         summary[memberof.name].push(title)
+
+        byVersion[version] += `- [${title}](/api/${memberof.name}.html): ${description}`
 
 md[memberof.name] += 
 `### ${title}`
@@ -248,3 +258,16 @@ for (let key in md) {
     const text = createSummary(summary[key]) + md[key]
     fs.writeFileSync(destination + key + '.md', text, 'utf-8')
 }
+
+let textVersion = `# AI ChangeLog
+`
+
+textVersion += Object.keys(byVersion)
+    .filter(v => v !== 'undefined')
+    .sort((a, b) => compareVersions(b, a))
+    .reduce((prevStr, currentStr) => {
+        const content = byVersion[currentStr]
+        return prevStr + content
+    }, '')
+
+fs.writeFileSync(changelog + 'changelog.md', textVersion, 'utf-8')

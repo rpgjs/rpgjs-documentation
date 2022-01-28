@@ -3,6 +3,7 @@
 - [Set Graphic](#set-graphic)
 - [Change Map](#change-map)
 - [Create Dynamic Event](#create-dynamic-event)
+- [Remove Event](#remove-event)
 - [Teleport on the map](#teleport-on-the-map)
 - [Load progress](#load-progress)
 - [Save progress](#save-progress)
@@ -13,8 +14,8 @@
 - [Listen to data from the client](#listen-to-data-from-the-client)
 - [Play Sound](#play-sound)
 - [Get/Set position](#get-set-position)
-- [Get/Set position](#get-set-position)
-- [Get/Set position](#get-set-position)
+- [Get Collision of tiles](#get-collision-of-tiles)
+- [Get Collision of other players/events](#get-collision-of-other-players-events)
 - [Set Sizes](#set-sizes)
 - [Set Hitbox](#set-hitbox)
 - [Get Tile](#get-tile)
@@ -56,7 +57,7 @@ Give the spritesheet identifier
 - **Arguments**:
     - {<Type type='string' />} `mapId`.  (Optional: `false`)
     - {<Type type=' {x: number, y: number, z?: number} | string ' />} `positions`.  (Optional: `true`)
-- **Return**: <Type type='Promise&lt <a href="/classes/map">RpgMap</a>&gt;' />   
+- **Return**: <Type type='Promise&lt <a href="/classes/map.html">RpgMap</a>&gt;' />   
 - **Usage**:
 
 
@@ -69,11 +70,11 @@ You don't have to give positions but you can put a starting position in the TMX 
 
 ---
 ### Create Dynamic Event
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Method**: `player.createDynamicEvent(eventObj`
 - **Arguments**:
     - {<Type type=' { x: number, y: number, z?: number, event: eventClass } ' />} `eventsList`.  (Optional: `true`)
-- **Return**: <Type type=' { [eventId: string]: <a href="/classes/event">RpgEvent</a> } ' />   
+- **Return**: <Type type=' { [eventId: string]: <a href="/classes/event.html">RpgEvent</a> } ' />   
 - **Usage**:
 
 
@@ -98,6 +99,18 @@ player.createDynamicEvent({
 
 You can also put an array of objects to create several events at once
 
+
+---
+### Remove Event
+- **Since**: 3.0.0-beta.4
+- **Method**: `player.removeEvent(eventId)`
+- **Arguments**:
+    - {<Type type='string' />} `eventId`. Event Name (Optional: `false`)
+- **Return**: <Type type='boolean' />   
+- **Usage**:
+
+
+Removes an event from the map (Scenario Mode). Returns false if the event is not found
 
 ---
 ### Teleport on the map
@@ -178,7 +191,7 @@ The method calls the `onChanges` method on events and synchronizes all map data 
 ---
 ### Get Current Map
 - **Method**: `player.getCurrentMap()`
-- **Return**: <Type type=' <a href="/classes/map">RpgMap</a>' />   
+- **Return**: <Type type=' <a href="/classes/map.html">RpgMap</a>' />   
 - **Usage**:
 
 
@@ -314,8 +327,8 @@ z is the depth layer. By default, its value is 0. Collisions and overlays will b
 
 
 ---
-### Get/Set position
-- **Since**: 3.beta-4
+### Get Collision of tiles
+- **Since**: 3.0.0-beta.4
 - **Property**: `tiles`
 - **Type**: <Type type=' TileInfo[] ' />
 - **Optional**: `false`
@@ -328,8 +341,8 @@ Recovers all the colliding tiles of the current player
 
 
 ---
-### Get/Set position
-- **Since**: 3.beta-4
+### Get Collision of other players/events
+- **Since**: 3.0.0-beta.4
 - **Property**: `otherPlayersCollision`
 - **Type**: <Type type='  <a href="/commands/common.html">RpgPlayer</a> | Rpgvent)[] ' />
 - **Optional**: `false`
@@ -392,7 +405,7 @@ player.setHitbox(20, 20)
 
 ---
 ### Get Tile
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Method**: `player.getTile(x,y,z?)`
 - **Arguments**:
     - {<Type type='number' />} `x`.  (Optional: `false`)
@@ -436,13 +449,13 @@ Example of returns:
 
 ---
 ### Attach Shape
-- **Since**: beta.3
+- **Since**: 3.0.0-beta.3
 - **Method**: `player.attachShape(parameters)`
 - **Arguments**:
     - {<Type type=' { width: number, height: number, positioning?, name?, properties?: object } ' />} `obj`. - positioning: Indicate where the shape is placed.
 - properties: An object in order to retrieve information when interacting with the shape
 - name: The name of the shape (Optional: `false`)
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>' />   
 - **Usage**:
 
 
@@ -461,9 +474,9 @@ player.attachShape({
 
 ---
 ### Get Shapes
-- **Since**: beta.3
+- **Since**: 3.0.0-beta.3
 - **Method**: `player.getShapes()`
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[]' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[]' />   
 - **Usage**:
 
 
@@ -472,9 +485,9 @@ Returns all shapes assigned to this player
 
 ---
 ### Get In-Shapes
-- **Since**: beta.3
+- **Since**: 3.0.0-beta.3
 - **Method**: `player.getInShapes()`
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[]' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[]' />   
 - **Usage**:
 
 

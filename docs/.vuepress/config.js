@@ -140,6 +140,7 @@ const pluginMenu = [{
   ]
 }]
 
+
 module.exports = {
     title: 'RPGJS v3 Documentation',
     description: 'Create your RPG or MMORPG in Javascript',
@@ -162,6 +163,12 @@ module.exports = {
           link: '/plugins/chat'
         },
         {
+          text: 'Lean more',
+          items: [
+            { text: 'Change Log', link: '/others/changelog' }
+          ]
+        },
+        {
           text: 'Community',
           link: 'https://community.rpgjs.dev'
         }
@@ -170,6 +177,7 @@ module.exports = {
         '/classes/': apiMenu,
         '/commands/': apiMenu,
         '/database/': apiMenu,
+        '/api/': apiMenu,
         '/guide/': guideMenu,
         '/gui/': guideMenu,
         '/advanced/': guideMenu,

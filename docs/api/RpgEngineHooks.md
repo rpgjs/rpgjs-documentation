@@ -75,7 +75,7 @@ Called when there was a connection error
 
 ---
 ### onWindowResize
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Property**: `onWindowResize`
 - **Type**: <Type type=' () =&gt; any ' />
 - **Optional**: `true` 

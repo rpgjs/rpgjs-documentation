@@ -6,6 +6,7 @@
 - [Width of the map in pixels](#width-of-the-map-in-pixels)
 - [Height of the map in pixels](#height-of-the-map-in-pixels)
 - [The depth of the map in pixels (this is the height of a tile ;))](#the-depth-of-the-map-in-pixels-(this-is-the-height-of-a-tile-;)))
+- [Get Layer by name](#get-layer-by-name)
 - [Create Shape](#create-shape)
 - [Get Shapes](#get-shapes)
 - [Get Shapes](#get-shapes)
@@ -14,8 +15,11 @@
 - [Get tile by index](#get-tile-by-index)
 - [Get origin position of tile](#get-origin-position-of-tile)
 - [Get tile by position](#get-tile-by-position)
+- [map id](#map-id)
+- [event list](#event-list)
 - [Change Tile in map](#change-tile-in-map)
 - [Create Dynamic Event](#create-dynamic-event)
+- [Remove Event](#remove-event)
 :::
 ---
 ### Data of map
@@ -88,12 +92,29 @@
  
 
 ---
+### Get Layer by name
+- **Method**: `map.getLayerByName(name)`
+- **Arguments**:
+    - {<Type type='string' />} `name`. layer name (Optional: `false`)
+- **Return**: <Type type='LayerInfo | undefined' />  
+- **Example**: 
+
+```ts
+ const tiles = map.getLayerByName(0, 0)
+ ``` 
+- **Usage**:
+
+
+Find a layer by name. Returns `undefined` is the layer is not found
+
+
+---
 ### Create Shape
-- **Since**: beta.3
+- **Since**: 3.0.0-beta.3
 - **Method**: `map.createShape(obj)`
 - **Arguments**:
     - {<Type type='object' />} `obj`.  (Optional: `false`)
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>' />   
 - **Usage**:
 
 
@@ -126,7 +147,7 @@ Delete a shape
 ---
 ### Get Shapes
 - **Method**: `map.getShapes()`
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[]' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[]' />   
 - **Usage**:
 
 
@@ -138,7 +159,7 @@ Return all shapes on the map
 - **Method**: `map.getShape(name)`
 - **Arguments**:
     - {<Type type='string' />} `name`. Name of shape (Optional: `false`)
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[] | undefined' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[] | undefined' />   
 - **Usage**:
 
 
@@ -215,8 +236,27 @@ Recover tiles according to a position
 
 
 ---
+### map id
+- **Property**: `id`
+- **Type**: <Type type='string' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+
+---
+### event list
+- **Property**: `events`
+- **Type**: <Type type=' { [eventId: string]: <a href="/classes/event.html">RpgEvent</a> } ' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+
+---
 ### Change Tile in map
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Method**: `map.setTile(x,y,layer,tileInfo)`
 - **Arguments**:
     - {<Type type='number' />} `x`. Position X (Optional: `false`)
@@ -239,11 +279,11 @@ Edit a tile on the map. All players on the map will see the modified tile
 
 ---
 ### Create Dynamic Event
-- **Since**: 3.beta-4
-- **Method**: `map.createDynamicEvent(eventObj`
+- **Since**: 3.0.0-beta.4
+- **Method**: `map.createDynamicEvent(eventObj|eventObj[])`
 - **Arguments**:
     - {<Type type=' { x: number, y: number, z?: number, event: eventClass } ' />} `eventsList`.  (Optional: `false`)
-- **Return**: <Type type=' { [eventId: string]: <a href="/classes/event">RpgEvent</a> } ' />   
+- **Return**: <Type type=' { [eventId: string]: <a href="/classes/event.html">RpgEvent</a> } ' />   
 - **Usage**:
 
 
@@ -268,3 +308,15 @@ map.createDynamicEvent({
 
 You can also put an array of objects to create several events at once
 
+
+---
+### Remove Event
+- **Since**: 3.0.0-beta.4
+- **Method**: `map.removeEvent(eventId)`
+- **Arguments**:
+    - {<Type type='string' />} `eventId`. Event Name (Optional: `false`)
+- **Return**: <Type type='boolean' />   
+- **Usage**:
+
+
+Removes an event from the map. Returns false if the event is not found

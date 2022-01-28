@@ -6,6 +6,7 @@
 - [Width of the map in pixels](#width-of-the-map-in-pixels)
 - [Height of the map in pixels](#height-of-the-map-in-pixels)
 - [The depth of the map in pixels (this is the height of a tile ;))](#the-depth-of-the-map-in-pixels-(this-is-the-height-of-a-tile-;)))
+- [Get Layer by name](#get-layer-by-name)
 - [Get Shapes](#get-shapes)
 - [Get Shape by name](#get-shape-by-name)
 - [Get index of tile](#get-index-of-tile)
@@ -14,7 +15,7 @@
 - [Get tile by position](#get-tile-by-position)
 - [tilemap](#tilemap)
 - [viewport](#viewport)
-- [Listen mouvse event](#listen-mouvse-event)
+- [Listen mouse event](#listen-mouse-event)
 :::
 ---
 ### Data of map
@@ -87,9 +88,26 @@
  
 
 ---
+### Get Layer by name
+- **Method**: `map.getLayerByName(name)`
+- **Arguments**:
+    - {<Type type='string' />} `name`. layer name (Optional: `false`)
+- **Return**: <Type type='LayerInfo | undefined' />  
+- **Example**: 
+
+```ts
+ const tiles = map.getLayerByName(0, 0)
+ ``` 
+- **Usage**:
+
+
+Find a layer by name. Returns `undefined` is the layer is not found
+
+
+---
 ### Get Shapes
 - **Method**: `map.getShapes()`
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[]' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[]' />   
 - **Usage**:
 
 
@@ -101,7 +119,7 @@ Return all shapes on the map
 - **Method**: `map.getShape(name)`
 - **Arguments**:
     - {<Type type='string' />} `name`. Name of shape (Optional: `false`)
-- **Return**: <Type type=' <a href="/classes/shape">RpgShape</a>[] | undefined' />   
+- **Return**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[] | undefined' />   
 - **Usage**:
 
 
@@ -180,7 +198,7 @@ Recover tiles according to a position
 ---
 ### tilemap
 - **Property**: `tilemap`
-- **Type**: <Type type='TileMap' />
+- **Type**: <Type type=' <a href="https://pixijs.download/dev/docs/PIXI.Container.html">PIXI.Container</a>' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -204,8 +222,8 @@ It automatically follows the sprite representing the player but you can attach i
 
 
 ---
-### Listen mouvse event
-- **Since**: 3.beta-4
+### Listen mouse event
+- **Since**: 3.0.0-beta.4
 - **Method**: `on(eventName,callback)`
 - **Arguments**:
     - {<Type type='string' />} `eventName`. Name of the event (see PIXI documentation). Name often used in the codes

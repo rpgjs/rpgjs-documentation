@@ -56,9 +56,9 @@ To know if the sprite is the sprite controlled by the player
 
 ---
 ### logic
-- **Since**: 3.beta-4
+- **Since**: 3.0.0-beta.4
 - **Property**: `logic`
-- **Type**: <Type type=' <a href="/classes/sprite">RpgSprite</a>Logic' />
+- **Type**: <Type type=' <a href="/classes/sprite.html">RpgSprite</a>Logic' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:

@@ -5,7 +5,7 @@
 ---
 ### onStart
 - **Property**: `onStart`
-- **Type**: <Type type=' (engine: <a href="/classes/server-engine">RpgServerEngine</a>) =&gt; any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/server-engine.html">RpgServerEngine</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
@@ -16,7 +16,7 @@
 ---
 ### onStep
 - **Property**: `onStep`
-- **Type**: <Type type=' (engine: <a href="/classes/server-engine">RpgServerEngine</a>) =&gt; any ' />
+- **Type**: <Type type=' (engine: <a href="/classes/server-engine.html">RpgServerEngine</a>) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 
