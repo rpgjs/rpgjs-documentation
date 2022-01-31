@@ -15,8 +15,8 @@ import { Skill } from '@rpgjs/database'
     power: 100,
     variance: 10,
     hitRate: 1,
-    addStates: []
-    removeStates: []
+    addStates: [],
+    removeStates: [],
     elements: [],
     coefficient: {}
 })

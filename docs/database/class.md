@@ -13,7 +13,7 @@ import { Class } from '@rpgjs/database'
     description: 'A great fighter!',
     equippable: [],
     skillsToLearn: [],
-    statesEfficiency: []
+    statesEfficiency: [],
     elementsEfficiency: []
 })
 export class Fighter {

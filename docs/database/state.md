@@ -15,7 +15,7 @@ import { State } from '@rpgjs/database'
     description: 'The player is paralyzed',
     effects: [],
     paramsModifier: [],
-    statesEfficiency: []
+    statesEfficiency: [],
     elementsEfficiency: []
 })
 export class Paralyse {

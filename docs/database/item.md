@@ -15,10 +15,10 @@ import { Item } from '@rpgjs/database'
     hpValue: 100,
     hitRate: 1,
     consumable: true,
-    addStates: []
-    removeStates: []
+    addStates: [],
+    removeStates: [],
     elements: [],
-    effects: []
+    effects: [],
     paramsModifier: {}
 })
 export class Potion {

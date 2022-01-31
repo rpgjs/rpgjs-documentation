@@ -14,13 +14,13 @@ import { Armor } from '@rpgjs/database'
     price: 4000,
     pdef: 2000,
     sdef: 1000,
-    addStates: []
-    removeStates: []
+    addStates: [],
+    removeStates: [],
     elements: [],
-    effects: []
-    params: {}
-    paramsModifier: {}
-    statesDefense: []
+    effects: [],
+    params: {},
+    paramsModifier: {},
+    statesDefense: [],
     elementsDefense: []
 })
 export class Shield {

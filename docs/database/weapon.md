@@ -15,17 +15,17 @@ import { Weapon } from '@rpgjs/database'
     atk: number
     pdef: number,
     sdef: number,
-    addStates: []
-    removeStates: []
+    addStates: [],
+    removeStates: [],
     elements: [],
-    effects: []
+    effects: [],
     params: {
         maxhp
-    }
+    },
     paramsModifier: {
 
-    }
-    statesDefense: []
+    },
+    statesDefense: [],
     elementsDefense: []
 })
 export class Sword {
