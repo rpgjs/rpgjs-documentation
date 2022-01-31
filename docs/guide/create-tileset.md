@@ -29,7 +29,7 @@ The size of the tiles must not exceed the dimensions of the image. For example, 
 
 
 1. Place the image in <PathTo to="baseModule" file="client/maps/assets" />
-2. Then create the following file in <PathTo to="baseModule" file="client/characters/medieval.ts" />
+2. Then create the following file in <PathTo to="baseModule" file="client/maps/medieval.ts" />
 
 ```ts
 import { Spritesheet } from '@rpgjs/client'
@@ -55,17 +55,17 @@ The `images` object allows to group several tilesets at the same time
 
 ```ts
 import { RpgClient, RpgModule } from '@rpgjs/client'
-import { Tilesets } from './characters/medieval'
+import { Tilesets } from './maps/medieval'
 
 @RpgModule<RpgClient>({
     spritesheets: [
         Tilesets
     ]
 })
-export default class RpgClientEngine {}
+export default class RpgClientModuleEngine {}
 ```
 
-2. And add the `Tilesets`, class 
+2. And add the `Tilesets` class 
 
 ## Define collisions
 

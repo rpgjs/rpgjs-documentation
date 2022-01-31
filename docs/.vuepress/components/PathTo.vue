@@ -8,11 +8,13 @@ const configDir = 'src/config'
 const modDir = 'src/modules'
 const baseModule = modDir + '/main'
 const serverDir = baseModule + '/server'
+const clientDir = baseModule + '/client'
 const paths = {
     clientIndex: baseModule + '/client/index.ts',
     serverIndex: baseModule + '/server/index.ts',
     baseModule,
     serverDir,
+    clientDir,
     mapDir: serverDir + '/maps',
     eventDir: serverDir + '/events',
     databaseDir: serverDir + '/database',

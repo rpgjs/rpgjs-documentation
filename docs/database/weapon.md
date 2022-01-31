@@ -12,9 +12,9 @@ import { Weapon } from '@rpgjs/database'
     name: 'Sword',
     description: 'Gives 100 HP',
     price: 2000,
-    atk: number
-    pdef: number,
-    sdef: number,
+    atk: 10,
+    pdef: 10,
+    sdef: 10,
     addStates: [],
     removeStates: [],
     elements: [],
