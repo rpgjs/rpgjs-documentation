@@ -59,7 +59,7 @@ export default [
 
 ## Create the client-side module
 
-In the <PathTo to="modDir" file="mymodule/client/index.ts" /> file, create a module with the @RpgModule decorator:
+In the <PathTo to="modDir" file="mymodule/client/index.ts" /> file, create a module with the `@RpgModule` decorator:
 
 ```ts
 import { RpgClient, RpgModule } from '@rpgjs/client'
@@ -70,8 +70,7 @@ import { sceneMap } from './map' // optional
     sprite, // optional
     scenes: { // optional
         map: sceneMap
-    },
-    spritesheets
+    }
 })
 export default class RpgClientEngine {}
 ```
@@ -82,7 +81,7 @@ In the module, you can specify the sprite, the scene map or the graphic contents
 
 ## Create the server side module
 
-In the <PathTo to="modDir" file="mymodule/server/index.ts" /> file, create a module with the @RpgModule decorator:
+In the <PathTo to="modDir" file="mymodule/server/index.ts" /> file, create a module with the `@RpgModule` decorator:
 
 ```ts
 import { RpgServer, RpgModule } from '@rpgjs/server'

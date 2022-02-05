@@ -81,7 +81,6 @@ In <PathTo to="playerFile" />
 
 ```ts
 import { RpgPlayer, RpgMap, RpgPlayerHooks, RpgShape, ShapePositioning } from '@rpgjs/server'
-import { EmotionBubble } from '@rpgjs/plugin-emotion-bubbles'
 
 export const player: RpgPlayerHooks = {
     onJoinMap(player: RpgPlayer, map: RpgMap) {

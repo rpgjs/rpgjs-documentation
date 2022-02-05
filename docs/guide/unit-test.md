@@ -65,7 +65,7 @@ module.exports = jestConfig
 > ```js
 > const jestConfig = require('@rpgjs/compiler/jest')
 > module.exports = {
->    ...jestConfig
+>    ...jestConfig,
 >    verbose: true
 > }
 > ```
