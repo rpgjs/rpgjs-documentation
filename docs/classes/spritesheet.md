@@ -55,16 +55,16 @@ You can call the animation
 On the scene
 
 ```ts
-import { RpgSceneMap } from '@rpgjs/client'
+import { RpgSceneMapHooks, RpgSceneMap } from '@rpgjs/client'
 
-export class SceneMap extends RpgSceneMap {
-     onLoad() {
-         this.showAnimation({
+export const sceneMap: RpgSceneMapHooks = {
+    onAfterLoading(scene: RpgSceneMap) {
+        scene.showAnimation({
              graphic: 'shield',
              animationName: 'default',
-             attachTo: this.getCurrentPlayer()
+             attachTo: scene.getCurrentPlayer()
          })
-     }
+    }
 }
 ```
 
