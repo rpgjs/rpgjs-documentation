@@ -95,6 +95,7 @@ const guideMenu = [{
     '/guide/animation-tile',
     '/guide/create-shape',
     '/guide/unit-test',
+    '/advanced/listen-param-client',
   ]
 }, 
 {
