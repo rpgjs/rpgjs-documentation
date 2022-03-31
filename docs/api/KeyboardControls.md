@@ -31,7 +31,8 @@ if (control) {
 - **Method**: `applyControl(controlName,isDown)`
 - **Arguments**:
     - {<Type type='string' />} `controlName`.  (Optional: `false`)
-    - {<Type type='boolean' />} `isDown`.  (Optional: `true`) 
+    - {<Type type='boolean' />} `isDown`.  (Optional: `true`)
+- **Return**: <Type type='Promise&lt;void&gt;' />   
 - **Usage**:
 
 

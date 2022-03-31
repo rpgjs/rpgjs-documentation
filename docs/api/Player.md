@@ -12,6 +12,8 @@
 - [Show Animation](#show-animation)
 - [Emit to client](#emit-to-client)
 - [Listen to data from the client](#listen-to-data-from-the-client)
+- [Listen one-time to data from the client](#listen-one-time-to-data-from-the-client)
+- [Removes all listeners of the client](#removes-all-listeners-of-the-client)
 - [Play Sound](#play-sound)
 - [Get/Set position](#get-set-position)
 - [Get Collision of tiles](#get-collision-of-tiles)
@@ -271,6 +273,33 @@ Listen to the data (socket) sent by the client
 
 
 ---
+### Listen one-time to data from the client
+- **Since**: 3.0.0-beta.5
+- **Method**: `player.once(key,cb)`
+- **Arguments**:
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+    - {<Type type='function' />} `cb`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
+- **Usage**:
+
+
+Adds a one-time listener function for the event named eventName
+
+
+---
+### Removes all listeners of the client
+- **Since**: 3.0.0-beta.5
+- **Method**: `player.off(key)`
+- **Arguments**:
+    - {<Type type='string' />} `key`.  (Optional: `false`)
+- **Return**: <Type type='void' />   
+- **Usage**:
+
+
+Removes all listeners of the specified eventName.
+
+
+---
 ### Play Sound
 ::: warning
 Stability: 1 - Experimental
@@ -282,7 +311,7 @@ It may change or be removed in future versions.
 - **Method**: `player.playSound(soundId,allMap=false)`
 - **Arguments**:
     - {<Type type='string' />} `soundId`. Sound identifier, defined on the client side (Optional: `false`)
-    - {<Type type='boolean' />} `allMap`. Indicate if the sound is heard by the players on the card (Optional: `true`)
+    - {<Type type='boolean' />} `allMap`. Indicate if the sound is heard by the players on the map (Optional: `true`)
 - **Return**: <Type type='void' />   
 - **Usage**:
 
@@ -344,7 +373,7 @@ Recovers all the colliding tiles of the current player
 ### Get Collision of other players/events
 - **Since**: 3.0.0-beta.4
 - **Property**: `otherPlayersCollision`
-- **Type**: <Type type='  <a href="/commands/common.html">RpgPlayer</a> | Rpgvent)[] ' />
+- **Type**: <Type type='  <a href="/commands/common.html">RpgPlayer</a> | <a href="/classes/event.html">RpgEvent</a>)[] ' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:
@@ -497,7 +526,7 @@ Retrieves all shapes where the player is located
 ---
 ### Get Direction
 - **Method**: `player.getDirection()`
-- **Return**: <Type type='string' />  right, up or down 
+- **Return**: <Type type='Direction | number' />   
 - **Usage**:
 
 

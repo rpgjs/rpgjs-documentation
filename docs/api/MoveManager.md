@@ -101,7 +101,7 @@ player.through = true
 | Frequency.Lower | 400 |
 | Frequency.Low | 200 |
 | Frequency.High | 100 |
-| Frequency.Highter | 50 |
+| Frequency.Higher | 50 |
 | Frequency.Highest | 25 |
 | Frequency.None | 0 |
 - **Property**: `player.speed`

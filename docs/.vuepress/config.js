@@ -96,6 +96,7 @@ const guideMenu = [{
     '/guide/create-shape',
     '/guide/unit-test',
     '/advanced/listen-param-client',
+    '/advanced/event-changes'
   ]
 }, 
 {
@@ -107,6 +108,7 @@ const guideMenu = [{
     '/gui/reuse-gui',
     '/gui/notification-gui',
     '/guide/create-gui',
+    '/gui/tooltip'
   ]
 },
 {

@@ -1,6 +1,8 @@
 ::: tip Summary
 - [name ](#name)
 - [positioning ](#positioning)
+- [width ](#width)
+- [height ](#height)
 - [x ](#x)
 - [y ](#y)
 - [Properties ](#properties)
@@ -27,6 +29,28 @@ Get/Set name
 
 
 Get/Set positioning
+
+---
+### width 
+- **Since**: 3.0.0-beta.5
+- **Property**: `width`
+- **Type**: <Type type=' number ' />
+- **Optional**: `false` 
+- **Usage**:
+
+
+Get/Set width
+
+---
+### height 
+- **Since**: 3.0.0-beta.5
+- **Property**: `height`
+- **Type**: <Type type=' number ' />
+- **Optional**: `false` 
+- **Usage**:
+
+
+Get/Set height
 
 ---
 ### x 

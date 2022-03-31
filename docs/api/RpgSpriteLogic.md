@@ -22,7 +22,7 @@ Recovers all the colliding tiles of the current player
 ### Get Collision of other players/events
 - **Since**: 3.0.0-beta.4
 - **Property**: `otherPlayersCollision`
-- **Type**: <Type type='  <a href="/commands/common.html">RpgPlayer</a> | Rpgvent)[] ' />
+- **Type**: <Type type='  <a href="/commands/common.html">RpgPlayer</a> | <a href="/classes/event.html">RpgEvent</a>)[] ' />
 - **Optional**: `false`
 - **Read Only** 
 - **Usage**:

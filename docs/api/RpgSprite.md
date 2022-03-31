@@ -1,4 +1,5 @@
 ::: tip Summary
+- [guiDisplay](#guidisplay)
 - [dir](#dir)
 - [isPlayer](#isplayer)
 - [isEvent](#isevent)
@@ -6,6 +7,18 @@
 - [logic](#logic)
 - [Get Positions of Graphic](#get-positions-of-graphic)
 :::
+---
+### guiDisplay
+- **Since**: 3.0.0-beta.5
+- **Property**: `guiDisplay`
+- **Type**: <Type type='boolean' />
+- **Optional**: `false` 
+- **Usage**:
+
+ 
+Display/Hide the GUI attached to this sprite
+
+
 ---
 ### dir
 - **Property**: `dir`

@@ -8,7 +8,7 @@
 - [The depth of the map in pixels (this is the height of a tile ;))](#the-depth-of-the-map-in-pixels-(this-is-the-height-of-a-tile-;)))
 - [Get Layer by name](#get-layer-by-name)
 - [Create Shape](#create-shape)
-- [Get Shapes](#get-shapes)
+- [Delete Shape](#delete-shape)
 - [Get Shapes](#get-shapes)
 - [Get Shape by name](#get-shape-by-name)
 - [Get index of tile](#get-index-of-tile)
@@ -133,7 +133,7 @@ Object:
 
 
 ---
-### Get Shapes
+### Delete Shape
 - **Method**: `map.removeShape(name)`
 - **Arguments**:
     - {<Type type='string' />} `name`. Name of shape (Optional: `false`)

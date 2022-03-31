@@ -3,9 +3,9 @@
 ## RpgEngineHooks
 
 ```ts
-import { RpgClientEngine, RpgSpriteHooks } from '@rpgjs/client'
+import { RpgClientEngine, RpgClientEngineHooks } from '@rpgjs/client'
 
-const engine: RpgEngineHooks = {
+const engine: RpgClientEngineHooks = {
     onConnected(engine: RpgClientEngine) {
         console.log('client is connected')
     }

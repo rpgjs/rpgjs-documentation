@@ -1,5 +1,27 @@
 # AI ChangeLog
 
+## Version 3.0.0-beta.5
+
+- [View to GUI attached](/api/GuiManager.html):  
+Display the GUI attached to the players
+
+If you don't specify the players as parameters, it will display the GUI of the instance 
+But you can specify which GUIs to display by specifying the players as the first parameter
+- [Hide to GUI attached](/api/GuiManager.html):  
+Hide the GUI attached to the players
+- [Listen one-time to data from the client](/api/Player.html): 
+Adds a one-time listener function for the event named eventName
+- [Removes all listeners of the client](/api/Player.html): 
+Removes all listeners of the specified eventName.
+- [guiDisplay](/api/RpgSprite.html):  
+Display/Hide the GUI attached to this sprite
+- [width ](/api/Shape.html): 
+Get/Set width- [height ](/api/Shape.html): 
+Get/Set height- [tick](/api/RpgClientEngine.html):  
+Listen to each frame
+- [Next Frame](/api/RpgClientEngine.html): 
+Display the next frame. Useful for unit tests
+
 ## Version 3.0.0-beta.4
 
 - [Create Dynamic Event](/api/Player.html): 

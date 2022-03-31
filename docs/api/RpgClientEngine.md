@@ -3,9 +3,11 @@
 - [socket](#socket)
 - [globalConfig](#globalconfig)
 - [controls](#controls)
+- [tick](#tick)
 - [Add Spritesheet](#add-spritesheet)
 - [Add Sound](#add-sound)
 - [Start Client Engine](#start-client-engine)
+- [Next Frame](#next-frame)
 - [objects](#objects)
 - [Connect to server](#connect-to-server)
 - [vueApp](#vueapp)
@@ -61,6 +63,27 @@ Get the class managing the keyboard
 
 
 ---
+### tick
+- **Since**: 3.0.0-beta.5
+- **Property**: `tick`
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable.html">Observable</a>&lt;{ timestamp: number, deltaTime: number, frame: number }&gt;' />
+- **Optional**: `false`
+- **Read Only**
+- **Example**: 
+
+```ts
+client.tick.subscribe(({ timestamp, deltaTime, frame }) => {
+
+})
+```
+ 
+- **Usage**:
+
+ 
+Listen to each frame
+
+
+---
 ### Add Spritesheet
 - **Since**: 3.0.0-beta.3
 - **Method**: `addSpriteSheet(spritesheetClass|spritesheetClass[])`
@@ -90,6 +113,18 @@ Adds Sound classes
 
 
 Starts the client side and connects to the server
+
+
+---
+### Next Frame
+- **Since**: 3.0.0-beta.5
+- **Method**: `nextFrame()`
+- **Arguments**:
+    - {<Type type='number' />} `timestamp`. Indicate the timestamp of the frame (Optional: `false`) 
+- **Usage**:
+
+
+Display the next frame. Useful for unit tests
 
 
 ---

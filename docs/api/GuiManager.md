@@ -6,6 +6,8 @@
 - [Call Shop Menu](#call-shop-menu)
 - [Call custom GUI](#call-custom-gui)
 - [Close custom GUI](#close-custom-gui)
+- [View to GUI attached](#view-to-gui-attached)
+- [Hide to GUI attached](#hide-to-gui-attached)
 :::
 ---
 ### Show Text 
@@ -205,4 +207,51 @@ await gui.open({ hello: 'world' }, {
 
 
 Closes the GUI and removes it from memory
+
+
+---
+### View to GUI attached
+- **Since**: 3.0.0-beta.5
+- **Method**: `player.showAttachedGui(players?)`
+- **Arguments**:
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a>[] | <a href="/commands/common.html">RpgPlayer</a>' />} `players`. The GUIs attached to the players to display (Optional: `true`)
+- **Example**: 
+```ts
+player.showAttachedGui()
+```
+```ts
+player.showAttachedGui(aPlayer)
+```
+```ts
+player.showAttachedGui([player1, player2])
+``` 
+- **Usage**:
+
+ 
+Display the GUI attached to the players
+
+If you don't specify the players as parameters, it will display the GUI of the instance 
+But you can specify which GUIs to display by specifying the players as the first parameter
+
+
+---
+### Hide to GUI attached
+- **Since**: 3.0.0-beta.5
+- **Method**: `player.hideAttachedGui(players?)`
+- **Arguments**:
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a>[] | <a href="/commands/common.html">RpgPlayer</a>' />} `players`. The GUIs attached to the players to hide (Optional: `true`)
+- **Example**: 
+```ts
+player.hideAttachedGui()
+```
+```ts
+player.hideAttachedGui(aPlayer)
+```
+```ts
+player.hideAttachedGui([player1, player2])
+``` 
+- **Usage**:
+
+ 
+Hide the GUI attached to the players
 
