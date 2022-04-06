@@ -19,6 +19,7 @@
 - [event list](#event-list)
 - [Change Tile in map](#change-tile-in-map)
 - [Create Dynamic Event](#create-dynamic-event)
+- [Get Event](#get-event)
 - [Remove Event](#remove-event)
 :::
 ---
@@ -308,6 +309,18 @@ map.createDynamicEvent({
 
 You can also put an array of objects to create several events at once
 
+
+---
+### Get Event
+- **Since**: 3.0.0-beta.7
+- **Method**: `map.getEvent(eventId)`
+- **Arguments**:
+    - {<Type type='string' />} `eventId`. Event Id (Optional: `false`)
+- **Return**: <Type type=' <a href="/classes/event.html">RpgEvent</a> | undefined' />   
+- **Usage**:
+
+
+Get Event in current map
 
 ---
 ### Remove Event

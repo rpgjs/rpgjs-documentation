@@ -23,7 +23,7 @@ import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
     name: 'EV-1'
 })
 export class CharaEvent extends RpgEvent {
-    onInit(player: RpgPlayer) {
+    onInit() {
     }
 
     onAction(player: RpgPlayer) {
@@ -167,7 +167,7 @@ import { RpgEvent, EventData, RpgPlayer, EventMode } from '@rpgjs/server'
     mode: EventMode.Scenario
 })
 export class CharaEvent extends RpgEvent {
-    onInit() {
+    onInit(player: RpgPlayer) {
         this.setGraphic('chara')
     }
     onAction(player: RpgPlayer) {

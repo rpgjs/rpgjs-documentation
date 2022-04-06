@@ -49,6 +49,10 @@ The `images` object allows to group several tilesets at the same time
 
 > It is important to put `require()` because Webpack will retrieve the images and put it in the `dist` folder. 
 
+::: warning
+For this to work, put the same name of the key in the object as the name of the image. This point will be improved in the next versions
+:::
+
 ## Add the tileset to the game
 
 1. Go to <PathTo to="clientIndex" />

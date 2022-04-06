@@ -97,7 +97,7 @@ animation.onFinish = () => {
 - **Method**: `scene.getSprite(id)`
 - **Arguments**:
     - {<Type type='string' />} `id`.  (Optional: `false`)
-- **Return**: <Type type=' <a href="/classes/sprite.html">RpgSprite</a>' />   
+- **Return**: <Type type=' <a href="/classes/sprite.html">RpgSprite</a> | undefined' />   
 - **Usage**:
 
 
@@ -107,7 +107,7 @@ Retrieve a sprite according to its identifier
 ---
 ### Get Current Player
 - **Method**: `scene.getCurrentPlayer()`
-- **Return**: <Type type=' <a href="/classes/sprite.html">RpgSprite</a>' />   
+- **Return**: <Type type=' <a href="/classes/sprite.html">RpgSprite</a> | undefined' />   
 - **Usage**:
 
 

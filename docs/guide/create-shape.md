@@ -20,14 +20,22 @@ It is also possible to attach an area to a player/event. For example, create a v
 
 ![add-shape](/assets/add-shape.png)
 
+
 ::: tip
 Set the `collision` property to `true` to put a collision on the shape. [View Define collision](/guide/create-tileset.html#define-collisions)
+:::
+
+::: tip
+You can put rectangles, circles and polygons. 
+You should know that
+- circles do not use height. The radius is the width divided by 2
+- polygons use performance for collisions, don't overuse it
 :::
 
 3. Go to the file: <PathTo to="serverDir" file="player.ts" />
 
 ```ts
-import { RpgPlayer, RpgShape } from '@rpgjs/server'
+import { RpgPlayer, RpgShape, RpgPlayerHooks } from '@rpgjs/server'
 
 export const player: RpgPlayerHooks = {
     onInShape(player: RpgPlayer, shape: RpgShape) {

@@ -1,5 +1,9 @@
 # AI ChangeLog
 
+## Version 3.0.0-beta.7
+
+- [Get Event](/api/Map.html): 
+Get Event in current map
 ## Version 3.0.0-beta.5
 
 - [View to GUI attached](/api/GuiManager.html):  

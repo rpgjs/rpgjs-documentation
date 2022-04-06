@@ -10,7 +10,7 @@
 2. You can create a `Player` class to perform commands according to a situation. Here it is when it is connected
 3. You have several ways to position a player
 
-## Create Player class
+## Player Hooks
 
 ```ts
 import { RpgPlayer, RpgPlayerHooks } from '@rpgjs/server'

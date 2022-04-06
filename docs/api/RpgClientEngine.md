@@ -3,16 +3,17 @@
 - [socket](#socket)
 - [globalConfig](#globalconfig)
 - [controls](#controls)
+- [objects](#objects)
 - [tick](#tick)
 - [Add Spritesheet](#add-spritesheet)
 - [Add Sound](#add-sound)
 - [Start Client Engine](#start-client-engine)
 - [Next Frame](#next-frame)
-- [objects](#objects)
 - [Connect to server](#connect-to-server)
 - [vueApp](#vueapp)
 - [vueInstance](#vueinstance)
 - [scene](#scene)
+- [Connect to server](#connect-to-server)
 :::
 ---
 ### renderer
@@ -60,6 +61,23 @@ retrieve the global configurations assigned at the entry point
 
  
 Get the class managing the keyboard
+
+
+---
+### objects
+- **Property**: `objects`
+- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable.html">Observable</a>&lt; {
+     [id: string]: {
+         object: any,
+         paramsChanged: any
+     }
+} &gt;' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+
+Read objects synchronized with the server
 
 
 ---
@@ -128,23 +146,6 @@ Display the next frame. Useful for unit tests
 
 
 ---
-### objects
-- **Property**: `objects`
-- **Type**: <Type type=' <a href="https://rxjs.dev/guide/observable.html">Observable</a>&lt; {
-     [id: string]: {
-         object: any,
-         paramsChanged: any
-     }
-} &gt;' />
-- **Optional**: `true`
-- **Read Only** 
-- **Usage**:
-
-
-Read objects synchronized with the server
-
-
----
 ### Connect to server
 - **Method**: `connection()`
 - **Return**: <Type type='void' />   
@@ -191,5 +192,15 @@ VueJS Parent component instance
 - **Usage**:
 
  
+retrieves the current scene (SceneMap if you are on a map)
+
+
+---
+### Connect to server
+- **Method**: `getScene()`
+- **Return**: <Type type=' <a href="/classes/scene-map.html">RpgScene</a>' />   
+- **Usage**:
+
+
 retrieves the current scene (SceneMap if you are on a map)
 
