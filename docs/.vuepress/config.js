@@ -9,6 +9,7 @@ const apiMenu = [
       '/classes/player',
       '/classes/scene-map-server',
       '/classes/map',
+      '/classes/world-maps',
       '/classes/event',
       '/classes/shape',
       '/classes/world'
@@ -77,6 +78,7 @@ const guideMenu = [{
     '/guide/get-started',
     '/guide/create-tileset',
     '/guide/create-map',
+    '/guide/create-world-maps',
     '/guide/create-sprite',
     '/guide/player-start',
     '/guide/create-event',

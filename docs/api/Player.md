@@ -59,7 +59,7 @@ Give the spritesheet identifier
 - **Arguments**:
     - {<Type type='string' />} `mapId`.  (Optional: `false`)
     - {<Type type=' {x: number, y: number, z?: number} | string ' />} `positions`.  (Optional: `true`)
-- **Return**: <Type type='Promise&lt <a href="/classes/map.html">RpgMap</a>&gt;' />   
+- **Return**: <Type type='Promise&lt <a href="/classes/map.html">RpgMap</a> | null&gt;' />  if map not exists 
 - **Usage**:
 
 
@@ -119,7 +119,7 @@ Removes an event from the map (Scenario Mode). Returns false if the event is not
 - **Method**: `player.teleport(positions)`
 - **Arguments**:
     - {<Type type=' {x: number, y: number, z?: number} | string ' />} `positions`.  (Optional: `true`)
-- **Return**: <Type type=' {x: number, y: number, z: number} ' />   
+- **Return**: <Type type='Promise&lt;{ {x: number, y: number, z: number} }&gt;' />   
 - **Usage**:
 
 
@@ -193,11 +193,13 @@ The method calls the `onChanges` method on events and synchronizes all map data 
 ---
 ### Get Current Map
 - **Method**: `player.getCurrentMap()`
-- **Return**: <Type type=' <a href="/classes/map.html">RpgMap</a>' />   
+- **Return**: <Type type=' <a href="/classes/map.html">RpgMap</a> | null' />   
 - **Usage**:
 
 
 Retrieves data from the current map
+
+returns null if the player is not assigned to a map
 
 
 ---

@@ -1,8 +1,11 @@
 ::: tip Summary
+- [map id](#map-id)
 - [Data of map](#data-of-map)
 - [Width of a tile](#width-of-a-tile)
 - [Height of a tile](#height-of-a-tile)
 - [Layers of map](#layers-of-map)
+- [World X Position](#world-x-position)
+- [World Y Position](#world-y-position)
 - [Width of the map in pixels](#width-of-the-map-in-pixels)
 - [Height of the map in pixels](#height-of-the-map-in-pixels)
 - [The depth of the map in pixels (this is the height of a tile ;))](#the-depth-of-the-map-in-pixels-(this-is-the-height-of-a-tile-;)))
@@ -15,13 +18,25 @@
 - [Get tile by index](#get-tile-by-index)
 - [Get origin position of tile](#get-origin-position-of-tile)
 - [Get tile by position](#get-tile-by-position)
-- [map id](#map-id)
+- [Assign the map to a world](#assign-the-map-to-a-world)
+- [Remove this map from the world](#remove-this-map-from-the-world)
+- [Get attached World](#get-attached-world)
 - [event list](#event-list)
 - [Change Tile in map](#change-tile-in-map)
 - [Create Dynamic Event](#create-dynamic-event)
 - [Get Event](#get-event)
 - [Remove Event](#remove-event)
 :::
+---
+### map id
+- **Property**: `id`
+- **Type**: <Type type='string' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+
 ---
 ### Data of map
 - **Property**: `data`
@@ -61,6 +76,32 @@
 - **Usage**:
 
  
+
+---
+### World X Position
+- **Since**: 3.0.0-beta.8
+- **Property**: `worldX`
+- **Type**: <Type type='number' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+Retrieves the X position of the map in the world (0 if no world assigned)
+
+
+---
+### World Y Position
+- **Since**: 3.0.0-beta.8
+- **Property**: `worldY`
+- **Type**: <Type type='number' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+Retrieves the Y position of the map in the world (0 if no world assigned)
+
 
 ---
 ### Width of the map in pixels
@@ -237,14 +278,36 @@ Recover tiles according to a position
 
 
 ---
-### map id
-- **Property**: `id`
-- **Type**: <Type type='string' />
-- **Optional**: `true`
-- **Read Only** 
+### Assign the map to a world
+- **Since**: 3.0.0-beta.8
+- **Method**: `map.setInWorldMaps(name)`
+- **Arguments**:
+    - {<Type type=' <a href="/classes/world-maps.html">RpgWorldMaps</a>' />} `worldMap`. world maps (Optional: `false`) 
 - **Usage**:
 
- 
+
+Assign the map to a world
+
+
+---
+### Remove this map from the world
+- **Since**: 3.0.0-beta.8
+- **Method**: `map.removeFromWorldMaps()`
+- **Return**: <Type type='boolean | undefined' />   
+- **Usage**:
+
+
+Remove this map from the world
+
+---
+### Get attached World
+- **Since**: 3.0.0-beta.8
+- **Method**: `map.getInWorldMaps()` 
+- **Usage**:
+
+
+Recover the world attached to this map (`undefined` if no world attached)
+
 
 ---
 ### event list

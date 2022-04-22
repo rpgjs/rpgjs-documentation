@@ -57,6 +57,7 @@ const types = [
     [ 'RpgScene', '/classes/scene-map.html' ],
     [ 'Sound', '/classes/sound.html' ],
     [ 'RpgShape', '/classes/shape.html' ],
+    [ 'RpgWorldMaps', '/classes/world-maps.html' ],
     [
       'Timeline',
       '/classes/spritesheet.html#create-animation-with-timeline-system'

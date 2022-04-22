@@ -15,6 +15,7 @@ const paths = {
     baseModule,
     serverDir,
     clientDir,
+    tmxDir: serverDir + '/maps/tmx',
     mapDir: serverDir + '/maps',
     eventDir: serverDir + '/events',
     databaseDir: serverDir + '/database',

@@ -1,4 +1,4 @@
-# Step 3. Create map
+# Step 3a. Create map
 
 ## Prerequisites
 

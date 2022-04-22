@@ -4,6 +4,7 @@
 - [player](#player)
 - [database](#database)
 - [maps](#maps)
+- [worldMaps](#worldmaps)
 - [damageFormulas](#damageformulas)
 :::
 ---
@@ -135,6 +136,43 @@ It is possible to just give the object as well
 class RpgServerEngine { } 
 ``` 
 
+Since version 3.0.0-beta.8, you can just pass the path to the file. The identifier will then be the name of the file
+
+ ```ts
+@RpgModule<RpgServer>({
+     maps: [
+         require('./tmx/mymap.tmx') // id is "mymap"
+     ]
+})
+class RpgServerEngine { } 
+``` 
+
+
+---
+### worldMaps
+- **Since**: 3.0.0-beta.8
+- **Property**: `worldMaps`
+- **Type**: <Type type='object[]' />
+- **Optional**: `true`
+- **Arguments**:
+    - {<Type type=' <a href="/classes/scene-map.html">RpgSceneMap</a>' />} `sceneMap`.  (Optional: `false`)
+- **Example**: 
+```ts
+import myworld from 'myworld.world'
+
+@RpgModule<RpgServer>({
+     worldMaps: [
+         myworld
+     ]
+})
+class RpgServerEngine { } 
+``` 
+- **Usage**:
+
+
+Loads the content of a `.world` file from Tiled Map Editor into the map scene
+
+> Note, that if the map already exists (i.e. you have already defined an RpgMap), the world will retrieve the already existing map. Otherwise it will create a new map
 
 
 ---

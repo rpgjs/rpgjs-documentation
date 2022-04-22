@@ -1,5 +1,40 @@
 # AI ChangeLog
 
+## Version 3.0.0-beta.8
+
+- [World X Position](/api/Map.html):  
+Retrieves the X position of the map in the world (0 if no world assigned)
+- [World Y Position](/api/Map.html):  
+Retrieves the Y position of the map in the world (0 if no world assigned)
+- [Assign the map to a world](/api/Map.html): 
+Assign the map to a world
+- [Remove this map from the world](/api/Map.html): 
+Remove this map from the world- [Get attached World](/api/Map.html): 
+Recover the world attached to this map (`undefined` if no world attached)
+- [Add Map in world](/api/RpgWorldMaps.html): 
+Adding information from the map to the world
+
+> Maximum maps in world: 500
+- [Remove map of the world](/api/RpgWorldMaps.html): 
+Remove map of the world- [Retrieve information from the world](/api/RpgWorldMaps.html): 
+Retrieve information from the world
+- [Retrieves neighboring maps](/api/RpgWorldMaps.html): 
+Retrieves neighboring maps according to positions or direction
+- [canChangeMap](/api/RpgPlayerHooks.html): 
+Allow or not the player to switch maps. `nexMap` parameter is the retrieved RpgMap class and not the instance
+- [worldMaps](/api/RpgServer.html): 
+Loads the content of a `.world` file from Tiled Map Editor into the map scene
+
+> Note, that if the map already exists (i.e. you have already defined an RpgMap), the world will retrieve the already existing map. Otherwise it will create a new map
+- [Create worlds dynamically](/api/SceneMap.html): 
+Loads the content of a `.world` file from Tiled Map Editor into the map scene
+
+> Note, that if the map already exists (i.e. you have already defined an RpgMap), the world will retrieve the already existing map. Otherwise it will create a new map
+- [Recover a world](/api/SceneMap.html): 
+Recover a world
+- [Delete a world](/api/SceneMap.html): 
+Delete a world
+
 ## Version 3.0.0-beta.7
 
 - [Get Event](/api/Map.html): 
@@ -131,6 +166,8 @@ Adds data to the server's database (in RAM) for later use
 - [sceneMap](/api/RpgServerEngine.html): 
 Return the scene that manages the maps of the game- [Create a dynamic map](/api/SceneMap.html): 
 Create a dynamic map
+
+Since version 3.0.0-beta.8, you can just pass the path to the file. The identifier will then be the name of the file
 - [Change Tile in map](/api/Map.html): 
 Edit a tile on the map. All players on the map will see the modified tile
 

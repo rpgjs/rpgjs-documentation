@@ -9,6 +9,7 @@
 - [onInShape](#oninshape)
 - [onOutShape](#onoutshape)
 - [onMove](#onmove)
+- [canChangeMap](#canchangemap)
 :::
 ---
 ### onJoinMap
@@ -131,4 +132,16 @@ It may change or be removed in future versions.
 
 
 When the x, y positions change
+
+
+---
+### canChangeMap
+- **Since**: 3.0.0-beta.8
+- **Property**: `canChangeMap`
+- **Type**: <Type type=' (player: <a href="/commands/common.html">RpgPlayer</a>, nextMap: RpgClassMap&lt <a href="/classes/map.html">RpgMap</a>&gt;) =&gt;  boolean | Promise&lt;boolean&gt; ' />
+- **Optional**: `true` 
+- **Usage**:
+
+
+Allow or not the player to switch maps. `nexMap` parameter is the retrieved RpgMap class and not the instance
 
