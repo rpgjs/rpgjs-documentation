@@ -161,8 +161,10 @@ If you want to change the scheme of players and events, consider overwriting the
 import { MapData, RpgMap, RpgPlayer } from '@rpgjs/server'
 
 
-export class Player extends RpgPlayer {
-   customProp: string = 'test'
+declare module '@rpgjs/server' {
+ export interface RpgPlayer {
+     customProp: string
+ }
 }
 
 @MapData({

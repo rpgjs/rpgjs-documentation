@@ -98,7 +98,8 @@ const guideMenu = [{
     '/guide/create-shape',
     '/guide/unit-test',
     '/advanced/listen-param-client',
-    '/advanced/event-changes'
+    '/advanced/event-changes',
+    '/advanced/agones'
   ]
 }, 
 {

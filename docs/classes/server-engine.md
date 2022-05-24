@@ -20,6 +20,6 @@ export default class RpgServerModuleEngine {}
 
 <ApiContent page="RpgServerEngineHooks" />
 
-## RpgClientEngine
+## RpgServerEngine
 
 <ApiContent page="RpgServerEngine" />
