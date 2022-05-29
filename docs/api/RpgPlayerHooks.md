@@ -22,8 +22,8 @@
 
 
  Set custom properties on the player. Several interests:
-1.  The property is shared with the customer
-2. If you save with player.save(), the property will be saved to be reloaded later
+1. The property is shared with the client
+2. If you save with `player.save()`, the property will be saved to be reloaded later
 3. If you use horizontal scaling, the property will be kept in memory if the player changes the map and this map is on another server
 
 Example:

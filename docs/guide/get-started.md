@@ -56,3 +56,14 @@ The same line as above but start the development line with `RPG_TYPE` environmen
 Go to `http://localhost:3000`
 
 > To change the port: `PORT=4000 RPG_TYPE=rpg npm run dev`
+
+::: tip For Windows
+To use the environment variables, it is different from Linux
+
+So use the package cross-env
+
+```
+npm install --save-dev cross-env
+npx cross-env RPG_TYPE=rpg npm run dev
+```
+:::

@@ -25,7 +25,8 @@
 onlyShowAdjacentMaps: boolean, // only for Tiled Map Editor
 type: 'world' // only for Tiled Map Editor
 }
-``` (Optional: `false`) 
+```
+ (Optional: `false`) 
 - **Usage**:
 
 
