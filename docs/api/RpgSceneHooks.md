@@ -10,7 +10,7 @@
 ---
 ### onAddSprite
 - **Property**: `onAddSprite`
-- **Type**: <Type type=' (scene: <a href="/classes/scene-map.html">RpgScene</a>, sprite: <a href="/classes/sprite.html">RpgSprite</a>) =&gt; any ' />
+- **Type**: <Type type=' (scene: <a href="/classes/scene-map.html">RpgScene</a>, sprite: RpgComponent) =&gt; any ' />
 - **Optional**: `true` 
 - **Usage**:
 

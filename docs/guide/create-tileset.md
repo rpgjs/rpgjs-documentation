@@ -27,50 +27,6 @@ For a tileset compatible with WebGL 1 (mainly mobiles), the image must be at mos
 The size of the tiles must not exceed the dimensions of the image. For example, if the width of a tile is 32px but the width of the tileset is 60px then there will be a problem. The width of the tileset must be 64px
 :::
 
-
-1. Place the image in <PathTo to="baseModule" file="client/maps/assets" />
-2. Then create the following file in <PathTo to="baseModule" file="client/maps/medieval.ts" />
-
-```ts
-import { Spritesheet } from '@rpgjs/client'
-
-@Spritesheet({
-    images: {
-        medieval: require('./assets/medieval.png')
-        // here, you can add other tileset
-    }
-})
-export class Tilesets { }
-```
-
-The `images` object allows to group several tilesets at the same time
-- `medieval`, the key, is the spritesheet identifier
-- the value is the relative path to the image
-
-> It is important to put `require()` because Webpack will retrieve the images and put it in the `dist` folder. 
-
-::: warning
-For this to work, put the same name of the key in the object as the name of the image. This point will be improved in the next versions
-:::
-
-## Add the tileset to the game
-
-1. Go to <PathTo to="clientIndex" />
-
-```ts
-import { RpgClient, RpgModule } from '@rpgjs/client'
-import { Tilesets } from './maps/medieval'
-
-@RpgModule<RpgClient>({
-    spritesheets: [
-        Tilesets
-    ]
-})
-export default class RpgClientModuleEngine {}
-```
-
-2. And add the `Tilesets` class 
-
 ## Define collisions
 
 ### First of all

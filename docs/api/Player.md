@@ -43,12 +43,24 @@ player.name = 'Link'
 ### Set Graphic
 - **Method**: `player.setGraphic(graphic)`
 - **Arguments**:
-    - {<Type type='string' />} `graphic`.  (Optional: `false`)
+    - {<Type type='string | number | (string | number)[]' />} `graphic`.  (Optional: `false`)
 - **Return**: <Type type='void' />   
 - **Usage**:
 
 
 Give the spritesheet identifier
+
+Since version 3.0.0-rc, you can define several graphic elements. If you put a number, it represents the tile ID in the tileset
+
+Example 1:
+```ts
+player.setGraphic(['body', 'shield'])
+```
+
+Example 2:
+```ts
+player.setGraphic(3) // Use tile #3
+```
 
 > You must, on the client side, create the spritesheet in question. Guide: [Create Sprite](/guide/create-sprite.html)
 
@@ -206,7 +218,7 @@ returns null if the player is not assigned to a map
 ### Show Animation
 - **Method**: `player.showAnimation(graphic,animationName,replaceGraphic=false)`
 - **Arguments**:
-    - {<Type type='string' />} `graphic`. spritesheet identifier (Optional: `false`)
+    - {<Type type='string | string[]' />} `graphic`. spritesheet identifier (Optional: `false`)
     - {<Type type='string' />} `animationName`. Name of the animation in the spritesheet (Optional: `false`)
     - {<Type type='boolean' />} `replaceGraphic`. Replace the event graphic with the animation. After the end of the animation, the original graphic is reapplied (Optional: `true`)
 - **Return**: <Type type='void' />   
@@ -245,6 +257,12 @@ When the animation is finished, the original graphic is displayed again
 
 ```ts
 player.showAnimation('sword_stroke', 'default', true)
+```
+
+Since version 3.0.0-rc, you can define several graphic elements. This allows you to animate them all at once
+
+```ts
+player.showAnimation(['body', 'sword_stroke'], 'default', true)
 ```
 
 

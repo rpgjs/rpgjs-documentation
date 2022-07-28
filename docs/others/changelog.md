@@ -259,9 +259,7 @@ map.createDynamicEvent({
 
 You can also put an array of objects to create several events at once
 - [Remove Event](/api/Map.html): 
-Removes an event from the map. Returns false if the event is not found- [logic](/api/RpgSprite.html):  
-Retrieves the logic of the sprite
-- [Listen mouse event](/api/RpgSceneMap.html): 
+Removes an event from the map. Returns false if the event is not found- [Listen mouse event](/api/RpgSceneMap.html): 
 Listen to the events of the smile on the stage
 - [onWindowResize](/api/RpgEngineHooks.html): 
 Called when window is resized
