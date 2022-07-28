@@ -1,4 +1,4 @@
-# Running on smarpthone 
+# Running on smartphone 
 
 ![Smartphone](/assets/smartphone.png)
 
@@ -6,7 +6,7 @@ You should know that the game works on a smartphone. But for a good user experie
 
 1. The game must be Responsive Design. Depending on the size of the screen, the game remains playable.
 2. We have controls to make the character move or do an action.
-3. The game can be installed on the smarpthone and can be played offline (in the case of an RPG).
+3. The game can be installed on the smartphone and can be played offline (in the case of an RPG).
 
 ## Responsive Design
 
@@ -94,7 +94,7 @@ As soon as the map is opened, display the GUI for controls
 
 > Works only when building the game and not during development
 
-The notion of offline mode is already integrated in RPGJS. Files are cached for offline play and a PWA is created to install the game on smarpthone. 
+The notion of offline mode is already integrated in RPGJS. Files are cached for offline play and a PWA is created to install the game on smartphone. 
 To do this, create an `rpg.json` file at the root of your project.
 
 Example:
