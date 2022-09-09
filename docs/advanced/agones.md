@@ -84,6 +84,14 @@ export default [
 ]
 ```
 
+Next, add in <PathTo to="configDir" file="client/index.ts" />
+
+```ts
+export default {
+  matchMakerService: '<URL TO MATCHMAKER SERVICE>'
+}
+```
+
 > From now on, if you launch the game locally, you must indicate the secret token and the url of match maker service
 > `MATCH_MAKER_SECRET_TOKEN=<SECRET TOKEN> MATCH_MAKER_URL=<URL TO MATCHMAKER SERVICE> REDIS_URL=<URL (is optional)> npm run dev`
 
