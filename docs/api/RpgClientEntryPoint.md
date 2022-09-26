@@ -5,6 +5,8 @@
 - [selectorGui](#selectorgui)
 - [selectorCanvas](#selectorcanvas)
 - [globalConfig](#globalconfig)
+- [maxFps](#maxfps)
+- [serverFps](#serverfps)
 :::
 ---
 ### io
@@ -85,4 +87,28 @@ If you didn't put element in the main div, an element will be automatically crea
 
  
 The general configurations of the game. For example, default keyboard keys, cursor noise. This is information that external modules can reuse
+
+
+---
+### maxFps
+- **Since**: 3.0.2
+- **Property**: `maxFps`
+- **Type**: <Type type='object' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The maximum number of fps for the rendering
+
+
+---
+### serverFps
+- **Since**: 3.0.2
+- **Property**: `serverFps`
+- **Type**: <Type type='object' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Put the number of FPS that the server processes. It allows to synchronize the client rendering with the server. The default value is 60
 

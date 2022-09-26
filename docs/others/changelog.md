@@ -1,5 +1,12 @@
 # AI ChangeLog
 
+## Version 3.0.2
+
+- [maxFps](/api/RpgClientEntryPoint.html):  
+The maximum number of fps for the rendering
+- [serverFps](/api/RpgClientEntryPoint.html):  
+Put the number of FPS that the server processes. It allows to synchronize the client rendering with the server. The default value is 60
+
 ## Version 3.0.0-beta.9
 
 - [props](/api/RpgPlayerHooks.html): 

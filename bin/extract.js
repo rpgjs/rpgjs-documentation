@@ -2,7 +2,7 @@ const parser = require('comment-parser')
 const fs = require('fs')
 const compareVersions = require("compare-versions")
 
-const baseUrl = __dirname + '/../../RPGJS/'
+const baseUrl = __dirname + '/../../RPG-JS/'
 const destination  = __dirname + '/../docs/api/'
 const changelog = __dirname + '/../docs/others/'
 
