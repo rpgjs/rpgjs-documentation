@@ -5,6 +5,7 @@
 - [events](#events)
 - [sounds](#sounds)
 - [syncSchema](#syncschema)
+- [lowMemory](#lowmemory)
 :::
 ---
 ### id
@@ -183,4 +184,20 @@ export class TownMap extends RpgMap {}
 ```
 
 The properties are called `users` and `events`. Their scheme is identical and defined in `RpgPlayer.schemas`. To write schematics, refer to the [documentation of the simple-room](https://github.com/RSamaium/simple-room) module
+
+
+---
+### lowMemory
+- **Since**: 3.1.0
+- **Property**: `lowMemory`
+- **Type**: <Type type='boolean' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Decreases the RAM of the map. In this case, some instructions will be different.
+
+`map.getTileByIndex()` will not return all tiles of an index but only the tile of the highest layer
+
+> You can also use the `low-memory` property in Tiled maps
 

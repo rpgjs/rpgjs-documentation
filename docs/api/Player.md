@@ -10,6 +10,7 @@
 - [Run Sync Changes](#run-sync-changes)
 - [Get Current Map](#get-current-map)
 - [Show Animation](#show-animation)
+- [Camera Follow](#camera-follow)
 - [Emit to client](#emit-to-client)
 - [Listen to data from the client](#listen-to-data-from-the-client)
 - [Listen one-time to data from the client](#listen-one-time-to-data-from-the-client)
@@ -267,6 +268,23 @@ player.showAnimation(['body', 'sword_stroke'], 'default', true)
 
 
 ---
+### Camera Follow
+- **Since**: 3.1.0
+- **Method**: `player.cameraFollow(otherPlayer,options)`
+- **Arguments**:
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a> | <a href="/classes/event.html">RpgEvent</a>' />} `otherPlayer`.  (Optional: `false`)
+    - {<Type type='options' />} `options`.  (Optional: `false`)
+    - {<Type type='object | boolean' />} `options.smoothMove`. - animate. Set a boolean to use default parameters (Optional: `true`)
+    - {<Type type='number' />} `options.smoothMove.time`. - time to animate (Optional: `true`)
+    - {<Type type='string' />} `options.smoothMove.ease`. - easing to use. Go to https://easings.net to get function name (Optional: `true`)
+- **Return**: <Type type='void' />   
+- **Usage**:
+
+
+Sends the client which event or player the camera should follow. You can set options to perform a motion animation
+
+
+---
 ### Emit to client
 - **Method**: `player.emit(key,value)`
 - **Arguments**:
@@ -321,12 +339,6 @@ Removes all listeners of the specified eventName.
 
 ---
 ### Play Sound
-::: warning
-Stability: 1 - Experimental
-This feature is subject to change, and is gated by a command line flag.
-It may change or be removed in future versions.
-:::
-    
 - **Since**: 3.0.0-alpha.9
 - **Method**: `player.playSound(soundId,allMap=false)`
 - **Arguments**:

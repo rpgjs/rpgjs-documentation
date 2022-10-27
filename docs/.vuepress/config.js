@@ -99,7 +99,8 @@ const guideMenu = [{
     '/guide/unit-test',
     '/advanced/listen-param-client',
     '/advanced/event-changes',
-    '/advanced/agones'
+    '/advanced/agones',
+    '/guide/performance',
   ]
 }, 
 {

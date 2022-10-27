@@ -15,6 +15,15 @@
 - [Create Dynamic Event](#create-dynamic-event)
 - [Get Event](#get-event)
 - [Remove Event](#remove-event)
+- [Data of map](#data-of-map)
+- [Width of the map in pixels](#width-of-the-map-in-pixels)
+- [Height of the map in pixels](#height-of-the-map-in-pixels)
+- [The depth of the map in pixels (this is the height of a tile ;))](#the-depth-of-the-map-in-pixels-(this-is-the-height-of-a-tile-;)))
+- [Get Layer by name](#get-layer-by-name)
+- [Get index of tile](#get-index-of-tile)
+- [Get origin position of tile](#get-origin-position-of-tile)
+- [Get tile by position](#get-tile-by-position)
+- [Get tile by index](#get-tile-by-index)
 :::
 ---
 ### map id
@@ -239,3 +248,129 @@ Get Event in current map
 
 
 Removes an event from the map. Returns false if the event is not found
+
+---
+### Data of map
+- **Property**: `data`
+- **Type**: <Type type='object' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+
+---
+### Width of the map in pixels
+- **Property**: `widthPx`
+- **Type**: <Type type='number' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+
+---
+### Height of the map in pixels
+- **Property**: `heightPx`
+- **Type**: <Type type='number' />
+- **Optional**: `true`
+- **Read Only** 
+- **Usage**:
+
+ 
+
+---
+### The depth of the map in pixels (this is the height of a tile ;))
+- **Property**: `map.zTileHeight`
+- **Type**: <Type type='number' />
+- **Optional**: `false`
+- **Read Only** 
+- **Usage**:
+
+ 
+
+---
+### Get Layer by name
+- **Method**: `map.getLayerByName(name)`
+- **Arguments**:
+    - {<Type type='string' />} `name`. layer name (Optional: `false`)
+- **Return**: <Type type='LayerInfo | undefined' />  
+- **Example**: 
+
+```ts
+ const tiles = map.getLayerByName(0, 0)
+ ``` 
+- **Usage**:
+
+
+Find a layer by name. Returns `undefined` is the layer is not found
+
+
+---
+### Get index of tile
+- **Method**: `map.getTileIndex(x,y)`
+- **Arguments**:
+    - {<Type type='number' />} `x`. Position X (Optional: `false`)
+    - {<Type type='number' />} `x`. Position Y (Optional: `false`)
+- **Return**: <Type type='number' />   
+- **Usage**:
+
+
+Get the tile index on the tileset
+
+
+---
+### Get origin position of tile
+- **Method**: `map.getTileOriginPosition(x,y)`
+- **Arguments**:
+    - {<Type type='number' />} `x`. Position X (Optional: `false`)
+    - {<Type type='number' />} `x`. Position Y (Optional: `false`)
+- **Return**: <Type type=' {x: number, y: number }' />  
+- **Example**: 
+
+```ts
+ // If the size of a tile is 32x32px
+ const position = map.getTileOriginPosition(35, 12)
+ console.log(position) // { x: 32, y: 0 }
+ ``` 
+- **Usage**:
+
+
+Find the point of origin (top left) of a tile. Of course, its position depends on the size of the tile
+
+
+---
+### Get tile by position
+- **Method**: `map.getTileByPosition(x,y)`
+- **Arguments**:
+    - {<Type type='number' />} `x`. Position X (Optional: `false`)
+    - {<Type type='number' />} `x`. Position Y (Optional: `false`)
+- **Return**: <Type type='TileInfo' />  
+- **Example**: 
+
+```ts
+ const tiles = map.getTileByPosition(0, 0)
+ ``` 
+- **Usage**:
+
+
+Recover tiles according to a position
+
+
+---
+### Get tile by index
+- **Method**: `map.getTileByIndex(tileIndex)`
+- **Arguments**:
+    - {<Type type='number' />} `tileIndex`. tile index (Optional: `false`)
+- **Return**: <Type type='TileInfo' />  
+- **Example**: 
+
+```ts
+ const index = map.getTileIndex(0, 0)
+ const tiles = map.getTileByIndex(index)
+ ``` 
+- **Usage**:
+
+
+Retrieves tiles according to its index
+

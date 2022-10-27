@@ -1,5 +1,16 @@
 # AI ChangeLog
 
+## Version 3.1.0
+
+- [Camera Follow](/api/Player.html): 
+Sends the client which event or player the camera should follow. You can set options to perform a motion animation
+- [lowMemory](/api/MapData.html):  
+Decreases the RAM of the map. In this case, some instructions will be different.
+
+`map.getTileByIndex()` will not return all tiles of an index but only the tile of the highest layer
+
+> You can also use the `low-memory` property in Tiled maps
+
 ## Version 3.0.2
 
 - [maxFps](/api/RpgClientEntryPoint.html):  
