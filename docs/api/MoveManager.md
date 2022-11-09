@@ -8,6 +8,8 @@
 - [Infinite Move Routes](#infinite-move-routes)
 - [Stop an infinite movement](#stop-an-infinite-movement)
 - [Replay an infinite movement](#replay-an-infinite-movement)
+- [Move To](#move-to)
+- [Stop Move To](#stop-move-to)
 :::
 ---
 ### Change Speed
@@ -241,4 +243,41 @@ player.replayRoutes()
 
 Works only for infinite movements. You must first use the method `infiniteMoveRoute()`
 If the road was stopped with `breakRoutes()`, you can restart it with this method
+
+
+---
+### Move To
+- **Since**: 3.2.0
+- **Method**: `player.moveTo()`
+- **Arguments**:
+    - {<Type type=' <a href="/commands/common.html">RpgPlayer</a> <a href="/classes/event.html">RpgEvent</a> <a href="/classes/shape.html">RpgShape</a>|Position' />} `target`. the target (Optional: `false`)
+    - {<Type type='object' />} `options`. - animate. Set a boolean to use default parameters (Optional: `true`)
+    - {<Type type='boolean' />} `options.infinite`. - moves infinitely towards the target, you have to stop its movement manually with the method `stopMoveTo()` (Optional: `true`)
+    - {<Type type='() =&gt; void' />} `options.onComplete`. - Callback when the event arrives at the destination (Optional: `true`)
+    - {<Type type='(duration:number) =&gt; void' />} `options.onStuck`. - callback when the event is blocked against a wall. Duration gives you the duration (in frames) of the blocking time (Optional: `true`)
+- **Return**: <Type type='void' />  
+- **Example**: 
+
+```ts
+import { Move } from '@rpgjs/server'
+
+player.moveTo(otherPlayer)
+```
+ 
+- **Usage**:
+
+
+Move the event to another event, a player, a shape or a specific position.
+The event will avoid obstacles, but you can tell if it is stuck or has completed its path
+
+
+---
+### Stop Move To
+- **Since**: 3.2.0
+- **Method**: `player.stopMoveTo()`
+- **Return**: <Type type='void' />   
+- **Usage**:
+
+
+Stops the movement of the player who moves towards his target
 

@@ -67,6 +67,14 @@ const apiMenu = [
       '/database/element',
       '/database/effect'
     ]
+  },
+  {
+    title: 'Testing',
+    collapsable: false,
+    sidebarDepth: 2,
+    children: [
+      '/classes/tests'
+    ]
   }
 ]
 

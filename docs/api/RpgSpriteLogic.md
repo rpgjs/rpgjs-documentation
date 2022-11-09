@@ -1,9 +1,24 @@
 ::: tip Summary
+- [Get Collision of shapes](#get-collision-of-shapes)
 - [Get Collision of tiles](#get-collision-of-tiles)
 - [Get Collision of other players/events](#get-collision-of-other-players-events)
 - [Get Tile](#get-tile)
 - [Get Shapes](#get-shapes)
 :::
+---
+### Get Collision of shapes
+- **Since**: 3.2.0
+- **Property**: `shapes`
+- **Type**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[] ' />
+- **Optional**: `false`
+- **Read Only** 
+- **Usage**:
+
+
+
+Recovers all the colliding shapes of the current player 
+
+
 ---
 ### Get Collision of tiles
 - **Since**: 3.0.0-beta.4

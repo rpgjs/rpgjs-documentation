@@ -17,6 +17,7 @@
 - [Removes all listeners of the client](#removes-all-listeners-of-the-client)
 - [Play Sound](#play-sound)
 - [Get/Set position](#get-set-position)
+- [Get Collision of shapes](#get-collision-of-shapes)
 - [Get Collision of tiles](#get-collision-of-tiles)
 - [Get Collision of other players/events](#get-collision-of-other-players-events)
 - [Set Sizes](#set-sizes)
@@ -385,6 +386,20 @@ player.playSound('town-music', true)
 Get/Set position x, y and z of player
 
 z is the depth layer. By default, its value is 0. Collisions and overlays will be performed with other objects on the same z-position. 
+
+
+---
+### Get Collision of shapes
+- **Since**: 3.2.0
+- **Property**: `shapes`
+- **Type**: <Type type=' <a href="/classes/shape.html">RpgShape</a>[] ' />
+- **Optional**: `false`
+- **Read Only** 
+- **Usage**:
+
+
+
+Recovers all the colliding shapes of the current player 
 
 
 ---

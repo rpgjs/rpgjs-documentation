@@ -1,5 +1,28 @@
 # AI ChangeLog
 
+## Version 3.2.0
+
+- [Move To](/api/MoveManager.html): 
+Move the event to another event, a player, a shape or a specific position.
+The event will avoid obstacles, but you can tell if it is stuck or has completed its path
+- [Get Collision of shapes](/api/Player.html): 
+
+Recovers all the colliding shapes of the current player 
+- [Get Collision of shapes](/api/RpgSpriteLogic.html): 
+
+Recovers all the colliding shapes of the current player 
+- [Stop Move To](/api/MoveManager.html): 
+Stops the movement of the player who moves towards his target
+- [Create a temporary and moving hitbox](/api/Map.html): 
+Allows to create a temporary hitbox on the map that can have a movement
+For example, you can use it to explode a bomb and find all the affected players, or during a sword strike, you can create a moving hitbox and find the affected players again- [spriteRealSize](/api/Spritesheet.html):  
+Defines the actual size of the sprite that is inside a larger rectangle.
+For example, if the texture rectangle is 192x192 while the character, which is in the center, is only 64x64 then set `spriteRealSize: 64`. This way the character will be well positioned in relation to the animations that have a different rectangle
+
+> You can also put `spriteRealSize: { width: 64, height: 64 }` but be aware that the width is not concerned because it will always be centered while the height depends on the hitbox
+- [Add Other Client In Map](/api/FixtureTesting.html): 
+Create another client, add it to the map and send the information to the first client
+
 ## Version 3.1.0
 
 - [Camera Follow](/api/Player.html): 
@@ -286,19 +309,6 @@ When the x, y positions change
 
 ## Version 3.0.0-beta.3
 
-- [Create Shape](/api/Map.html): 
-Create a shape dynamically on the map
-
-Object:
- - (number) x: Position X
- - (number) y: Position Y
- - (number) width: Width
- - (number) height: Height
- - (object) properties (optionnal): 
-     - (number) z: Position Z
-     - (hexadecimal) color: Color (shared with client)
-     - (boolean) collision
-     - You can your own properties
 - [Attach Shape](/api/Player.html): 
 Attach a shape to the player (and allow interaction with it)
 
@@ -317,6 +327,19 @@ Returns all shapes assigned to this player
 Returns all shapes assigned to this player
 - [Get In-Shapes](/api/Player.html): 
 Retrieves all shapes where the player is located
+- [Create Shape](/api/Map.html): 
+Create a shape dynamically on the map
+
+Object:
+ - (number) x: Position X
+ - (number) y: Position Y
+ - (number) width: Width
+ - (number) height: Height
+ - (object) properties (optionnal): 
+     - (number) z: Position Z
+     - (hexadecimal) color: Color (shared with client)
+     - (boolean) collision
+     - You can your own properties
 - [Add Spritesheet](/api/RpgClientEngine.html): 
 Adds Spritesheet classes
 - [Add Sound](/api/RpgClientEngine.html): 

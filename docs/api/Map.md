@@ -15,6 +15,7 @@
 - [Create Dynamic Event](#create-dynamic-event)
 - [Get Event](#get-event)
 - [Remove Event](#remove-event)
+- [Create a temporary and moving hitbox](#create-a-temporary-and-moving-hitbox)
 - [Data of map](#data-of-map)
 - [Width of the map in pixels](#width-of-the-map-in-pixels)
 - [Height of the map in pixels](#height-of-the-map-in-pixels)
@@ -248,6 +249,40 @@ Get Event in current map
 
 
 Removes an event from the map. Returns false if the event is not found
+
+---
+### Create a temporary and moving hitbox
+- **Since**: 3.2.0
+- **Method**: `map.createMovingHitbox(hitboxes,options)`
+- **Arguments**:
+    - {<Type type='Array&lt;{ width: number, height: number, x: number, y: number }&gt;' />} `hitboxes`. Create several hitboxes that will give an effect of movement (Optional: `false`)
+    - {<Type type='object' />} `options`.  (Optional: `true`)
+    - {<Type type='speed' />} `options.speed`. speed of movement (in frames) (Optional: `true`)
+- **Return**: <Type type=' <a href="https://rxjs.dev/guide/observable.html">Observable</a>&lt;AbstractObject&gt;' />  find the methods of position and movement of an event
+- **Example**: 
+
+```ts
+// Two hitboxes that will be done very quickly
+map.createMovingHitbox(
+  [ 
+     { x: 0, y: 0, width: 100, height: 100 },
+     { x: 20, y: 0, width: 100, height: 100 } 
+  ]
+).subscribe({
+     next(hitbox) {
+         console.log(hitbox.otherPlayersCollision)
+     },
+     complete() {
+         console.log('finish')
+     }
+})
+```
+ 
+- **Usage**:
+
+
+Allows to create a temporary hitbox on the map that can have a movement
+For example, you can use it to explode a bomb and find all the affected players, or during a sword strike, you can create a moving hitbox and find the affected players again
 
 ---
 ### Data of map

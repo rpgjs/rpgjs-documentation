@@ -105,7 +105,11 @@ Listen to each frame
 ### Add Spritesheet
 - **Since**: 3.0.0-beta.3
 - **Method**: `addSpriteSheet(spritesheetClass|spritesheetClass[])`
-- **Return**: <Type type='void' />   
+- **Arguments**:
+    - {<Type type=' Class|Class[] ' />} `spritesheetClass`.  (Optional: `false`)
+    - {<Type type='string' />} `url`. Define the url of the resource (Optional: `false`)
+    - {<Type type='string' />} `id`. Define a resource identifier (Optional: `false`)
+- **Return**: <Type type='Class' />   
 - **Usage**:
 
 
@@ -115,8 +119,12 @@ Adds Spritesheet classes
 ---
 ### Add Sound
 - **Since**: 3.0.0-beta.3
-- **Method**: `addSpriteSheet(soundClass|soundClass[])`
-- **Return**: <Type type='void' />   
+- **Method**: `addSound(soundClass|soundClass[])`
+- **Arguments**:
+    - {<Type type=' Class|Class[] ' />} `soundClass`.  (Optional: `false`)
+    - {<Type type='string' />} `url`. Define the url of the resource (Optional: `false`)
+    - {<Type type='string' />} `id`. Define a resource identifier (Optional: `false`)
+- **Return**: <Type type='Class' />   
 - **Usage**:
 
 

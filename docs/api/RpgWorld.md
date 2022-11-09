@@ -3,6 +3,7 @@
 - [Get Player](#get-player)
 - [Get all Players](#get-all-players)
 - [Get all objects of map](#get-all-objects-of-map)
+- [Get all shapes of map](#get-all-shapes-of-map)
 - [Get all Players a map](#get-all-players-a-map)
 :::
 ---
@@ -89,6 +90,25 @@ Also retrieve events in Scenario mode:
 import { RpgWorld } from '@rpgjs/server'
 
 const objects = RpgWorld.getObjectsOfMap('mapname', 'playerid')
+```
+
+
+---
+### Get all shapes of map
+- **Method**: `RpgWorld.getShapesOfMap(map)`
+- **Arguments**:
+    - {<Type type='string' />} `map`. Map Name (Optional: `false`)
+- **Return**: <Type type='Array&lt <a href="/classes/shape.html">RpgShape</a>&gt;' />   
+- **Usage**:
+
+
+Find all the shapes of the map
+
+```ts
+import { RpgWorld } from '@rpgjs/server'
+
+const shapes = RpgWorld.getShapesOfMap('mapname')
+console.log(shapes)
 ```
 
 

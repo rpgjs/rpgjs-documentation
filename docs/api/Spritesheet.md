@@ -2,6 +2,7 @@
 - [opacity](#opacity)
 - [pivot](#pivot)
 - [anchor](#anchor)
+- [spriteRealSize](#spriterealsize)
 - [angle](#angle)
 - [rotation](#rotation)
 - [scale](#scale)
@@ -10,14 +11,17 @@
 - [y](#y)
 - [visible](#visible)
 - [sound](#sound)
-- [image](#image)
 - [framesWidth](#frameswidth)
 - [framesHeight](#framesheight)
 - [width](#width)
 - [height](#height)
-- [images](#images)
-- [id](#id)
+- [rectWidth](#rectwidth)
+- [rectHeight](#rectheight)
+- [offset](#offset)
 - [textures](#textures)
+- [image](#image)
+- [id](#id)
+- [images](#images)
 :::
 ---
 ### opacity
@@ -66,6 +70,21 @@ The array has two elements: [x, y].  If y is omitted, both x and y will be set t
 ```ts
 anchor: [0.5, 0.8]
 ```
+
+
+---
+### spriteRealSize
+- **Since**: 3.2.0
+- **Property**: `spriteRealSize`
+- **Type**: <Type type='{ width: number, height: number } | number' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Defines the actual size of the sprite that is inside a larger rectangle.
+For example, if the texture rectangle is 192x192 while the character, which is in the center, is only 64x64 then set `spriteRealSize: 64`. This way the character will be well positioned in relation to the animations that have a different rectangle
+
+> You can also put `spriteRealSize: { width: 64, height: 64 }` but be aware that the width is not concerned because it will always be centered while the height depends on the hitbox
 
 
 ---
@@ -179,28 +198,10 @@ Define the sound that will be played for all animations in the spritesheet. Reme
 
 
 ---
-### image
-- **Property**: `image`
-- **Type**: <Type type='string' />
-- **Optional**: `true` 
-- **Usage**:
-
- 
-The link to the image
-
-> Do not use the `images` property
-> Remember to wrap the link to the image with the `require` function.
-
-```ts
-image: require('./assets/hero.png')
-```
-
-
----
 ### framesWidth
 - **Property**: `framesWidth`
 - **Type**: <Type type='number' />
-- **Optional**: `true` 
+- **Optional**: `false` 
 - **Usage**:
 
  
@@ -211,7 +212,7 @@ The number of frames on the width
 ### framesHeight
 - **Property**: `framesHeight`
 - **Type**: <Type type='number' />
-- **Optional**: `true` 
+- **Optional**: `false` 
 - **Usage**:
 
  
@@ -222,7 +223,7 @@ The number of frames on the height
 ### width
 - **Property**: `width`
 - **Type**: <Type type='number' />
-- **Optional**: `true` 
+- **Optional**: `false` 
 - **Usage**:
 
  
@@ -233,7 +234,7 @@ The width of the image (in pixels)
 ### height
 - **Property**: `height`
 - **Type**: <Type type='number' />
-- **Optional**: `true` 
+- **Optional**: `false` 
 - **Usage**:
 
  
@@ -241,36 +242,36 @@ The height of the image (in pixels)
 
 
 ---
-### images
-- **Property**: `images`
-- **Type**: <Type type=' { [id: string]: string } ' />
+### rectWidth
+- **Property**: `rectWidth`
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
  
-Put the different images that are concerned by the properties below.
-The key of the object is the identifier of the spritesheet and the value and the link to the image.
-
-> Remember to wrap the link to the image with the `require` function.
-
-```ts
-images: {
-   hero: require('./assets/hero.png')
-}
-```
+Takes a width of a rectangle in the image. Equivalent to `width / framesWidth`
 
 
 ---
-### id
-- **Property**: `id`
-- **Type**: <Type type='string' />
+### rectHeight
+- **Property**: `rectHeight`
+- **Type**: <Type type='number' />
 - **Optional**: `true` 
 - **Usage**:
 
  
-Spritesheet identifier.
+Takes a height of a rectangle in the image. Equivalent to `height / framesHeight`
 
-> Do not use the `images` property
+
+---
+### offset
+- **Property**: `offset`
+- **Type**: <Type type='number' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+To take the texture, start at a well defined X and Y position. Otherwise, it starts at 0,0
 
 
 ---
@@ -392,6 +393,57 @@ export class Chest implements ISpriteCharacter {
      onCharacterStand(sprite: RpgSprite) {
         sprite.animation.play(Animation.Stand, ['hello'])
      }
+}
+```
+
+
+---
+### image
+- **Property**: `image`
+- **Type**: <Type type='string' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+The link to the image
+
+> Do not use the `images` property
+> Remember to wrap the link to the image with the `require` function.
+
+```ts
+image: require('./assets/hero.png')
+```
+
+
+---
+### id
+- **Property**: `id`
+- **Type**: <Type type='string' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Spritesheet identifier.
+
+> Do not use the `images` property
+
+
+---
+### images
+- **Property**: `images`
+- **Type**: <Type type=' { [id: string]: string } ' />
+- **Optional**: `true` 
+- **Usage**:
+
+ 
+Put the different images that are concerned by the properties below.
+The key of the object is the identifier of the spritesheet and the value and the link to the image.
+
+> Remember to wrap the link to the image with the `require` function.
+
+```ts
+images: {
+   hero: require('./assets/hero.png')
 }
 ```
 
